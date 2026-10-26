@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Dale, Down, Fell and Beck</title>
+<meta name="description" content="Britain's words for its hills, valleys and streams, mapped. Where beck gives way to brook and burn, where dale meets combe, how sharp the lines are, and whether they follow the Danelaw.">
+<meta property="og:title" content="Dale, Down, Fell and Beck">
+<meta property="og:description" content="The words Britain uses for its hills, valleys and streams, mapped from {{n_classified}} named features.">
+<meta property="og:image" content="https://tristan-hotham.github.io/dale-down-fell-beck/header.png">
+<meta property="og:url" content="https://tristan-hotham.github.io/dale-down-fell-beck/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+/* Old-survey paper. Blue = Norse. Orange = English. Gold = Scots and northern English. Plum = Welsh, Cornish and other Brittonic. Moss = Gaelic. Slate = mixed. */
+:root{
+  --bg:#F3EEE2; --panel:#EAE3D2; --fg:#1D1A15; --muted:#6B6457; --rule:#D8D0BE; --card:#FBF8F1; --border:#C9BFA9;
+  --hot:#D9480F; --moss:#4D7A2E; --plum:#8E3E9E; --blue:#2763A8; --gold:#A87400; --slate:#4F6B73;
+  --sea:#DCE4E3; --land:#ECE5D3; --dot:#8D846F;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#15140F; --panel:#1F1D17; --fg:#EDE8DC; --muted:#A59E8E; --rule:#36332A; --card:#211F19; --border:#48443A;
+  --hot:#F26A30; --moss:#7FAE58; --plum:#C27BD3; --blue:#6E9FE0; --gold:#D6A136; --slate:#86AAB4;
+  --sea:#111A1C; --land:#26241D; --dot:#857D6B; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#15140F; --panel:#1F1D17; --fg:#EDE8DC; --muted:#A59E8E; --rule:#36332A; --card:#211F19; --border:#48443A;
+  --hot:#F26A30; --moss:#7FAE58; --plum:#C27BD3; --blue:#6E9FE0; --gold:#D6A136; --slate:#86AAB4;
+  --sea:#111A1C; --land:#26241D; --dot:#857D6B; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 18px/1.62 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden}
+.wrap{max-width:680px;margin:0 auto;padding-block:28px 64px}
+.wrap .bleed{width:min(1080px,calc(100vw - 32px));margin-left:calc((100% - min(1080px,100vw - 32px))/2);margin-right:0}
+a{color:inherit;text-decoration-color:var(--hot);text-underline-offset:3px}
+.kicker{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.kicker b{background:var(--hot);color:#fff;padding:5px 8px;font-weight:500}
+header.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 24px;align-items:end;border-bottom:6px double var(--fg);padding-bottom:22px;margin-top:18px}
+h1{font:900 clamp(50px,12.5vw,108px)/.88 var(--display);letter-spacing:-.02em;margin:0;text-wrap:balance;font-variation-settings:"SOFT" 50}
+h1 em{font-style:normal;color:var(--blue)}
+h1 i{font-style:normal;color:var(--hot)}
+.mark{width:clamp(84px,19vw,168px);height:auto;display:block}
+.dek{grid-column:1/-1;font-size:21px;line-height:1.42;margin:8px 0 0;max-width:44ch}
+.byline{font:400 13px/1.4 var(--mono);color:var(--muted);margin-top:14px}
+h2{font:800 34px/1.04 var(--display);letter-spacing:-.01em;margin:52px 0 10px;text-wrap:balance}
+h2 .n{font:500 13px/1 var(--mono);color:var(--hot);display:block;letter-spacing:.1em;margin-bottom:10px}
+h3{font:600 20px/1.25 var(--display);margin:28px 0 6px}
+p{margin:0 0 16px}
+.lede::first-letter{font:900 72px/.8 var(--display);float:left;margin:6px 10px 0 0;color:var(--hot)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:26px 0 8px}
+.stats div{background:var(--card);padding:14px 12px}
+.stats b{display:block;font:900 clamp(28px,6vw,40px)/1 var(--display);color:var(--fg)}
+.stats b.h{color:var(--hot)}
+.stats b.bl{color:var(--blue)}
+.stats span{font:400 12px/1.35 var(--mono);color:var(--muted);display:block;margin-top:6px}
+@media (max-width:600px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.figure{margin:26px 0 30px}
+.fig-h{font:600 19px/1.25 var(--display);margin:0 0 4px}
+.fig-sub{font:400 13px/1.45 var(--mono);color:var(--muted);margin:0 0 12px}
+.src{font:400 12px/1.45 var(--mono);color:var(--muted);margin-top:10px}
+.chart{width:100%;position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{font-family:var(--mono);fill:var(--fg)}
+.lab{font-size:12px}.lab.m{fill:var(--muted)}.lab.b{font-weight:500}.lab.s{font-size:11px}
+.tip{position:absolute;pointer-events:none;background:var(--fg);color:var(--bg);font:400 12px/1.45 var(--mono);padding:8px 10px;border-radius:3px;max-width:270px;z-index:1200;transform:translate(-50%,calc(-100% - 12px));display:none}
+.tip b{font-weight:500}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 10px}
+.btn{font:500 12px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:8px 10px;cursor:pointer;min-height:36px}
+.btn[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn:focus-visible,input:focus-visible,.chip:focus-visible{outline:2px solid var(--hot);outline-offset:2px}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:3px;overflow:hidden;flex-wrap:wrap;max-width:100%}
+.seg .btn{border:0;border-radius:0;border-right:1px solid var(--border)}
+.seg .btn:last-child{border-right:0}
+input[type=search]{font:400 14px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:9px 10px;min-height:36px;flex:1 1 180px;min-width:0;width:100%}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+.chip{font:500 12.5px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:999px;padding:7px 10px 7px 8px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;min-height:32px}
+.chip i{width:10px;height:10px;border-radius:50%;display:inline-block;flex:none}
+.chip small{font:400 11px/1 var(--mono);color:var(--muted)}
+.chip[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.chip[aria-pressed="true"] small{color:var(--bg);opacity:.75}
+.mapwrap{position:relative}
+#lmap{height:min(680px,78vh);min-height:440px;border:1px solid var(--border);background:var(--sea);border-radius:2px}
+.leaflet-container{font:400 12px/1.4 var(--mono);background:var(--sea)}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--card);color:var(--fg);border-radius:3px;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.leaflet-popup-content{margin:10px 12px;font:400 12.5px/1.5 var(--mono)}
+.leaflet-popup-content b{font:600 16px/1.2 var(--display);display:block;margin-bottom:4px}
+.leaflet-container a.leaflet-popup-close-button{color:var(--muted)}
+.leaflet-control-attribution{background:color-mix(in srgb,var(--card) 85%,transparent)!important;color:var(--muted)!important;font:400 10.5px/1.4 var(--mono)}
+.leaflet-control-attribution a{color:var(--fg)!important}
+.leaflet-bar a{background:var(--card);color:var(--fg);border-bottom-color:var(--border)}
+.leaflet-bar a:hover{background:var(--panel)}
+.leaflet-bar{border:1px solid var(--border)!important;box-shadow:none!important}
+.legend{display:flex;gap:10px 16px;flex-wrap:wrap;font:400 12px/1.3 var(--mono);color:var(--muted);margin-top:8px;align-items:center}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.legend .ramp{display:inline-block;width:120px;height:10px;vertical-align:-1px;margin:0 6px;border:1px solid var(--rule)}
+.legend .ln{display:inline-block;width:26px;height:0;border-top:3px solid var(--fg);vertical-align:3px;margin-right:6px}
+.results{list-style:none;margin:4px 0 0;padding:0;font:400 12.5px/1.3 var(--mono);border:1px solid var(--rule);background:var(--card);position:absolute;left:0;right:0;top:100%;z-index:1100;max-height:300px;overflow:auto}
+.results li{padding:8px 10px;border-bottom:1px solid var(--rule);cursor:pointer;display:flex;justify-content:space-between;gap:10px}
+.results li span{color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.results li:hover,.results li:focus-visible,.results li.on{background:var(--panel);outline:none}
+.searchbox{position:relative;flex:1 1 240px;min-width:0}
+.card{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--hot);padding:12px 14px;font:400 13px/1.5 var(--mono);margin-top:10px}
+.card b{font:600 17px/1.2 var(--display)}
+.pull{font:600 26px/1.25 var(--display);border-left:6px solid var(--blue);padding:4px 0 4px 18px;margin:30px 0}
+.note{background:var(--panel);border:1px solid var(--rule);padding:14px 16px;font-size:16px;margin:22px 0}
+.note h3{margin-top:0}
+.note code{font:400 13px/1.4 var(--mono)}
+table.t{width:100%;border-collapse:collapse;font:400 13px/1.35 var(--mono)}
+table.t th{text-align:left;font-weight:500;color:var(--muted);border-bottom:2px solid var(--fg);padding:6px 8px 6px 0;position:sticky;top:0;background:var(--bg)}
+table.t td{border-bottom:1px solid var(--rule);padding:7px 8px 7px 0;vertical-align:top}
+table.t td.num,table.t th.num{text-align:right}
+table.t td i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
+.tablewrap{overflow:auto;max-height:520px;border-bottom:1px solid var(--rule)}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.cta a{font:500 13px/1 var(--mono);text-decoration:none;border:1px solid var(--fg);padding:11px 14px;border-radius:3px}
+.cta a.p{background:var(--hot);border-color:var(--hot);color:#fff}
+footer{border-top:6px double var(--fg);margin-top:56px;padding-top:16px;font:400 13px/1.55 var(--mono);color:var(--muted)}
+footer p{margin:0 0 10px}
+.sm{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px 12px}
+@media (max-width:820px){.sm{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:560px){.sm{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 8px}}
+.sm .cell{min-width:0}
+.sm .cell svg{display:block;width:100%;height:auto}
+.sm .nm{font:600 16px/1.1 var(--display);margin:0}
+.sm .ct{font:400 11px/1.3 var(--mono);color:var(--muted);margin:2px 0 4px}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px}
+@media (max-width:700px){.two{grid-template-columns:1fr}}
+.theme{position:fixed;right:12px;bottom:12px;z-index:1300}
+.etym{font:400 14px/1.5 var(--mono);color:var(--muted);border-left:3px solid var(--rule);padding:2px 0 2px 12px;margin:0 0 16px}
+@media print{.theme,.controls,.chips{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="kicker"><b>Data study</b><span>Landscape × language</span><span>Great Britain</span></div>
+<header class="hero">
+  <h1>Dale, <i>down</i>, <em>fell</em> and <em>beck</em></h1>
+  <svg class="mark" viewBox="-100 -100 200 200" aria-hidden="true"><g id="heroMark"></g></svg>
+  <p class="dek">The words Britain uses for its hills, valleys and streams, mapped. I sorted {{n_classified}} named features by their landscape word to find where beck gives way to brook, how sharp those lines are, and whether they follow the Vikings.</p>
+</header>
+<div class="byline">Dr Tristan Hotham, Independent researcher · October 2026 · Data: Ordnance Survey OS Open Names and OS Open Rivers</div>
+
+<div class="stats">
+  <div><b>{{n_classified}}</b><span>named hills, valleys, streams and waterfalls with a recognised landscape word</span></div>
+  <div><b class="h">{{bb_w}} km</b><span>for the stream word to go from 80% beck to 20% beck at the beck/brook line</span></div>
+  <div><b class="bl">{{nbs_beck}} vs {{nbs_brook}}</b><span>share of settlements with a Norse name element on the beck side and the brook side</span></div>
+  <div><b>{{dl_bb_med}} km</b><span>median distance from the beck/brook line north to the approximate Danelaw line</span></div>
+</div>
+
+<p class="lede">Walk north through England and the water changes its name. In Surrey a stream is a brook. In Yorkshire it is a beck. In Northumberland it becomes a burn, and in the Highlands an allt. The hills change too: downs in Wessex, tors on Dartmoor, fells in the Lake District, laws in the Borders, bens and cnocs further north.</p>
+<p>These words are a fossil map of who named the land. I wanted to know where the lines between them fall, how sharp those lines are, and whether they match history: the Danelaw, the Norse settlement names that end in -by and -thwaite, and the borders with Wales and Scotland.</p>
+<p>I took every named valley, hill and waterfall in Ordnance Survey's OS Open Names, and every named watercourse in OS Open Rivers, and sorted each one by its landscape word using explicit matching rules that are published with the data. Of {{n_landscape}} features, {{n_classified}} ({{pct_classified}}) carry a word I could recognise. I added {{n_settle}} towns, villages and hamlets, checked for Norse elements such as -by, -thorpe and -thwaite.</p>
+
+<h2><span class="n">01 · The map</span>Pick a word</h2>
+<p>Choose a family, then a word. Dots are the named features. The shading shows that word's share of all named features in its family, in hexagons {{hex_w}} km across. Switch to <em>Boundaries</em> to see the lines I fitted between neighbouring words, with the approximate Danelaw line and the national borders. Or type a name to find it.</p>
+<div class="figure bleed">
+  <div class="controls">
+    <div class="seg" role="group" aria-label="Map view">
+      <button class="btn" data-view="words" aria-pressed="true">Words</button>
+      <button class="btn" data-view="bounds" aria-pressed="false">Boundaries</button>
+    </div>
+    <div class="seg" role="group" aria-label="Family" id="famseg"></div>
+    <div class="searchbox"><input type="search" id="q" placeholder="Type a name, e.g. Wensleydale" aria-label="Find a named feature" autocomplete="off"><ul class="results" id="qres" hidden></ul></div>
+  </div>
+  <div class="chips" id="chips" role="group" aria-label="Words"></div>
+  <div class="controls" id="layerctl">
+    <button class="btn" id="tPts" aria-pressed="true">Dots</button>
+    <button class="btn" id="tHex" aria-pressed="true">Shading</button>
+    <button class="btn" id="tDane" aria-pressed="false">Danelaw line (approx.)</button>
+    <button class="btn" id="tBord" aria-pressed="false">National borders</button>
+  </div>
+  <div class="mapwrap"><div id="lmap" role="region" aria-label="Interactive map of landscape words in Great Britain"></div></div>
+  <div class="legend" id="legend"></div>
+  <div class="card" id="wordcard"></div>
+  <div class="src">Base map © OpenStreetMap contributors © CARTO. Contains OS data © Crown copyright and database right 2026. Shading appears only in hexagons with at least 3 named features of that family. Lines are fitted boundaries where the two words are equally common; line thickness shows how sharp the change is there.</div>
+</div>
+
+<h2><span class="n">02 · Water</span>Brook, beck, burn</h2>
+<p class="etym">Beck comes from Old Norse <i>bekkr</i>. Brook and burn come from Old English <i>brōc</i> and <i>burna</i>.</p>
+<p>The streams draw the clearest lines in Britain. OS Open Rivers names {{n_streams}} separate watercourses (I joined {{n_links}} river links into single streams). {{n_burn}} are burns, {{n_allt}} are allts, {{n_brook}} are brooks and {{n_beck}} are becks.</p>
+<p>The chart walks up England and southern Scotland in {{band_km}} km steps, leaving Wales aside. Brook rules the south. Then, in a band no wider than a county, beck takes over. A little further north, burn takes over from beck.</p>
+<div class="figure">
+  <div class="controls"><div class="seg" role="group" aria-label="Family for walk north" id="trseg">
+    <button class="btn" data-tr="stream" aria-pressed="true">Streams</button>
+    <button class="btn" data-tr="valley" aria-pressed="false">Valleys</button>
+    <button class="btn" data-tr="hill" aria-pressed="false">Hills</button></div></div>
+  <div class="fig-h" id="trh">Walking north: each word's share, every {{band_km}} km</div>
+  <div class="fig-sub" id="trs">Share among beck, brook and burn in each {{band_km}} km band of northing. England and Scotland only. Bands with fewer than 8 of these words are left blank.</div>
+  <div class="chart" id="transect"></div>
+</div>
+<p>The beck/brook line runs across northern England, through Lancashire, the south Pennines and Nottinghamshire to Lincolnshire, at a median latitude of {{bb_lat}}°N. It is remarkably clean. {{bb_a_on}} of becks lie on the beck side of the line and {{bb_b_on}} of brooks on the brook side. Across it, the share of becks falls from 80% to 20% in about {{bb_w}} km.</p>
+<p>The burn/beck line is just as sharp ({{bub_w}} km) but sits in the wrong place for a national border. {{bub_in_eng}} of its length is in England, through County Durham and northern Cumbria, a median {{bub_border}} km south of the Scottish border. Northumberland's streams are burns, like Scotland's.</p>
+<p class="pull">Northumberland's streams are burns, Yorkshire's are becks, Derbyshire's are brooks. The changes take about a day's walk.</p>
+<p>Further north there is one more line, between Scots burn and Gaelic allt. It runs for {{ab_km}} km, in {{ab_pieces}} pieces, through Argyll and Bute, Perth and Kinross and Highland, and it is softer: the 80% to 20% change takes {{ab_w}} km on average, and anywhere from {{ab_min}} to {{ab_max}} km on different stretches.</p>
+
+<h2><span class="n">03 · Sharpness</span>How sharp are the lines?</h2>
+<p>For each pair of neighbouring words I fitted a smooth surface of where each is more common, drew the line where they are equally common, and then measured how far you have to travel across it for one word to go from 80% of the pair to 20%. A short distance means a sharp line. The method is in the note at the end.</p>
+<div class="figure">
+  <div class="fig-h">Distance over which one word gives way to the other</div>
+  <div class="fig-sub">Kilometres from 80% to 20%, with 95% bootstrap intervals. Shorter is sharper. <span style="color:var(--blue)">Blue</span> = streams, <span style="color:var(--slate)">slate</span> = valleys, <span style="color:var(--hot)">orange</span> = hills. "Own side" = share of each word on its own side of the line.</div>
+  <div class="chart" id="sharp"></div>
+</div>
+<p>The sharpest lines are the stream lines: beck/brook ({{bb_w}} km) and burn/beck ({{bub_w}} km). The valley words dale and clough meet across Yorkshire and the Peak in {{dc_w}} km. Welsh and English words meet at the Welsh border: nant and afon against brook in {{nb_w}} km, cwm against dingle in {{cd_w}} km.</p>
+<p>The softest are the pairs where one word is rare. Combe and bottom blur over {{cb_w}} km across the West Country, and only {{cb_a_on}} of combes sit on the combe side. Tor and down, both Old English, mix over {{td_w}} km on the edge of Dartmoor.</p>
+
+<h2><span class="n">04 · Valleys and hills</span>Dale, down, hill and fell</h2>
+<p class="etym">Dale comes from Old English <i>dæl</i>, reinforced by Old Norse <i>dalr</i>. Combe is a Brittonic word, the same word as Welsh <i>cwm</i>. Fell comes from Old Norse <i>fjall</i>, down from Old English <i>dūn</i> and tor from Old English <i>torr</i>.</p>
+<p>Use the buttons above the walking-north chart to switch to valleys or hills. The valleys sort into neat bands. Bottoms fill Hampshire, Dorset and Wiltshire, combes Somerset and Devon, cloughs Lancashire and the south Pennines, dales Yorkshire, cleughs the Borders and Dumfries and Galloway. Clough and cleugh are the same word in English and Scots spelling, and the dales sit between them. They never meet closely enough for me to draw a line.</p>
+<p>Hills are different. Hill itself is everywhere: {{n_hill}} of the {{n_hillfam}} named hills in the family are just hills. The local words are islands in that sea. Down ({{n_down}}) is southern England, led by Wiltshire, Devon and Cornwall. Fell ({{n_fell}}) is Cumbria, the Pennines and Galloway. Tor ({{n_tor}}) is Devon and Cornwall, with a few in the Peak. Law ({{n_law}}) is the Scottish Borders and Northumberland. Fell gives way to law across the Scottish border over {{fl_w}} km.</p>
+<div class="figure">
+  <div class="controls"><div class="seg" role="group" aria-label="Small multiples family" id="smseg"></div></div>
+  <div class="fig-h">Every word, mapped</div>
+  <div class="fig-sub">Each map shows one word's named features, counted in {{hex_w}} km hexagons. Darker = more.</div>
+  <div class="sm" id="sm"></div>
+  <div class="legend" id="smleg"></div>
+</div>
+
+<h2><span class="n">05 · The Vikings</span>Do the lines follow the Norse?</h2>
+<p class="etym">-by, -thorpe, -thwaite and -toft come from Old Norse words for a farm or settlement, an outlying farm, a clearing and a plot. Some -thorpe names may instead be Old English <i>throp</i>.</p>
+<p>The obvious test for beck is Norse settlement. In every hexagon I took the share of streams that are becks and the share of towns, villages and hamlets with a Norse element in their name. Across {{bvn_n}} English hexagons with enough of both, the two go together strongly: a rank correlation of {{bvn_rho}} (95% interval {{bvn_lo}} to {{bvn_hi}}, from a bootstrap that resamples 100 km blocks, because neighbouring hexagons are not independent).</p>
+<div class="figure">
+  <div class="fig-h">Beck's share of beck plus brook, against the share of Norse settlement names</div>
+  <div class="fig-sub">Each dot is a {{hex_w}} km hexagon in England with at least 3 becks or brooks and 5 settlements. Dot size = number of becks and brooks.</div>
+  <div class="chart" id="scatter"></div>
+</div>
+<p>The link is strong but not one to one. Where no settlement has a Norse name, {{band0_beck}} of beck-or-brook streams are still becks. Where at least a fifth of settlements do, {{band4_beck}} are. On the beck side of the beck/brook line, {{nbs_beck}} of settlements have a Norse element. On the brook side, {{nbs_brook}}.</p>
+<p>Other words line up too. Across English hexagons, dale's share of valleys correlates with Norse names at {{c_dale}}, beck at {{c_beck}}, gill at {{c_gill}} and fell at {{c_fell}}. Brook ({{c_brook}}) and down ({{c_down}}) go the other way.</p>
+
+<h3>And the Danelaw?</h3>
+<p>The treaty between Alfred and Guthrum set a boundary up the Thames, up the Lea to its source, straight to Bedford, then up the Ouse to Watling Street. I drew an approximate version of that line and continued it along Watling Street and then straight to Chester. It is for orientation only.</p>
+<p>The beck/brook line does not follow it. The whole of the beck/brook line lies north of it, a median {{dl_bb_med}} km away and never closer than {{dl_bb_min}} km. In the Danelaw south of 53.2°N, brooks outnumber becks by {{dn_brook}} to {{dn_beck}}.</p>
+<p>The settlement names are a different story. North of 53.2°N almost everything is north-east of the line, so I tested only the part of England the line actually crosses, south of that latitude. There, {{s_base}} of all OS named features lie north-east of the line. So do {{s_norse}} of settlements with a Norse element, {{s_by}} of -by names and {{s_thorpe}} of -thorpe names, against {{s_ton}} of -ton names and {{s_brook}} of brooks.</p>
+<div class="figure">
+  <div class="fig-h">Share of each word lying north-east of the Danelaw line</div>
+  <div class="fig-sub">England south of 53.2°N only. Words with at least 25 features there. The dashed line is the share for all OS named features ({{s_base}}).</div>
+  <div class="chart" id="south"></div>
+</div>
+<div class="figure">
+  <div class="fig-h">Crossing the Danelaw line</div>
+  <div class="fig-sub">England south of 53.2°N, in 20 km strips by distance from the line. Top: share of settlements with a Norse element. Bottom: beck's share of beck plus brook (strips with at least 10).</div>
+  <div class="chart" id="profile"></div>
+</div>
+<p>Even here the change is a gradient rather than a wall. In the 20 km strip just south-west of the line, {{pf_sw}} of settlements have a Norse element; in the strip just north-east, {{pf_ne}}; and {{pf_far}} at 60 to 80 km. Becks only appear in numbers more than 60 km into the Danelaw, in Lincolnshire and Norfolk.</p>
+<p class="pull">The Danelaw line separates the place-names. The stream names change much further north.</p>
+
+<h2><span class="n">06 · Borders</span>Wales stops at the border, Scotland does not</h2>
+<p>I derived the borders of England with Wales and Scotland from the country recorded for every OS name. The Welsh words stop almost exactly there. The line between nant or afon and brook runs a median {{nb_border}} km from the Welsh border, and {{nb_border20}} of it lies within 20 km. The cwm/dingle line is a median {{cd_border}} km from the border. A second, separate nant/brook line crosses south Pembrokeshire, where the English-speaking south of the county meets the Welsh-speaking north.</p>
+<p>The Scottish border is not a word boundary at all. The burn/beck line runs a median {{bub_border}} km inside England, and the fell/law line a median {{fl_border}} km from the border, wandering either side of it. The words of the Borders belong to both countries.</p>
+
+<h2><span class="n">07 · County by county</span>Every county's words</h2>
+<p>For each county or unitary area: its commonest stream, valley and hill word, and in brackets its most distinctive word, the one most over-represented there compared with Britain as a whole (with at least 5 examples). The commonest stream word is brook in {{ct_brook}} areas, burn in {{ct_burn}}, nant in {{ct_nant}} and beck in {{ct_beck}}.</p>
+<div class="figure">
+  <div class="controls"><input type="search" id="cq" placeholder="Filter, e.g. Devon or beck" aria-label="Filter counties"></div>
+  <div class="tablewrap"><table class="t" id="ctab"></table></div>
+  <div class="src">Areas with fewer than 10 classified features in a family are left blank for that family.</div>
+</div>
+
+<h2><span class="n">08 · Odd ones out</span>Rare words and Norse corners</h2>
+<p>Some words are tiny local dialects. Every rife in the data is in West Sussex. Lincolnshire has {{eau_top}} of the {{eau_n}} eaus, a fenland name for a watercourse. Lodes are in the fens of Cambridgeshire and Lincolnshire. Foss is a North Yorkshire waterfall word; elsewhere in the north a waterfall is a force, from Old Norse <i>fors</i>, while Scotland has its linns and Wales its pistylls and rhaeadrs.</p>
+<div class="figure">
+  <div class="fig-h">The rarest words and where they cluster</div>
+  <div class="fig-sub">Words with 60 or fewer features. Radius = distance from the word's median point that takes in 80% of its features.</div>
+  <div class="tablewrap" style="max-height:440px"><table class="t" id="rare"></table></div>
+</div>
+<p>I also gave every English town and village a Norse score: of the Norse-linked words within 10 km (beck, gill, fell, force, how, and the settlement endings), and English-linked words (brook, bourne, burn, down, dean, clough, bottom, -ton, -ham, -worth, -ley and a few more), what share are Norse? Places with fewer than 25 such words nearby are left out.</p>
+<div class="two">
+  <div><div class="fig-h">Most Norse</div><div class="fig-sub">Share of Norse-linked words within 10 km</div><table class="t" id="mostN"></table></div>
+  <div><div class="fig-h">Least Norse</div><div class="fig-sub">No Norse-linked words within 10 km, most English-linked words</div><table class="t" id="mostE"></table></div>
+</div>
+<p>The most Norse place in England on this measure is {{mn_name}}, with {{mn_n}} Norse-linked words and {{mn_e}} English-linked {{mn_e_word}} within 10 km. Among towns, {{mn_town}} leads. The least Norse is {{me_name}} in {{me_cty}}, high in the Peak, with {{me_clough}} cloughs and {{me_brook}} brooks within 10 km and not one beck. It is only {{me_km}} km from the beck/brook line.</p>
+
+<h3>Hidden in the town names</h3>
+<p>Stream and valley words also hide inside settlement names: Ashbourne, Blackburn, Holbeck, Ilfracombe. They follow the same order from north to south: burn, then dale and beck, then brook, bourne and combe.</p>
+<div class="figure">
+  <div class="fig-h">Settlement names ending in a landscape word, by latitude</div>
+  <div class="fig-sub">Dot = median latitude of settlements ending in the word; bar = middle half. Number of settlements in brackets.</div>
+  <div class="chart" id="hidden"></div>
+</div>
+
+<h2><span class="n">09 · The whole vocabulary</span>Counting the words</h2>
+<div class="figure">
+  <div class="controls"><div class="seg" role="group" aria-label="Family for counts" id="cntseg"></div></div>
+  <div class="fig-h">How many of each word</div>
+  <div class="fig-sub">Named features with each word. Colour = the language group the word is usually linked with.</div>
+  <div class="chart" id="counts"></div>
+  <div class="legend" id="origleg"></div>
+</div>
+<p>One caution runs through all of this. OS Open Names is a modern map, not a historical record. Many names are recent: drains cut in the fens, farm-named hills, cloughs named after the mill above them. A name being on the map tells us what people call a place now, or called it when the surveyors came, not when it was first named. The patterns are still striking, because local words for landscape are exactly the kind of thing new names inherit from old ones.</p>
+
+<div class="note" id="method">
+  <h3>How I did this</h3>
+  <p><b>Features.</b> OS Open Names, filtered to {{n_osnames}} named features. Valleys are the local types Valley and Cirque Or Hollow ({{n_valleyfam}}). Hills are Hill Or Mountain, Hill Or Mountain Ranges, Cliff Or Slope, Other Landform and Spot Height, plus Other Landcover features named fell or down, because OS records most named downs and fells as open land rather than hills ({{n_hillfam}}). Waterfalls are the type Waterfall ({{n_fallfam}}). Settlements are all populated places ({{n_settle}}).</p>
+  <p><b>Streams.</b> OS Open Rivers splits each river into links between junctions. Counting links would weight long, fragmented rivers more than short ones, so I joined same-named links that share a node or come within 2 km into one watercourse and placed it at the vertex nearest its length-weighted centre. That gives {{n_streams}} watercourses from {{n_links}} links.</p>
+  <p><b>Words.</b> Each name gets at most one landscape word: its generic. In English the generic usually comes last (Mill Beck); in Welsh and Gaelic it comes first (Afon Conwy, Allt Beag, Cwm Idwal); in "Burn of Tafts" it comes before "of". Compounds count too (Borrowdale, Troutbeck, Scafell). The full rules are regular expressions in <code>code/words.py</code>, with tests. Where the main name has no match I tried the Welsh or Gaelic alternative name ({{n_via2}} matches).</p>
+  <p><b>Checking.</b> I read {{audit_n}} random matches, 30 from each family, and judged {{audit_false}} to be wrong. A second check of {{strat_n}} matches drawn only from the rarer words found {{strat_false}} wrong and {{strat_unc}} uncertain. Earlier checks caught Easter and Wester being read as Norse -ster names, and Dunkirk as kirk; the rules now exclude them.</p>
+  <p><b>Shares.</b> {{hex_n}} hexagons {{hex_w}} km across on the British National Grid. A word's share is its count divided by all named features of its family in the hexagon, including those with no recognised word.</p>
+  <p><b>Boundaries.</b> For each pair of words I counted both on a 2 km grid and smoothed each with a Gaussian kernel, choosing the kernel width (6 to 20 km) by leave-one-out likelihood. The line is where the two smoothed surfaces are equal, drawn only on land and where at least 5 kernel-weighted features of either word are nearby. For sharpness, I took every feature of the two words within 60 km of the line, measured its signed distance to the line, and fitted a logistic regression of word on distance. The 80% to 20% distance is 2 ln 4 divided by the slope. Intervals come from 300 bootstrap resamples. The local thickness on the map repeats the fit on 60 km stretches of line.</p>
+  <p><b>Danelaw and borders.</b> The Danelaw line is hand-placed from the treaty description and is approximate. The national borders come from the nearest OS name's country field on a 2 km grid. Correlations are Spearman rank correlations between hexagons with at least 5 settlements and 5 features of the family, with 95% intervals from a 100 km block bootstrap.</p>
+</div>
+<div class="cta">
+  <a class="p" href="https://github.com/Tristan-Hotham/dale-down-fell-beck">Data and code</a>
+  <a href="#lmap">Back to the map</a>
+</div>
+<footer>
+  <p>Dr Tristan Hotham, researcher on social media, campaigns and politics. Independent researcher.</p>
+  <p>Contains OS data © Crown copyright and database right 2026. OS Open Names and OS Open Rivers from Ordnance Survey, used under the Open Government Licence v3.0. Base map © OpenStreetMap contributors © CARTO.</p>
+  <p>The derived data and the text of this page are released under CC BY 4.0. The code is released under the MIT licence.</p>
+  <p>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</p>
+</footer>
+</div>
+<div class="tip" id="tip"></div>
+<button class="btn theme" id="theme" aria-label="Toggle dark mode">◐</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+const S = /*__SITE__*/null;
+const R = /*__R__*/null;
+const NS = "http://www.w3.org/2000/svg";
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const el = (t, a = {}, p) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+const fmt = n => Math.round(n).toLocaleString("en-GB");
+const pc = (x, d = 0) => (x * 100).toFixed(d) + "%";
+const tip = document.getElementById("tip");
+function showTip(h, x, y) { tip.innerHTML = h; tip.style.display = "block"; const w = tip.offsetWidth; x = Math.max(w / 2 + 8, Math.min(innerWidth - w / 2 - 8, x)); tip.style.left = x + scrollX + "px"; tip.style.top = y + scrollY + "px"; }
+function hideTip() { tip.style.display = "none"; }
+function hover(node, h) { node.style.cursor = "pointer"; node.setAttribute("tabindex", "0"); const s = () => { const r = node.getBoundingClientRect(); showTip(h, r.left + r.width / 2, r.top); }; node.addEventListener("pointerenter", s); node.addEventListener("pointerleave", hideTip); node.addEventListener("focus", s); node.addEventListener("blur", hideTip); node.addEventListener("click", e => { s(); e.stopPropagation(); }); }
+document.addEventListener("click", hideTip);
+const redraws = [];
+function resp(box, render) { let last = 0; const go = (force) => { const w = Math.max(280, Math.round(box.clientWidth)); if (!force && Math.abs(w - last) < 4) return; last = w; box.innerHTML = ""; render(w, w < 560); }; new ResizeObserver(() => go()).observe(box); go(); redraws.push(() => go(true)); }
+const lbl = (svg, x, y, s, cls = "lab", anchor = "start") => { const t = el("text", { x, y, class: cls, "text-anchor": anchor }, svg); t.textContent = s; return t; };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+/* ===== shared word data ===== */
+const ORIG = { norse: ["--blue", "Norse"], english: ["--hot", "English"], scots: ["--gold", "Scots and northern English"], brittonic: ["--plum", "Welsh, Cornish and Brittonic"], gaelic: ["--moss", "Gaelic"], mixed: ["--slate", "Mixed or uncertain"], plain: ["--dot", "General English"] };
+const FAMS = [["stream", "Streams"], ["valley", "Valleys"], ["hill", "Hills"], ["fall", "Waterfalls"], ["settlement", "Settlements"]];
+const FAMNOUN = { stream: "named streams", valley: "named valleys", hill: "named hills", fall: "named waterfalls", settlement: "settlements" };
+S.meta["settlement:norse_any"] = { family: "settlement", key: "norse_any", label: "any Norse element", origin: "norse" };
+const NAMES = S.names.split("|");
+const W = {}; // key -> {label, origin, family, n}
+for (const k in S.meta) { const m = S.meta[k]; const n = S.pts[k] ? S.pts[k].length / 5 : (k === "settlement:norse_any" ? R.n_norse_settlements : 0); W[k] = { ...m, n, k }; }
+const colOf = k => ORIG[W[k].origin][0];
+const famWords = fam => Object.values(W).filter(w => w.family === fam && w.n > 0).sort((a, b) => b.n - a.n);
+const label = k => W[k].label;
+
+/* theme toggle */
+document.getElementById("theme").onclick = () => { const r = document.documentElement; const dark = r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; r.dataset.theme = dark ? "light" : "dark"; redraws.forEach(f => f()); window.__mapTheme && window.__mapTheme(); };
+const isDark = () => { const r = document.documentElement; return r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; };
+
+/* hero mark: three hexes, beck brook burn */
+(() => { const g = document.getElementById("heroMark"); const hx = (cx, cy, r, f, o) => { let d = ""; for (let i = 0; i < 6; i++) { const a = Math.PI / 180 * (60 * i - 30); d += (i ? "L" : "M") + (cx + r * Math.cos(a)).toFixed(1) + " " + (cy + r * Math.sin(a)).toFixed(1); } el("path", { d: d + "Z", fill: f, opacity: o }, g); };
+  const R0 = 26, dx = R0 * Math.sqrt(3);
+  const cells = [[0, -2, "var(--gold)"], [1, -2, "var(--gold)"], [-1, -1, "var(--gold)"], [0, -1, "var(--blue)"], [1, -1, "var(--gold)"], [-1, 0, "var(--blue)"], [0, 0, "var(--blue)"], [1, 0, "var(--blue)"], [-1, 1, "var(--hot)"], [0, 1, "var(--blue)"], [1, 1, "var(--hot)"], [-1, 2, "var(--hot)"], [0, 2, "var(--hot)"]];
+  cells.forEach(([q, r, c], i) => hx(dx * (q + r / 2) - dx / 4, r * R0 * 1.5, R0 - 2.5, c, .9));
+})();
+
+/* ===== map ===== */
+(() => {
+  const famseg = document.getElementById("famseg"), chips = document.getElementById("chips"), legend = document.getElementById("legend"), card = document.getElementById("wordcard");
+  let view = "words", fam = "stream", word = "stream:beck", pair = "beck_brook", showPts = true, showHex = true, showDane = false, showBord = false;
+  const map = L.map("lmap", { preferCanvas: true, zoomSnap: .25, minZoom: 4.5, maxZoom: 14, worldCopyJump: false });
+  map.fitBounds([[50.0, -5.8], [58.6, 1.7]]);
+  const canv = L.canvas({ padding: .3 });
+  const ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a> | Contains OS data &copy; Crown copyright and database right 2026';
+  map.createPane("labels"); map.getPane("labels").style.zIndex = 450; map.getPane("labels").style.pointerEvents = "none";
+  let base, labs;
+  function tiles() { if (base) map.removeLayer(base); if (labs) map.removeLayer(labs); const t = isDark() ? "dark" : "light";
+    base = L.tileLayer(`https://{s}.basemaps.cartocdn.com/${t}_nolabels/{z}/{x}/{y}{r}.png`, { attribution: ATTR, subdomains: "abcd", maxZoom: 19 }).addTo(map);
+    labs = L.tileLayer(`https://{s}.basemaps.cartocdn.com/${t}_only_labels/{z}/{x}/{y}{r}.png`, { subdomains: "abcd", maxZoom: 19, pane: "labels", opacity: .8 }).addTo(map); }
+  tiles();
+  const hexL = L.layerGroup().addTo(map), ptsL = L.layerGroup().addTo(map), lineL = L.layerGroup().addTo(map), daneL = L.layerGroup().addTo(map), bordL = L.layerGroup().addTo(map);
+  const GEO = R.geo.features;
+  const BOUNDS = R.boundaries;
+  const PAIRS = Object.keys(BOUNDS).filter(k => BOUNDS[k].width_km);
+  const PAIRW = { beck_brook: ["stream:beck", "stream:brook"], burn_beck: ["stream:burn", "stream:beck"], allt_burn: ["stream:allt", "stream:burn"], nant_brook: [["stream:nant", "stream:afon"], "stream:brook"], dale_clough: ["valley:dale", "valley:clough"], combe_bottom: ["valley:combe", "valley:bottom"], cwm_dingle: ["valley:cwm", "valley:dingle"], fell_law: ["hill:fell", "hill:law"], tor_down: ["hill:tor", "hill:down"] };
+  const pairName = k => `${BOUNDS[k].a} / ${BOUNDS[k].b}`;
+  const pairCols = k => { const [a, b] = PAIRW[k]; const ca = colOf([].concat(a)[0]), cb0 = colOf([].concat(b)[0]); return [ca, cb0 === ca ? "--slate" : cb0]; };
+
+  function drawHex() { hexL.clearLayers(); if (view !== "words" || !showHex) return;
+    const w = S.hex.w[word] || [], tot = S.hex.fam[fam], n = new Float32Array(tot.length);
+    for (let i = 0; i < w.length; i += 2) n[w[i]] = w[i + 1];
+    const shares = []; for (let i = 0; i < tot.length; i++) if (tot[i] >= 3) shares.push(n[i] / tot[i]);
+    const srt = shares.filter(v => v > 0).sort((a, b) => a - b); const top = Math.max(.05, srt.length ? srt[Math.floor(srt.length * .95)] : .05);
+    const col = css(colOf(word)), grey = css("--dot");
+    for (let i = 0; i < tot.length; i++) { if (tot[i] < 3) continue; const s = n[i] / tot[i]; const p = S.hex.poly[i]; const ll = []; for (let j = 0; j < 12; j += 2) ll.push([p[j], p[j + 1]]);
+      L.polygon(ll, { renderer: canv, stroke: false, fillColor: s > 0 ? col : grey, fillOpacity: s > 0 ? .2 + .65 * Math.min(1, s / top) : .07, interactive: false }).addTo(hexL); }
+    return top; }
+  function ptsOf(k) { return S.pts[k] || []; }
+  const zr = () => { const z = map.getZoom(); return z < 6.5 ? .55 : z < 8 ? .8 : z < 10 ? 1 : 1.3; };
+  function drawPts(keys, cols, r = 3) { ptsL.clearLayers(); const bg = css("--card"); r = r * zr();
+    keys.forEach((k, j) => { const a = ptsOf(k), col = css(cols[j]);
+      for (let i = 0; i < a.length; i += 5) { const m = L.circleMarker([a[i] / 1000, a[i + 1] / 1000], { renderer: canv, radius: r, color: bg, weight: .6, fillColor: col, fillOpacity: .88 });
+        m.on("click", () => m.bindPopup(popup(k, i)).openPopup()); m.addTo(ptsL); } }); }
+  function popup(k, i) { const a = S.pts[k]; return `<b>${esc(NAMES[a[i + 2]])}</b>Word: ${esc(label(k))}<br>Type: ${esc(S.lt[a[i + 4]] === "Watercourse" ? "Watercourse (OS Open Rivers)" : S.lt[a[i + 4]])}<br>Area: ${esc(S.counties[a[i + 3]])}`; }
+  function drawLines() { lineL.clearLayers(); if (view !== "bounds") return; const fg = css("--fg"), mu = css("--muted");
+    GEO.filter(f => f.properties.kind === "word_boundary").forEach(f => { const p = f.properties, on = p.pair === pair, w = p.width_km;
+      const weight = on ? (w == null ? 2 : w < 15 ? 6 : w < 30 ? 4 : 2.5) : 1.5;
+      const ln = L.polyline(f.geometry.coordinates.map(c => [c[1], c[0]]), { color: on ? fg : mu, weight, opacity: on ? .95 : .5, dashArray: on && (w == null || w >= 30) ? "6 5" : null }).addTo(lineL);
+      if (on) ln.bringToFront();
+      ln.bindPopup(`<b>${esc(p.a)} / ${esc(p.b)}</b>${w == null ? "Too few features near this stretch to measure the change." : `Here the share goes from 80% to 20% in about ${Math.round(w)} km.`}<br>Whole line: ${BOUNDS[p.pair].width_km} km.`);
+      ln.on("click", () => { if (pair !== p.pair) setPair(p.pair); }); }); }
+  function drawRef() { daneL.clearLayers(); bordL.clearLayers(); const fg = css("--fg"), hot = css("--hot"), mu = css("--muted");
+    if (showDane) GEO.filter(f => f.properties.kind === "danelaw").forEach(f => { const ll = f.geometry.coordinates.map(c => [c[1], c[0]]); L.polyline(ll, { color: css("--card"), weight: 7, opacity: .9, interactive: false }).addTo(daneL); L.polyline(ll, { color: fg, weight: 3.5, dashArray: "12 7", opacity: 1 }).bindPopup("<b>Danelaw line (approximate)</b>Treaty of Alfred and Guthrum, as described: Thames, Lea, Bedford, Ouse, Watling Street; continued to Chester for orientation.").addTo(daneL); });
+    if (showBord) GEO.filter(f => f.properties.kind === "national_border").forEach(f => L.polyline(f.geometry.coordinates.map(c => [c[1], c[0]]), { color: mu, weight: 2.5, dashArray: "2 5", opacity: .95 }).bindPopup(`<b>${f.properties.name === "england_wales" ? "England and Wales" : "England and Scotland"}</b>Border derived from the country recorded for each OS name.`).addTo(bordL)); }
+  function setLegend(top) {
+    let h = "";
+    if (view === "words") { const c = colOf(word);
+      h += `<span><i style="background:var(${c})"></i>${esc(label(word))} (${ORIG[W[word].origin][1]})</span>`;
+      if (showHex) h += `<span>Share of ${FAMNOUN[fam]}: 0%<span class="ramp" style="background:linear-gradient(90deg,color-mix(in srgb,var(${c}) 12%,transparent),var(${c}))"></span>${pc(top)}+</span>`;
+    } else { const [a, b] = PAIRW[pair], [ca, cb] = pairCols(pair);
+      h += `<span><i style="background:var(${ca})"></i>${esc(BOUNDS[pair].a)}</span><span><i style="background:var(${cb})"></i>${esc(BOUNDS[pair].b)}</span><span><span class="ln" style="border-top-width:6px"></span>sharp (&lt;15 km)</span><span><span class="ln" style="border-top-width:3px"></span>15 to 30 km</span><span><span class="ln" style="border-top:2px dashed var(--fg)"></span>gradual</span>`; }
+    if (showDane) h += `<span><span class="ln" style="border-top:3px dashed var(--fg)"></span>Danelaw (approx.)</span>`;
+    if (showBord) h += `<span><span class="ln" style="border-top:3px dotted var(--muted)"></span>National borders</span>`;
+    legend.innerHTML = h; }
+  function setCard() {
+    if (view === "words") { const w = W[word], c = R.counts[fam] && R.counts[fam][w.key];
+      const where = c ? `England ${fmt(c.england)}, Wales ${fmt(c.wales)}, Scotland ${fmt(c.scotland)}` : `${fmt(w.n)} of ${fmt(R.n_features.settlement)} settlements`;
+      card.style.borderLeftColor = `var(${colOf(word)})`;
+      card.innerHTML = `<b>${esc(w.label)}</b> · ${fmt(w.n)} ${FAMNOUN[fam]} · ${where}`; }
+    else { const b = BOUNDS[pair]; const [ca] = pairCols(pair); card.style.borderLeftColor = `var(${ca})`;
+      card.innerHTML = `<b>${esc(b.a)} / ${esc(b.b)}</b> · 80% to 20% in ${b.width_km} km (95% interval ${b.ci[0]} to ${b.ci[1]}) · ${pc(b.a_on_a_side)} of ${esc(b.a)} and ${pc(b.b_on_b_side)} of ${esc(b.b)} on their own side · ${fmt(b.line_km)} km of line`; } }
+  function render() {
+    let top = .05;
+    if (view === "words") { top = drawHex() || top; if (showPts) drawPts([word === "settlement:norse_any" ? null : word].filter(Boolean), [colOf(word)], fam === "hill" && word === "hill:hill" ? 2 : 3); else ptsL.clearLayers();
+      if (word === "settlement:norse_any" && showPts) { const ks = ["settlement:by", "settlement:thorpe", "settlement:thwaite", "settlement:toft", "settlement:holme", "settlement:kirk", "settlement:setter"]; drawPts(ks, ks.map(() => "--blue"), 3); } }
+    else { hexL.clearLayers(); const [a, b] = PAIRW[pair], [ca, cb] = pairCols(pair); const ka = [].concat(a), kb = [].concat(b); drawPts([...ka, ...kb], [...ka.map(() => ca), ...kb.map(() => cb)], 3.6); }
+    drawLines(); drawRef(); setLegend(top); setCard(); }
+  function setFam(f) { fam = f; famseg.querySelectorAll(".btn").forEach(b => b.setAttribute("aria-pressed", b.dataset.f === f)); const ws = famWords(f); if (!word.startsWith(f + ":")) word = ws[0].k; buildChips(); render(); }
+  function setWord(k) { word = k; chips.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", c.dataset.k === k)); render(); }
+  function setPair(k) { pair = k; chips.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", c.dataset.k === k)); render(); }
+  function buildChips() { chips.innerHTML = "";
+    if (view === "words") { famWords(fam).forEach(w => { const b = document.createElement("button"); b.className = "chip"; b.dataset.k = w.k; b.setAttribute("aria-pressed", w.k === word); b.innerHTML = `<i style="background:var(${colOf(w.k)})"></i>${esc(w.label)}<small>${fmt(w.n)}</small>`; b.onclick = () => setWord(w.k); chips.appendChild(b); }); }
+    else { PAIRS.forEach(k => { const b = document.createElement("button"); b.className = "chip"; b.dataset.k = k; b.setAttribute("aria-pressed", k === pair); const [ca, cb] = pairCols(k); b.innerHTML = `<i style="background:var(${ca})"></i><i style="background:var(${cb});margin-left:-4px"></i>${esc(pairName(k))}<small>${BOUNDS[k].width_km} km</small>`; b.onclick = () => setPair(k); chips.appendChild(b); }); } }
+  FAMS.forEach(([f, t]) => { const b = document.createElement("button"); b.className = "btn"; b.dataset.f = f; b.textContent = t; b.setAttribute("aria-pressed", f === fam); b.onclick = () => { if (view !== "words") setView("words"); setFam(f); }; famseg.appendChild(b); });
+  function setView(v) { view = v; document.querySelectorAll("[data-view]").forEach(b => b.setAttribute("aria-pressed", b.dataset.view === v)); famseg.style.display = v === "words" ? "" : "none";
+    document.getElementById("tPts").style.display = document.getElementById("tHex").style.display = v === "words" ? "" : "none";
+    if (v === "bounds") { showDane = true; showBord = true; syncToggles(); } buildChips(); render(); }
+  document.querySelectorAll("[data-view]").forEach(b => b.onclick = () => setView(b.dataset.view));
+  const tg = (id, get, set) => { const b = document.getElementById(id); b.onclick = () => { set(!get()); syncToggles(); render(); }; };
+  function syncToggles() { [["tPts", showPts], ["tHex", showHex], ["tDane", showDane], ["tBord", showBord]].forEach(([id, v]) => document.getElementById(id).setAttribute("aria-pressed", v)); }
+  tg("tPts", () => showPts, v => showPts = v); tg("tHex", () => showHex, v => showHex = v); tg("tDane", () => showDane, v => showDane = v); tg("tBord", () => showBord, v => showBord = v);
+  /* search */
+  const q = document.getElementById("q"), qres = document.getElementById("qres"); let IDX = null, hits = [];
+  function buildIdx() { IDX = []; for (const k in S.pts) { const a = S.pts[k]; for (let i = 0; i < a.length; i += 5) IDX.push([NAMES[a[i + 2]].toLowerCase(), k, i]); } }
+  function search() { const v = q.value.trim().toLowerCase(); if (v.length < 2) { qres.hidden = true; return; } if (!IDX) buildIdx();
+    const pre = [], inn = []; for (const r of IDX) { const j = r[0].indexOf(v); if (j === 0) pre.push(r); else if (j > 0 && inn.length < 40) inn.push(r); if (pre.length >= 40) break; }
+    hits = [...pre, ...inn].slice(0, 10);
+    qres.innerHTML = hits.length ? hits.map((h, j) => { const a = S.pts[h[1]]; return `<li tabindex="0" data-j="${j}">${esc(NAMES[a[h[2] + 2]])}<span>${esc(label(h[1]))} · ${esc(S.counties[a[h[2] + 3]])}</span></li>`; }).join("") : `<li>No match among classified features</li>`;
+    qres.hidden = false; }
+  function go(j) { const h = hits[j]; if (!h) return; const [k, i] = [h[1], h[2]]; const a = S.pts[k]; qres.hidden = true; q.value = NAMES[a[i + 2]];
+    if (view !== "words") setView("words"); const f = k.split(":")[0]; fam = f; word = k; famseg.querySelectorAll(".btn").forEach(b => b.setAttribute("aria-pressed", b.dataset.f === f)); buildChips(); showPts = true; syncToggles(); render();
+    const ll = [a[i] / 1000, a[i + 1] / 1000]; map.flyTo(ll, 11, { duration: reduce ? 0 : .8 }); setTimeout(() => L.popup().setLatLng(ll).setContent(popup(k, i)).openOn(map), reduce ? 50 : 900); }
+  q.addEventListener("input", search); q.addEventListener("focus", search);
+  qres.addEventListener("click", e => { const li = e.target.closest("li[data-j]"); if (li) go(+li.dataset.j); });
+  qres.addEventListener("keydown", e => { if (e.key === "Enter") { const li = e.target.closest("li[data-j]"); if (li) go(+li.dataset.j); } });
+  q.addEventListener("keydown", e => { if (e.key === "Enter" && hits.length) go(0); if (e.key === "ArrowDown") { const f = qres.querySelector("li"); f && f.focus(); e.preventDefault(); } if (e.key === "Escape") qres.hidden = true; });
+  document.addEventListener("click", e => { if (!e.target.closest(".searchbox")) qres.hidden = true; });
+  let lastZr = .55; map.on("zoomend", () => { if (zr() !== lastZr) { lastZr = zr(); render(); } });
+  window.__mapTheme = () => { tiles(); render(); };
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { tiles(); render(); redraws.forEach(f => f()); });
+  window.__setView = setView; window.__setFam = setFam; window.__setWord = setWord; window.__map = map;
+  setFam("stream"); setWord("stream:beck"); syncToggles();
+})();
+
+/* ===== walking north (transect) ===== */
+(() => { let fam = "stream"; const box = document.getElementById("transect");
+  const COLS = { beck: "--blue", brook: "--hot", burn: "--gold", dale: "--slate", clough: "--hot", cleugh: "--gold", combe: "--plum", bottom: "--moss", dean: "--dot", fell: "--blue", down: "--hot", tor: "--plum", law: "--gold", pike: "--slate", edge: "--moss" };
+  const SUB = { stream: "Share among beck, brook and burn", valley: "Share among dale, clough, cleugh, combe, bottom and dean", hill: "Share among fell, down, tor, law, pike and edge" };
+  document.querySelectorAll("[data-tr]").forEach(b => b.onclick = () => { fam = b.dataset.tr; document.querySelectorAll("[data-tr]").forEach(x => x.setAttribute("aria-pressed", x.dataset.tr === fam));
+    document.getElementById("trs").textContent = `${SUB[fam]} in each ${R.transects[fam].band_km} km band of northing. England and Scotland only. Bands with fewer than 8 of these words are left blank.`; draw(); });
+  let draw = () => {};
+  resp(box, (W0, nar) => { draw = () => { box.innerHTML = ""; render(box.clientWidth, box.clientWidth < 560); }; render(W0, nar); });
+  function render(W, nar) {
+    const T = R.transects[fam], lat = R.transect_band_lat, H = nar ? 300 : 340, m = { l: 40, r: nar ? 12 : 70, t: 16, b: 44 };
+    const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Share of each word by latitude band" }, box);
+    const x0 = 50, x1 = 56.6, X = v => m.l + (v - x0) / (x1 - x0) * (W - m.l - m.r), Y = v => H - m.b - v * (H - m.t - m.b);
+    [0, .25, .5, .75, 1].forEach(v => { el("line", { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), stroke: "var(--rule)" }, svg); lbl(svg, m.l - 6, Y(v) + 4, pc(v), "lab m s", "end"); });
+    for (let la = 50; la <= 56; la += 1) lbl(svg, X(la), H - m.b + 16, la + "°N", "lab m s", "middle");
+    lbl(svg, (W + m.l - m.r) / 2, H - 6, "South  →  North (latitude of each band)", "lab m s", "middle");
+    if (fam === "stream") [["beck_brook", "beck/brook line"], ["burn_beck", "burn/beck line"]].forEach(([k, t]) => { const v = R.line_extent[k].lat_median; el("line", { x1: X(v), x2: X(v), y1: m.t, y2: H - m.b, stroke: "var(--fg)", "stroke-dasharray": "3 4", opacity: .6 }, svg); const tl = lbl(svg, X(v) - 5, Y(.3), t, "lab s m", "start"); tl.setAttribute("transform", `rotate(-90 ${X(v) - 5} ${Y(.3)})`); });
+    T.words.forEach((w, j) => { const pts = []; T.rows.forEach((r, i) => { if (r && lat[i] >= x0 && lat[i] <= x1) pts.push([X(lat[i]), Y(r[j]), r[j], lat[i], r[r.length - 1]]); else pts.push(null); });
+      let d = "", pen = false; pts.forEach(p => { if (!p) { pen = false; return; } d += (pen ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1); pen = true; });
+      el("path", { d, fill: "none", stroke: `var(${COLS[w]})`, "stroke-width": 2.6, "stroke-linejoin": "round" }, svg);
+      pts.forEach(p => { if (!p) return; const c = el("circle", { cx: p[0], cy: p[1], r: 3, fill: `var(${COLS[w]})` }, svg); hover(c, `<b>${w}</b> at ${p[3].toFixed(1)}°N<br>${pc(p[2])} of ${fmt(p[4])}`); });
+      const best = pts.filter(Boolean).sort((a, b) => b[2] - a[2])[0]; if (best) { const t = lbl(svg, best[0], best[1] - 8, w, "lab b", "middle"); t.setAttribute("style", `fill:var(${COLS[w]})`); } });
+  }
+})();
+
+/* ===== sharpness ===== */
+resp(document.getElementById("sharp"), (W, nar) => {
+  const rows = Object.values(R.boundaries).filter(b => b.width_km).sort((a, b) => a.width_km - b.width_km);
+  const famOf = { beck_brook: "stream", burn_beck: "stream", allt_burn: "stream", nant_brook: "stream", dale_clough: "valley", combe_bottom: "valley", cwm_dingle: "valley", fell_law: "hill", tor_down: "hill" };
+  const FC = { stream: "--blue", valley: "--slate", hill: "--hot" };
+  const lw = nar ? 0 : 150, rw = nar ? 0 : 120, rh = nar ? 46 : 32, H = rows.length * rh + 40, m = { l: nar ? 8 : lw, r: nar ? 40 : rw + 14, t: 8, b: 34 };
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Boundary sharpness in kilometres" }, document.getElementById("sharp"));
+  const max = 60, X = v => m.l + Math.min(v, max) / max * (W - m.l - m.r);
+  [0, 10, 20, 30, 40, 50, 60].forEach(v => { el("line", { x1: X(v), x2: X(v), y1: m.t, y2: H - m.b, stroke: "var(--rule)" }, svg); lbl(svg, X(v), H - m.b + 16, v, "lab m s", "middle"); });
+  lbl(svg, (W + m.l - m.r) / 2, H - 4, "km from 80% to 20%", "lab m s", "middle");
+  if (!nar) lbl(svg, W - rw, m.t + 4, "own side", "lab m s", "start");
+  rows.forEach((b, i) => { const col = `var(${FC[famOf[b.key]]})`, name = `${b.a} / ${b.b}`.replace("nant or afon", "nant, afon");
+    const y = nar ? m.t + i * rh + 32 : m.t + i * rh + rh / 2 + 6;
+    if (nar) { lbl(svg, 0, y - 14, name, "lab b"); lbl(svg, W, y - 14, `own side ${pc(b.a_on_a_side)} / ${pc(b.b_on_b_side)}`, "lab s m", "end"); }
+    else { lbl(svg, m.l - 10, y + 4, name, "lab b", "end"); lbl(svg, W - rw, y + 4, `${pc(b.a_on_a_side)} / ${pc(b.b_on_b_side)}`, "lab s m"); }
+    el("line", { x1: X(b.ci[0]), x2: X(b.ci[1]), y1: y, y2: y, stroke: col, "stroke-width": 4, opacity: .4 }, svg);
+    const c = el("circle", { cx: X(b.width_km), cy: y, r: 6, fill: col }, svg);
+    hover(c, `<b>${name}</b><br>${b.width_km} km (${b.ci[0]} to ${b.ci[1]})<br>kernel ${b.bandwidth_km} km · ${fmt(b.n_near)} features within 60 km`);
+    const right = X(b.ci[1]) + 8 + 50 > W; lbl(svg, right ? X(b.ci[0]) - 8 : X(b.ci[1]) + 8, y + 4, b.width_km + " km", "lab s", right ? "end" : "start"); });
+});
+
+/* ===== scatter ===== */
+resp(document.getElementById("scatter"), (W, nar) => {
+  const H = nar ? 320 : 380, m = { l: 46, r: 12, t: 30, b: 42 }, svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Beck share against Norse settlement share" }, document.getElementById("scatter"));
+  const xmax = .5, X = v => m.l + Math.min(v, xmax) / xmax * (W - m.l - m.r), Y = v => H - m.b - v * (H - m.t - m.b);
+  [0, .1, .2, .3, .4, .5].forEach(v => { el("line", { x1: X(v), x2: X(v), y1: m.t, y2: H - m.b, stroke: "var(--rule)" }, svg); lbl(svg, X(v), H - m.b + 16, v === .5 ? "50%+" : pc(v), "lab m s", "middle"); });
+  [0, .25, .5, .75, 1].forEach(v => { el("line", { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), stroke: "var(--rule)" }, svg); lbl(svg, m.l - 6, Y(v) + 4, pc(v), "lab m s", "end"); });
+  lbl(svg, (W + m.l) / 2, H - 6, "Share of settlements with a Norse element", "lab m s", "middle");
+  const yl = lbl(svg, 12, (H - m.b + m.t) / 2, "Becks / (becks + brooks)", "lab m s", "middle"); yl.setAttribute("transform", `rotate(-90 12 ${(H - m.b + m.t) / 2})`);
+  S.scatter.forEach(([x, y, n]) => { el("circle", { cx: X(x) + (Math.random() - .5) * 2, cy: Y(y), r: Math.max(1.6, Math.sqrt(n) * (nar ? .8 : 1)), fill: "var(--blue)", opacity: .38 }, svg); });
+  lbl(svg, W - m.r, 12, `Spearman ρ = ${R.beck_vs_norse.rho} (${R.beck_vs_norse.ci[0]} to ${R.beck_vs_norse.ci[1]}), ${fmt(R.beck_vs_norse.n_hex)} hexagons`, "lab s b", "end");
+});
+
+/* ===== south of 53.2: share NE of line ===== */
+resp(document.getElementById("south"), (W, nar) => {
+  const pick = ["beck", "toft", "by", "thorpe", "dale", "holme", "ham", "brook", "ton", "worth", "ley", "hill", "bottom", "down", "combe", "tre"];
+  const all = R.danelaw_side_south.words; const rows = []; pick.forEach(w => { const r = all.find(a => a.word === w && (w !== "gill")); if (r) rows.push(r); });
+  rows.sort((a, b) => b.share - a.share);
+  const rh = 24, H = rows.length * rh + 40, m = { l: nar ? 64 : 90, r: 44, t: 6, b: 30 }, svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Share of each word north-east of the Danelaw line" }, document.getElementById("south"));
+  const X = v => m.l + v * (W - m.l - m.r);
+  [0, .25, .5, .75, 1].forEach(v => { el("line", { x1: X(v), x2: X(v), y1: m.t, y2: H - m.b, stroke: "var(--rule)" }, svg); lbl(svg, X(v), H - m.b + 16, pc(v), "lab m s", "middle"); });
+  rows.forEach((r, i) => { const y = m.t + i * rh; const k = `${r.family}:${r.word}`; const col = W ? `var(${colOf(k)})` : "";
+    const lab = r.family === "settlement" ? (r.word === "tre" ? "tre-" : "-" + r.word) : r.word;
+    lbl(svg, m.l - 8, y + 15, lab, "lab b", "end");
+    const b = el("rect", { x: m.l, y: y + 4, width: Math.max(1.5, X(r.share) - m.l), height: rh - 9, fill: col }, svg);
+    hover(b, `<b>${lab}</b><br>${pc(r.share)} of ${fmt(r.n)} north-east of the line`);
+    lbl(svg, X(r.share) + 5, y + 15, pc(r.share), "lab s"); });
+  const bx = X(R.danelaw_side_south.baseline_all_features); el("line", { x1: bx, x2: bx, y1: m.t, y2: H - m.b, stroke: "var(--fg)", "stroke-dasharray": "4 4", "stroke-width": 1.5 }, svg);
+});
+
+/* ===== Danelaw profile ===== */
+resp(document.getElementById("profile"), (W, nar) => {
+  const P = R.danelaw_profile, H = 300, m = { l: 46, r: 10, t: 12, b: 40 }, gap = 26, ph = (H - m.t - m.b - gap) / 2;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Norse settlement share and beck share by distance from the Danelaw line" }, document.getElementById("profile"));
+  const X = v => m.l + (v + 120) / 240 * (W - m.l - m.r), bw = (W - m.l - m.r) / P.length;
+  const panel = (top, max, key, col, ttl, fmtv) => { const Y = v => top + ph - Math.min(v, max) / max * ph;
+    [0, max / 2, max].forEach(v => { el("line", { x1: m.l, x2: W - m.r, y1: Y(v), y2: Y(v), stroke: "var(--rule)" }, svg); lbl(svg, m.l - 6, Y(v) + 4, pc(v), "lab m s", "end"); });
+    P.forEach(p => { const v = p[key]; if (v == null) return; const r = el("rect", { x: X(p.lo) + 2, y: Y(v), width: bw - 4, height: top + ph - Y(v), fill: `var(${col})`, opacity: p.lo >= 0 ? .9 : .55 }, svg);
+      hover(r, `<b>${p.lo} to ${p.hi} km</b><br>${fmtv(p)}`); });
+    lbl(svg, m.l + 6, top + 12, ttl, "lab s b"); };
+  panel(m.t, .12, "norse", "--blue", "Norse settlement names", p => `${pc(p.norse, 1)} of ${fmt(p.n_settle)} settlements`);
+  panel(m.t + ph + gap, 1, "beck", "--blue", "Becks among becks and brooks", p => `${pc(p.beck)} of ${fmt(p.n_bb)} becks and brooks`);
+  el("line", { x1: X(0), x2: X(0), y1: m.t, y2: H - m.b, stroke: "var(--hot)", "stroke-width": 2.5, "stroke-dasharray": "7 5" }, svg);
+  [-120, -80, -40, 0, 40, 80, 120].forEach(v => lbl(svg, X(v), H - m.b + 16, (v > 0 ? "+" : "") + v, "lab m s", "middle"));
+  lbl(svg, X(-60), H - 6, "← south-west (km)", "lab m s", "middle"); lbl(svg, X(60), H - 6, "north-east (km) →", "lab m s", "middle");
+});
+
+/* ===== hidden words ===== */
+resp(document.getElementById("hidden"), (W, nar) => {
+  const rows = R.hidden.filter(r => r.n >= 20), rh = 28, H = rows.length * rh + 40, m = { l: nar ? 110 : 130, r: 14, t: 6, b: 30 };
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Latitude of settlement names ending in landscape words" }, document.getElementById("hidden"));
+  const x0 = 50.5, x1 = 57, X = v => m.l + (v - x0) / (x1 - x0) * (W - m.l - m.r);
+  for (let la = 51; la <= 57; la++) { el("line", { x1: X(la), x2: X(la), y1: m.t, y2: H - m.b, stroke: "var(--rule)" }, svg); lbl(svg, X(la), H - m.b + 16, la + "°N", "lab m s", "middle"); }
+  const HC = { burn: "--gold", thwaite: "--blue", dale: "--slate", beck: "--blue", hope: "--hot", brook: "--hot", dean: "--hot", bourne: "--hot", combe: "--plum" };
+  rows.forEach((r, i) => { const y = m.t + i * rh + rh / 2, col = `var(${HC[r.word] || "--dot"})`;
+    lbl(svg, m.l - 10, y + 4, `-${r.word} (${fmt(r.n)})`, "lab b", "end");
+    el("line", { x1: X(r.lat_p25), x2: X(r.lat_p75), y1: y, y2: y, stroke: col, "stroke-width": 6, opacity: .4, "stroke-linecap": "round" }, svg);
+    const c = el("circle", { cx: X(r.lat_med), cy: y, r: 6, fill: col }, svg);
+    hover(c, `<b>-${r.word}</b><br>median ${r.lat_med}°N<br>e.g. ${r.examples.slice(0, 3).map(esc).join(", ")}`); });
+});
+
+/* ===== counts ===== */
+(() => { const seg = document.getElementById("cntseg"); let fam = "stream";
+  FAMS.forEach(([f, t]) => { const b = document.createElement("button"); b.className = "btn"; b.dataset.f = f; b.textContent = t; b.setAttribute("aria-pressed", f === fam); b.onclick = () => { fam = f; seg.querySelectorAll(".btn").forEach(x => x.setAttribute("aria-pressed", x.dataset.f === f)); draw(); }; seg.appendChild(b); });
+  let draw = () => {}; const box = document.getElementById("counts");
+  resp(box, (W0, nar) => { draw = () => { box.innerHTML = ""; render(box.clientWidth, box.clientWidth < 560); }; render(W0, nar); });
+  function render(W, nar) { const rows = famWords(fam).filter(w => w.key !== "norse_any"), rh = 22, H = rows.length * rh + 12, m = { l: nar ? 96 : 120, r: 56, t: 4, b: 8 };
+    const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Counts of each word" }, box); const max = rows[0].n, X = v => m.l + Math.sqrt(v / max) * (W - m.l - m.r);
+    rows.forEach((w, i) => { const y = m.t + i * rh; lbl(svg, m.l - 8, y + 15, w.label, "lab", "end");
+      const r = el("rect", { x: m.l, y: y + 4, width: Math.max(1.5, X(w.n) - m.l), height: rh - 8, fill: `var(${colOf(w.k)})` }, svg); hover(r, `<b>${esc(w.label)}</b><br>${fmt(w.n)} ${FAMNOUN[fam]}<br>${ORIG[w.origin][1]}`);
+      lbl(svg, X(w.n) + 5, y + 15, fmt(w.n), "lab s m"); }); }
+  document.getElementById("origleg").innerHTML = Object.values(ORIG).map(([c, t]) => `<span><i style="background:var(${c})"></i>${t}</span>`).join("") + "<span>Bar length on a square-root scale</span>";
+})();
+
+/* ===== small multiples ===== */
+(() => { const box = document.getElementById("sm"), seg = document.getElementById("smseg");
+  const SETS = { stream: ["beck", "brook", "burn", "allt", "nant", "afon", "gill", "sike", "water", "dike", "drain", "rhyne", "lake", "abhainn", "grain"], valley: ["dale", "clough", "cleugh", "combe", "bottom", "dean", "cwm", "glen", "coire", "dingle", "hope", "gill", "slack", "den", "strath"], hill: ["fell", "down", "tor", "law", "knowe", "pike", "how", "knott", "edge", "rigg", "crag", "moel", "mynydd", "ben", "cnoc"], settlement: ["by", "thorpe", "thwaite", "toft", "holme", "kirk", "setter", "ton", "ham", "worth", "ley", "llan", "tre", "bal", "kil"] };
+  let fam = "stream";
+  [["stream", "Streams"], ["valley", "Valleys"], ["hill", "Hills"], ["settlement", "Settlements"]].forEach(([f, t]) => { const b = document.createElement("button"); b.className = "btn"; b.dataset.f = f; b.textContent = t; b.setAttribute("aria-pressed", f === fam); b.onclick = () => { fam = f; seg.querySelectorAll(".btn").forEach(x => x.setAttribute("aria-pressed", x.dataset.f === f)); draw(); }; seg.appendChild(b); });
+  const cx = S.hex.cx, cy = S.hex.cy, HR = 10 / Math.sqrt(3), x0 = 0, x1 = 660, y0 = 0, y1 = 1000;
+  const hexd = (x, y) => { let d = ""; for (let i = 0; i < 6; i++) { const a = Math.PI / 180 * (60 * i + 30); d += (i ? "L" : "M") + (x + HR * Math.cos(a)).toFixed(1) + " " + (y1 - y - HR * Math.sin(a)).toFixed(1); } return d + "Z"; };
+  let land = ""; for (let i = 0; i < cx.length; i++) if (cy[i] < y1) land += hexd(cx[i], cy[i]);
+  const defs = document.createElementNS(NS, "svg"); defs.setAttribute("width", 0); defs.setAttribute("height", 0); defs.style.position = "absolute"; el("path", { id: "gbland", d: land }, el("defs", {}, defs)); document.body.appendChild(defs);
+  const BINS = [[1, .3], [2, .55], [4, .8], [8, 1]];
+  function draw() { box.innerHTML = "";
+    SETS[fam].forEach(w => { const k = `${fam}:${w}`; if (!W[k] || !W[k].n) return; const d = document.createElement("div"); d.className = "cell";
+      const c = R.counts[fam][w]; d.innerHTML = `<p class="nm">${esc(fam === "settlement" ? (["llan", "tre", "bal", "kil", "kirk"].includes(w) ? w + "-" : "-" + w) : W[k].label.split(" / ")[0])}</p><p class="ct">${fmt(W[k].n)}</p>`;
+      const svg = el("svg", { viewBox: `${x0 + 60} ${y0} ${x1 - 60} ${y1 - 0}`, role: "img", "aria-label": `Map of ${w}` }, d);
+      el("use", { href: "#gbland", fill: "var(--land)", stroke: "var(--rule)", "stroke-width": .6 }, svg);
+      const h = S.hex.w[k] || [], byBin = BINS.map(() => "");
+      for (let i = 0; i < h.length; i += 2) { const j = h[i], n = h[i + 1]; if (cy[j] >= y1) continue; let b = 0; for (let q = BINS.length - 1; q >= 0; q--) if (n >= BINS[q][0]) { b = q; break; } byBin[b] += hexd(cx[j], cy[j]); }
+      byBin.forEach((dd, b) => { if (dd) el("path", { d: dd, fill: `var(${colOf(k)})`, opacity: BINS[b][1] }, svg); });
+      box.appendChild(d); }); }
+  draw(); redraws.push(draw);
+  document.getElementById("smleg").innerHTML = `Features per hexagon: ` + BINS.map(([n, o], i) => `<span><i style="background:var(--fg);opacity:${o};border-radius:1px"></i>${i === BINS.length - 1 ? n + "+" : n === BINS[i + 1][0] - 1 ? n : n + " to " + (BINS[i + 1][0] - 1)}</span>`).join("") + `<span>Orkney and Shetland not shown</span>`;
+})();
+
+/* ===== county table ===== */
+(() => { const t = document.getElementById("ctab"), q = document.getElementById("cq");
+  const cell = (fam, v) => v ? `<i style="background:var(${colOf(fam + ":" + v[0])})"></i>${esc(label(fam + ":" + v[0]))} ${pc(v[1])}${v[3] && v[3] !== v[0] ? ` <span style="color:var(--muted)">(${esc(label(fam + ":" + v[3]))})</span>` : ""}` : "";
+  const rows = [...R.counties].sort((a, b) => a.county.localeCompare(b.county));
+  function draw() { const v = q.value.trim().toLowerCase();
+    const rr = rows.filter(r => !v || JSON.stringify(r).toLowerCase().includes(v));
+    t.innerHTML = `<thead><tr><th>Area</th><th>Stream</th><th>Valley</th><th>Hill</th></tr></thead><tbody>${rr.map(r => `<tr><td>${esc(r.county)}<br><span style="color:var(--muted)">${esc(r.country)}</span></td><td>${cell("stream", r.stream)}</td><td>${cell("valley", r.valley)}</td><td>${cell("hill", r.hill)}</td></tr>`).join("")}</tbody>`; }
+  q.addEventListener("input", draw); draw(); redraws.push(draw);
+})();
+
+/* ===== rare words and Norse places ===== */
+(() => { const t = document.getElementById("rare"); const FN = { stream: "stream", valley: "valley", hill: "hill", fall: "waterfall" };
+  t.innerHTML = `<thead><tr><th>Word</th><th class="num">Count</th><th>Main area</th><th class="num">Radius</th></tr></thead><tbody>${R.rare.map(r => `<tr><td><i style="background:var(${colOf(r.family + ":" + r.word)})"></i><b>${esc(label(r.family + ":" + r.word))}</b> <span style="color:var(--muted)">${FN[r.family]}</span><br><span style="color:var(--muted)">${r.examples.slice(0, 2).map(esc).join(", ")}</span></td><td class="num">${r.n}</td><td>${esc(r.top_county)} ${pc(r.top_share)}</td><td class="num">${r.radius80_km} km</td></tr>`).join("")}</tbody>`;
+  const pl = (id, rows) => { document.getElementById(id).innerHTML = `<thead><tr><th>Place</th><th class="num">Norse</th><th class="num">English</th></tr></thead><tbody>${rows.map(r => `<tr><td>${esc(r.name)}<br><span style="color:var(--muted)">${esc(r.county)}</span></td><td class="num">${r.norse}</td><td class="num">${r.english}</td></tr>`).join("")}</tbody>`; };
+  pl("mostN", R.norse_index.most_norse.slice(0, 8)); pl("mostE", R.norse_index.most_english.slice(0, 8));
+})();
+</script>
+</body>
+</html>
