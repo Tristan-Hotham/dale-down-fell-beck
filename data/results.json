@@ -1,0 +1,7595 @@
+{
+ "n_features": {
+  "stream": 32548,
+  "valley": 13012,
+  "hill": 42089,
+  "fall": 737,
+  "settlement": 43274
+ },
+ "n_matched": {
+  "stream": 29677,
+  "valley": 12301,
+  "hill": 32333,
+  "fall": 623,
+  "settlement": 11769
+ },
+ "n_via_name2": 549,
+ "n_osnames": 267744,
+ "streams": {
+  "n_watercourses": 32548,
+  "n_links": 105905,
+  "n_names": 26245
+ },
+ "counts": {
+  "stream": {
+   "burn": {
+    "n": 7518,
+    "england": 917,
+    "wales": 0,
+    "scotland": 6601
+   },
+   "allt": {
+    "n": 5924,
+    "england": 0,
+    "wales": 8,
+    "scotland": 5916
+   },
+   "brook": {
+    "n": 3241,
+    "england": 2971,
+    "wales": 270,
+    "scotland": 0
+   },
+   "beck": {
+    "n": 2744,
+    "england": 2731,
+    "wales": 0,
+    "scotland": 13
+   },
+   "river": {
+    "n": 1776,
+    "england": 1074,
+    "wales": 53,
+    "scotland": 649
+   },
+   "nant": {
+    "n": 1427,
+    "england": 1,
+    "wales": 1426,
+    "scotland": 0
+   },
+   "gill": {
+    "n": 1021,
+    "england": 964,
+    "wales": 0,
+    "scotland": 57
+   },
+   "sike": {
+    "n": 872,
+    "england": 652,
+    "wales": 0,
+    "scotland": 220
+   },
+   "drain": {
+    "n": 862,
+    "england": 855,
+    "wales": 3,
+    "scotland": 4
+   },
+   "afon": {
+    "n": 727,
+    "england": 9,
+    "wales": 718,
+    "scotland": 0
+   },
+   "water": {
+    "n": 678,
+    "england": 183,
+    "wales": 5,
+    "scotland": 490
+   },
+   "abhainn": {
+    "n": 609,
+    "england": 0,
+    "wales": 0,
+    "scotland": 609
+   },
+   "dike": {
+    "n": 536,
+    "england": 535,
+    "wales": 0,
+    "scotland": 1
+   },
+   "stream": {
+    "n": 475,
+    "england": 466,
+    "wales": 4,
+    "scotland": 5
+   },
+   "ditch": {
+    "n": 250,
+    "england": 238,
+    "wales": 6,
+    "scotland": 6
+   },
+   "grain": {
+    "n": 156,
+    "england": 67,
+    "wales": 0,
+    "scotland": 89
+   },
+   "caochan": {
+    "n": 153,
+    "england": 0,
+    "wales": 0,
+    "scotland": 153
+   },
+   "rhyne": {
+    "n": 149,
+    "england": 149,
+    "wales": 0,
+    "scotland": 0
+   },
+   "lake": {
+    "n": 100,
+    "england": 78,
+    "wales": 8,
+    "scotland": 14
+   },
+   "gutter": {
+    "n": 100,
+    "england": 88,
+    "wales": 2,
+    "scotland": 10
+   },
+   "sewer": {
+    "n": 99,
+    "england": 99,
+    "wales": 0,
+    "scotland": 0
+   },
+   "fleet": {
+    "n": 51,
+    "england": 48,
+    "wales": 0,
+    "scotland": 3
+   },
+   "reen": {
+    "n": 49,
+    "england": 0,
+    "wales": 49,
+    "scotland": 0
+   },
+   "bourne": {
+    "n": 38,
+    "england": 38,
+    "wales": 0,
+    "scotland": 0
+   },
+   "clough": {
+    "n": 30,
+    "england": 30,
+    "wales": 0,
+    "scotland": 0
+   },
+   "lode": {
+    "n": 21,
+    "england": 21,
+    "wales": 0,
+    "scotland": 0
+   },
+   "cleugh": {
+    "n": 19,
+    "england": 15,
+    "wales": 0,
+    "scotland": 4
+   },
+   "pow": {
+    "n": 18,
+    "england": 0,
+    "wales": 0,
+    "scotland": 18
+   },
+   "eau": {
+    "n": 17,
+    "england": 17,
+    "wales": 0,
+    "scotland": 0
+   },
+   "rife": {
+    "n": 17,
+    "england": 17,
+    "wales": 0,
+    "scotland": 0
+   }
+  },
+  "valley": {
+   "coire": {
+    "n": 2533,
+    "england": 0,
+    "wales": 0,
+    "scotland": 2533
+   },
+   "glen": {
+    "n": 1629,
+    "england": 51,
+    "wales": 4,
+    "scotland": 1574
+   },
+   "bottom": {
+    "n": 1352,
+    "england": 1322,
+    "wales": 17,
+    "scotland": 13
+   },
+   "cleugh": {
+    "n": 1351,
+    "england": 344,
+    "wales": 0,
+    "scotland": 1007
+   },
+   "clough": {
+    "n": 1113,
+    "england": 1113,
+    "wales": 0,
+    "scotland": 0
+   },
+   "cwm": {
+    "n": 861,
+    "england": 7,
+    "wales": 854,
+    "scotland": 0
+   },
+   "dale": {
+    "n": 817,
+    "england": 644,
+    "wales": 3,
+    "scotland": 170
+   },
+   "glac": {
+    "n": 373,
+    "england": 0,
+    "wales": 0,
+    "scotland": 373
+   },
+   "dingle": {
+    "n": 371,
+    "england": 218,
+    "wales": 153,
+    "scotland": 0
+   },
+   "combe": {
+    "n": 296,
+    "england": 294,
+    "wales": 2,
+    "scotland": 0
+   },
+   "valley": {
+    "n": 258,
+    "england": 229,
+    "wales": 19,
+    "scotland": 10
+   },
+   "gully": {
+    "n": 213,
+    "england": 140,
+    "wales": 19,
+    "scotland": 54
+   },
+   "dean": {
+    "n": 173,
+    "england": 120,
+    "wales": 0,
+    "scotland": 53
+   },
+   "den": {
+    "n": 167,
+    "england": 7,
+    "wales": 1,
+    "scotland": 159
+   },
+   "strath": {
+    "n": 156,
+    "england": 0,
+    "wales": 0,
+    "scotland": 156
+   },
+   "gill": {
+    "n": 143,
+    "england": 136,
+    "wales": 0,
+    "scotland": 7
+   },
+   "hope": {
+    "n": 139,
+    "england": 28,
+    "wales": 0,
+    "scotland": 111
+   },
+   "vale": {
+    "n": 109,
+    "england": 93,
+    "wales": 13,
+    "scotland": 3
+   },
+   "slack": {
+    "n": 97,
+    "england": 75,
+    "wales": 0,
+    "scotland": 22
+   },
+   "dell": {
+    "n": 77,
+    "england": 68,
+    "wales": 2,
+    "scotland": 7
+   },
+   "chine": {
+    "n": 29,
+    "england": 29,
+    "wales": 0,
+    "scotland": 0
+   },
+   "slade": {
+    "n": 21,
+    "england": 19,
+    "wales": 2,
+    "scotland": 0
+   },
+   "dyffryn": {
+    "n": 17,
+    "england": 1,
+    "wales": 16,
+    "scotland": 0
+   },
+   "hollow": {
+    "n": 6,
+    "england": 6,
+    "wales": 0,
+    "scotland": 0
+   }
+  },
+  "hill": {
+   "hill": {
+    "n": 20259,
+    "england": 12156,
+    "wales": 325,
+    "scotland": 7778
+   },
+   "cnoc": {
+    "n": 3167,
+    "england": 2,
+    "wales": 0,
+    "scotland": 3165
+   },
+   "down": {
+    "n": 1473,
+    "england": 1441,
+    "wales": 30,
+    "scotland": 2
+   },
+   "ben": {
+    "n": 1186,
+    "england": 1,
+    "wales": 0,
+    "scotland": 1185
+   },
+   "meall": {
+    "n": 1018,
+    "england": 0,
+    "wales": 0,
+    "scotland": 1018
+   },
+   "creag": {
+    "n": 771,
+    "england": 0,
+    "wales": 0,
+    "scotland": 771
+   },
+   "carn": {
+    "n": 746,
+    "england": 13,
+    "wales": 25,
+    "scotland": 708
+   },
+   "fell": {
+    "n": 745,
+    "england": 601,
+    "wales": 0,
+    "scotland": 144
+   },
+   "law": {
+    "n": 483,
+    "england": 93,
+    "wales": 0,
+    "scotland": 390
+   },
+   "knowe": {
+    "n": 380,
+    "england": 51,
+    "wales": 0,
+    "scotland": 329
+   },
+   "rigg": {
+    "n": 287,
+    "england": 103,
+    "wales": 0,
+    "scotland": 184
+   },
+   "moel": {
+    "n": 249,
+    "england": 0,
+    "wales": 249,
+    "scotland": 0
+   },
+   "sgurr": {
+    "n": 237,
+    "england": 0,
+    "wales": 0,
+    "scotland": 237
+   },
+   "mynydd": {
+    "n": 233,
+    "england": 3,
+    "wales": 230,
+    "scotland": 0
+   },
+   "crag": {
+    "n": 195,
+    "england": 192,
+    "wales": 0,
+    "scotland": 3
+   },
+   "tor": {
+    "n": 142,
+    "england": 140,
+    "wales": 1,
+    "scotland": 1
+   },
+   "bryn": {
+    "n": 130,
+    "england": 0,
+    "wales": 130,
+    "scotland": 0
+   },
+   "pike": {
+    "n": 125,
+    "england": 117,
+    "wales": 0,
+    "scotland": 8
+   },
+   "pen": {
+    "n": 117,
+    "england": 2,
+    "wales": 115,
+    "scotland": 0
+   },
+   "cefn": {
+    "n": 112,
+    "england": 2,
+    "wales": 110,
+    "scotland": 0
+   },
+   "knott": {
+    "n": 84,
+    "england": 84,
+    "wales": 0,
+    "scotland": 0
+   },
+   "how": {
+    "n": 68,
+    "england": 64,
+    "wales": 0,
+    "scotland": 4
+   },
+   "edge": {
+    "n": 65,
+    "england": 46,
+    "wales": 0,
+    "scotland": 19
+   },
+   "beacon": {
+    "n": 61,
+    "england": 58,
+    "wales": 3,
+    "scotland": 0
+   }
+  },
+  "fall": {
+   "eas": {
+    "n": 172,
+    "england": 0,
+    "wales": 0,
+    "scotland": 172
+   },
+   "falls": {
+    "n": 139,
+    "england": 44,
+    "wales": 18,
+    "scotland": 77
+   },
+   "linn": {
+    "n": 124,
+    "england": 29,
+    "wales": 0,
+    "scotland": 95
+   },
+   "force": {
+    "n": 111,
+    "england": 111,
+    "wales": 0,
+    "scotland": 0
+   },
+   "spout": {
+    "n": 41,
+    "england": 8,
+    "wales": 0,
+    "scotland": 33
+   },
+   "pistyll": {
+    "n": 12,
+    "england": 0,
+    "wales": 12,
+    "scotland": 0
+   },
+   "rhaeadr": {
+    "n": 11,
+    "england": 0,
+    "wales": 11,
+    "scotland": 0
+   },
+   "sgwd": {
+    "n": 7,
+    "england": 0,
+    "wales": 7,
+    "scotland": 0
+   },
+   "foss": {
+    "n": 6,
+    "england": 6,
+    "wales": 0,
+    "scotland": 0
+   }
+  },
+  "settlement": {
+   "ton": {
+    "n": 5753,
+    "england": 5181,
+    "wales": 152,
+    "scotland": 420
+   },
+   "ley": {
+    "n": 1855,
+    "england": 1828,
+    "wales": 12,
+    "scotland": 15
+   },
+   "ham": {
+    "n": 1219,
+    "england": 1199,
+    "wales": 8,
+    "scotland": 12
+   },
+   "by": {
+    "n": 704,
+    "england": 680,
+    "wales": 2,
+    "scotland": 22
+   },
+   "llan": {
+    "n": 412,
+    "england": 10,
+    "wales": 402,
+    "scotland": 0
+   },
+   "thorpe": {
+    "n": 378,
+    "england": 378,
+    "wales": 0,
+    "scotland": 0
+   },
+   "worth": {
+    "n": 375,
+    "england": 375,
+    "wales": 0,
+    "scotland": 0
+   },
+   "tre": {
+    "n": 295,
+    "england": 179,
+    "wales": 116,
+    "scotland": 0
+   },
+   "holme": {
+    "n": 160,
+    "england": 138,
+    "wales": 0,
+    "scotland": 22
+   },
+   "bal": {
+    "n": 121,
+    "england": 0,
+    "wales": 0,
+    "scotland": 121
+   },
+   "aber": {
+    "n": 102,
+    "england": 1,
+    "wales": 80,
+    "scotland": 21
+   },
+   "thwaite": {
+    "n": 85,
+    "england": 85,
+    "wales": 0,
+    "scotland": 0
+   },
+   "kil": {
+    "n": 82,
+    "england": 0,
+    "wales": 0,
+    "scotland": 82
+   },
+   "setter": {
+    "n": 78,
+    "england": 0,
+    "wales": 0,
+    "scotland": 78
+   },
+   "kirk": {
+    "n": 61,
+    "england": 61,
+    "wales": 0,
+    "scotland": 0
+   },
+   "toft": {
+    "n": 45,
+    "england": 41,
+    "wales": 0,
+    "scotland": 4
+   },
+   "inver": {
+    "n": 44,
+    "england": 0,
+    "wales": 0,
+    "scotland": 44
+   }
+  }
+ },
+ "n_norse_settlements": 1511,
+ "hex": {
+  "n_hex": 3206,
+  "width_km": 10,
+  "area_km2": 86.6
+ },
+ "borders_km": {
+  "england_wales": 341,
+  "england_scotland": 165
+ },
+ "danelaw_coords": [
+  [
+   0.8,
+   51.51
+  ],
+  [
+   0.45,
+   51.47
+  ],
+  [
+   0.25,
+   51.46
+  ],
+  [
+   0.07,
+   51.5
+  ],
+  [
+   0.005,
+   51.508
+  ],
+  [
+   -0.04,
+   51.565
+  ],
+  [
+   -0.02,
+   51.67
+  ],
+  [
+   -0.03,
+   51.81
+  ],
+  [
+   -0.08,
+   51.8
+  ],
+  [
+   -0.21,
+   51.8
+  ],
+  [
+   -0.36,
+   51.82
+  ],
+  [
+   -0.42,
+   51.88
+  ],
+  [
+   -0.465,
+   51.905
+  ],
+  [
+   -0.467,
+   52.136
+  ],
+  [
+   -0.53,
+   52.15
+  ],
+  [
+   -0.625,
+   52.165
+  ],
+  [
+   -0.7,
+   52.155
+  ],
+  [
+   -0.72,
+   52.087
+  ],
+  [
+   -0.853,
+   52.058
+  ],
+  [
+   -0.99,
+   52.134
+  ],
+  [
+   -1.08,
+   52.23
+  ],
+  [
+   -1.17,
+   52.335
+  ],
+  [
+   -1.3,
+   52.497
+  ],
+  [
+   -1.42,
+   52.55
+  ],
+  [
+   -1.55,
+   52.58
+  ],
+  [
+   -1.7,
+   52.61
+  ],
+  [
+   -1.855,
+   52.656
+  ],
+  [
+   -2.89,
+   53.19
+  ]
+ ],
+ "danelaw_side": {
+  "baseline_all_features": 0.501,
+  "words": [
+   {
+    "family": "fall",
+    "word": "force",
+    "n": 111,
+    "share": 1.0
+   },
+   {
+    "family": "fall",
+    "word": "linn",
+    "n": 29,
+    "share": 1.0
+   },
+   {
+    "family": "hill",
+    "word": "crag",
+    "n": 192,
+    "share": 1.0
+   },
+   {
+    "family": "hill",
+    "word": "fell",
+    "n": 601,
+    "share": 1.0
+   },
+   {
+    "family": "hill",
+    "word": "knott",
+    "n": 84,
+    "share": 1.0
+   },
+   {
+    "family": "hill",
+    "word": "knowe",
+    "n": 51,
+    "share": 1.0
+   },
+   {
+    "family": "hill",
+    "word": "law",
+    "n": 93,
+    "share": 1.0
+   },
+   {
+    "family": "hill",
+    "word": "pike",
+    "n": 117,
+    "share": 1.0
+   },
+   {
+    "family": "hill",
+    "word": "rigg",
+    "n": 103,
+    "share": 1.0
+   },
+   {
+    "family": "settlement",
+    "word": "kirk",
+    "n": 61,
+    "share": 1.0
+   },
+   {
+    "family": "settlement",
+    "word": "thwaite",
+    "n": 85,
+    "share": 1.0
+   },
+   {
+    "family": "stream",
+    "word": "clough",
+    "n": 30,
+    "share": 1.0
+   },
+   {
+    "family": "stream",
+    "word": "grain",
+    "n": 67,
+    "share": 1.0
+   },
+   {
+    "family": "stream",
+    "word": "sike",
+    "n": 652,
+    "share": 1.0
+   },
+   {
+    "family": "valley",
+    "word": "cleugh",
+    "n": 344,
+    "share": 1.0
+   },
+   {
+    "family": "valley",
+    "word": "clough",
+    "n": 1113,
+    "share": 1.0
+   },
+   {
+    "family": "valley",
+    "word": "hope",
+    "n": 28,
+    "share": 1.0
+   },
+   {
+    "family": "valley",
+    "word": "slack",
+    "n": 75,
+    "share": 1.0
+   },
+   {
+    "family": "stream",
+    "word": "beck",
+    "n": 2731,
+    "share": 0.999
+   },
+   {
+    "family": "stream",
+    "word": "burn",
+    "n": 917,
+    "share": 0.997
+   },
+   {
+    "family": "hill",
+    "word": "how",
+    "n": 64,
+    "share": 0.984
+   },
+   {
+    "family": "settlement",
+    "word": "toft",
+    "n": 41,
+    "share": 0.976
+   },
+   {
+    "family": "stream",
+    "word": "dike",
+    "n": 535,
+    "share": 0.976
+   },
+   {
+    "family": "valley",
+    "word": "dale",
+    "n": 644,
+    "share": 0.963
+   },
+   {
+    "family": "settlement",
+    "word": "by",
+    "n": 680,
+    "share": 0.962
+   },
+   {
+    "family": "hill",
+    "word": "edge",
+    "n": 46,
+    "share": 0.957
+   },
+   {
+    "family": "settlement",
+    "word": "thorpe",
+    "n": 378,
+    "share": 0.955
+   },
+   {
+    "family": "stream",
+    "word": "gill",
+    "n": 964,
+    "share": 0.941
+   },
+   {
+    "family": "settlement",
+    "word": "holme",
+    "n": 138,
+    "share": 0.935
+   },
+   {
+    "family": "stream",
+    "word": "drain",
+    "n": 855,
+    "share": 0.926
+   },
+   {
+    "family": "valley",
+    "word": "dean",
+    "n": 120,
+    "share": 0.925
+   },
+   {
+    "family": "fall",
+    "word": "falls",
+    "n": 44,
+    "share": 0.818
+   },
+   {
+    "family": "stream",
+    "word": "fleet",
+    "n": 48,
+    "share": 0.792
+   },
+   {
+    "family": "stream",
+    "word": "gutter",
+    "n": 88,
+    "share": 0.739
+   },
+   {
+    "family": "valley",
+    "word": "glen",
+    "n": 51,
+    "share": 0.647
+   },
+   {
+    "family": "hill",
+    "word": "hill",
+    "n": 12156,
+    "share": 0.608
+   },
+   {
+    "family": "settlement",
+    "word": "ham",
+    "n": 1199,
+    "share": 0.571
+   },
+   {
+    "family": "valley",
+    "word": "gill",
+    "n": 136,
+    "share": 0.551
+   },
+   {
+    "family": "stream",
+    "word": "river",
+    "n": 1074,
+    "share": 0.541
+   },
+   {
+    "family": "stream",
+    "word": "brook",
+    "n": 2971,
+    "share": 0.537
+   },
+   {
+    "family": "settlement",
+    "word": "worth",
+    "n": 375,
+    "share": 0.525
+   },
+   {
+    "family": "settlement",
+    "word": "ton",
+    "n": 5181,
+    "share": 0.507
+   },
+   {
+    "family": "valley",
+    "word": "vale",
+    "n": 93,
+    "share": 0.505
+   },
+   {
+    "family": "stream",
+    "word": "ditch",
+    "n": 238,
+    "share": 0.462
+   },
+   {
+    "family": "settlement",
+    "word": "ley",
+    "n": 1828,
+    "share": 0.452
+   },
+   {
+    "family": "stream",
+    "word": "water",
+    "n": 183,
+    "share": 0.393
+   },
+   {
+    "family": "valley",
+    "word": "valley",
+    "n": 229,
+    "share": 0.393
+   },
+   {
+    "family": "stream",
+    "word": "sewer",
+    "n": 99,
+    "share": 0.384
+   },
+   {
+    "family": "valley",
+    "word": "bottom",
+    "n": 1322,
+    "share": 0.253
+   },
+   {
+    "family": "valley",
+    "word": "dell",
+    "n": 68,
+    "share": 0.221
+   },
+   {
+    "family": "stream",
+    "word": "bourne",
+    "n": 38,
+    "share": 0.211
+   },
+   {
+    "family": "hill",
+    "word": "beacon",
+    "n": 58,
+    "share": 0.172
+   },
+   {
+    "family": "valley",
+    "word": "gully",
+    "n": 140,
+    "share": 0.143
+   },
+   {
+    "family": "hill",
+    "word": "tor",
+    "n": 140,
+    "share": 0.136
+   },
+   {
+    "family": "stream",
+    "word": "stream",
+    "n": 466,
+    "share": 0.101
+   },
+   {
+    "family": "valley",
+    "word": "dingle",
+    "n": 218,
+    "share": 0.087
+   },
+   {
+    "family": "valley",
+    "word": "combe",
+    "n": 294,
+    "share": 0.041
+   },
+   {
+    "family": "stream",
+    "word": "lake",
+    "n": 78,
+    "share": 0.026
+   },
+   {
+    "family": "hill",
+    "word": "down",
+    "n": 1441,
+    "share": 0.01
+   },
+   {
+    "family": "settlement",
+    "word": "tre",
+    "n": 179,
+    "share": 0.0
+   },
+   {
+    "family": "stream",
+    "word": "rhyne",
+    "n": 149,
+    "share": 0.0
+   },
+   {
+    "family": "valley",
+    "word": "chine",
+    "n": 29,
+    "share": 0.0
+   }
+  ],
+  "norse_settlements": 0.962,
+  "n_norse_settlements_england": 1383
+ },
+ "danelaw_side_south": {
+  "lat_cut": 53.2,
+  "baseline_all_features": 0.27,
+  "words": [
+   {
+    "family": "stream",
+    "word": "beck",
+    "n": 85,
+    "share": 0.965
+   },
+   {
+    "family": "settlement",
+    "word": "toft",
+    "n": 25,
+    "share": 0.96
+   },
+   {
+    "family": "settlement",
+    "word": "by",
+    "n": 227,
+    "share": 0.912
+   },
+   {
+    "family": "settlement",
+    "word": "thorpe",
+    "n": 179,
+    "share": 0.905
+   },
+   {
+    "family": "stream",
+    "word": "dike",
+    "n": 131,
+    "share": 0.901
+   },
+   {
+    "family": "valley",
+    "word": "dale",
+    "n": 91,
+    "share": 0.758
+   },
+   {
+    "family": "stream",
+    "word": "fleet",
+    "n": 39,
+    "share": 0.744
+   },
+   {
+    "family": "settlement",
+    "word": "holme",
+    "n": 32,
+    "share": 0.719
+   },
+   {
+    "family": "stream",
+    "word": "drain",
+    "n": 210,
+    "share": 0.71
+   },
+   {
+    "family": "settlement",
+    "word": "ham",
+    "n": 986,
+    "share": 0.479
+   },
+   {
+    "family": "stream",
+    "word": "ditch",
+    "n": 216,
+    "share": 0.407
+   },
+   {
+    "family": "stream",
+    "word": "brook",
+    "n": 2056,
+    "share": 0.333
+   },
+   {
+    "family": "stream",
+    "word": "river",
+    "n": 734,
+    "share": 0.328
+   },
+   {
+    "family": "settlement",
+    "word": "worth",
+    "n": 262,
+    "share": 0.321
+   },
+   {
+    "family": "settlement",
+    "word": "ton",
+    "n": 3739,
+    "share": 0.319
+   },
+   {
+    "family": "stream",
+    "word": "sewer",
+    "n": 85,
+    "share": 0.282
+   },
+   {
+    "family": "settlement",
+    "word": "ley",
+    "n": 1351,
+    "share": 0.259
+   },
+   {
+    "family": "hill",
+    "word": "hill",
+    "n": 6289,
+    "share": 0.244
+   },
+   {
+    "family": "valley",
+    "word": "valley",
+    "n": 182,
+    "share": 0.236
+   },
+   {
+    "family": "stream",
+    "word": "bourne",
+    "n": 38,
+    "share": 0.211
+   },
+   {
+    "family": "valley",
+    "word": "vale",
+    "n": 57,
+    "share": 0.193
+   },
+   {
+    "family": "stream",
+    "word": "water",
+    "n": 128,
+    "share": 0.133
+   },
+   {
+    "family": "valley",
+    "word": "dell",
+    "n": 60,
+    "share": 0.117
+   },
+   {
+    "family": "stream",
+    "word": "stream",
+    "n": 444,
+    "share": 0.059
+   },
+   {
+    "family": "valley",
+    "word": "bottom",
+    "n": 1046,
+    "share": 0.056
+   },
+   {
+    "family": "valley",
+    "word": "dingle",
+    "n": 210,
+    "share": 0.052
+   },
+   {
+    "family": "hill",
+    "word": "tor",
+    "n": 122,
+    "share": 0.008
+   },
+   {
+    "family": "hill",
+    "word": "down",
+    "n": 1435,
+    "share": 0.006
+   },
+   {
+    "family": "valley",
+    "word": "combe",
+    "n": 283,
+    "share": 0.004
+   },
+   {
+    "family": "hill",
+    "word": "beacon",
+    "n": 48,
+    "share": 0.0
+   },
+   {
+    "family": "settlement",
+    "word": "tre",
+    "n": 179,
+    "share": 0.0
+   },
+   {
+    "family": "stream",
+    "word": "gill",
+    "n": 57,
+    "share": 0.0
+   },
+   {
+    "family": "stream",
+    "word": "lake",
+    "n": 76,
+    "share": 0.0
+   },
+   {
+    "family": "stream",
+    "word": "rhyne",
+    "n": 149,
+    "share": 0.0
+   },
+   {
+    "family": "valley",
+    "word": "chine",
+    "n": 29,
+    "share": 0.0
+   },
+   {
+    "family": "valley",
+    "word": "gill",
+    "n": 61,
+    "share": 0.0
+   },
+   {
+    "family": "valley",
+    "word": "gully",
+    "n": 120,
+    "share": 0.0
+   }
+  ],
+  "norse_settlements": 0.901,
+  "n_norse_settlements": 477,
+  "all_settlements": 0.295
+ },
+ "danelaw_profile": [
+  {
+   "lo": -120,
+   "hi": -100,
+   "n_settle": 1058,
+   "norse": 0.001,
+   "n_norse": 1,
+   "n_bb": 84,
+   "beck": 0.0
+  },
+  {
+   "lo": -100,
+   "hi": -80,
+   "n_settle": 1415,
+   "norse": 0.004,
+   "n_norse": 5,
+   "n_bb": 96,
+   "beck": 0.0
+  },
+  {
+   "lo": -80,
+   "hi": -60,
+   "n_settle": 1676,
+   "norse": 0.0,
+   "n_norse": 0,
+   "n_bb": 157,
+   "beck": 0.0
+  },
+  {
+   "lo": -60,
+   "hi": -40,
+   "n_settle": 2217,
+   "norse": 0.001,
+   "n_norse": 3,
+   "n_bb": 259,
+   "beck": 0.0
+  },
+  {
+   "lo": -40,
+   "hi": -20,
+   "n_settle": 2425,
+   "norse": 0.003,
+   "n_norse": 7,
+   "n_bb": 216,
+   "beck": 0.0
+  },
+  {
+   "lo": -20,
+   "hi": 0,
+   "n_settle": 2507,
+   "norse": 0.009,
+   "n_norse": 23,
+   "n_bb": 198,
+   "beck": 0.01
+  },
+  {
+   "lo": 0,
+   "hi": 20,
+   "n_settle": 1933,
+   "norse": 0.028,
+   "n_norse": 54,
+   "n_bb": 277,
+   "beck": 0.0
+  },
+  {
+   "lo": 20,
+   "hi": 40,
+   "n_settle": 1400,
+   "norse": 0.044,
+   "n_norse": 62,
+   "n_bb": 252,
+   "beck": 0.0
+  },
+  {
+   "lo": 40,
+   "hi": 60,
+   "n_settle": 1233,
+   "norse": 0.051,
+   "n_norse": 63,
+   "n_bb": 130,
+   "beck": 0.031
+  },
+  {
+   "lo": 60,
+   "hi": 80,
+   "n_settle": 822,
+   "norse": 0.114,
+   "n_norse": 94,
+   "n_bb": 39,
+   "beck": 0.359
+  },
+  {
+   "lo": 80,
+   "hi": 100,
+   "n_settle": 621,
+   "norse": 0.064,
+   "n_norse": 40,
+   "n_bb": 19,
+   "beck": 0.789
+  },
+  {
+   "lo": 100,
+   "hi": 120,
+   "n_settle": 569,
+   "norse": 0.102,
+   "n_norse": 58,
+   "n_bb": 17,
+   "beck": 1.0
+  }
+ ],
+ "compare": {
+  "beck_brook": {
+   "danelaw": {
+    "median_km": 84.5,
+    "share_within_20km": 0.0,
+    "min_km": 53.3
+   },
+   "england_wales": {
+    "median_km": 106.1,
+    "share_within_20km": 0.0,
+    "min_km": 65.3
+   },
+   "england_scotland": {
+    "median_km": 192.1,
+    "share_within_20km": 0.0,
+    "min_km": 97.2
+   },
+   "share_in_england": 1.0,
+   "share_on_danelaw_side": 1.0
+  },
+  "burn_beck": {
+   "danelaw": {
+    "median_km": 194.1,
+    "share_within_20km": 0.0,
+    "min_km": 171.8
+   },
+   "england_wales": {
+    "median_km": 175.5,
+    "share_within_20km": 0.0,
+    "min_km": 158.4
+   },
+   "england_scotland": {
+    "median_km": 40.1,
+    "share_within_20km": 0.385,
+    "min_km": 0.0
+   },
+   "share_in_england": 0.936,
+   "share_on_danelaw_side": 1.0
+  },
+  "allt_burn": {
+   "danelaw": {
+    "median_km": 419.7,
+    "share_within_20km": 0.0,
+    "min_km": 288.0
+   },
+   "england_wales": {
+    "median_km": 396.6,
+    "share_within_20km": 0.0,
+    "min_km": 255.3
+   },
+   "england_scotland": {
+    "median_km": 178.1,
+    "share_within_20km": 0.0,
+    "min_km": 116.9
+   },
+   "share_in_england": 0.0,
+   "share_on_danelaw_side": 0.0
+  },
+  "nant_brook": {
+   "danelaw": {
+    "median_km": 109.9,
+    "share_within_20km": 0.086,
+    "min_km": 16.4
+   },
+   "england_wales": {
+    "median_km": 10.6,
+    "share_within_20km": 0.806,
+    "min_km": 0.0
+   },
+   "england_scotland": {
+    "median_km": 303.0,
+    "share_within_20km": 0.0,
+    "min_km": 156.5
+   },
+   "share_in_england": 0.197,
+   "share_on_danelaw_side": 0.0
+  },
+  "dale_clough": {
+   "danelaw": {
+    "median_km": 113.3,
+    "share_within_20km": 0.13,
+    "min_km": 5.8
+   },
+   "england_wales": {
+    "median_km": 113.3,
+    "share_within_20km": 0.088,
+    "min_km": 16.0
+   },
+   "england_scotland": {
+    "median_km": 191.2,
+    "share_within_20km": 0.0,
+    "min_km": 81.1
+   },
+   "share_in_england": 1.0,
+   "share_on_danelaw_side": 1.0
+  },
+  "combe_bottom": {
+   "danelaw": {
+    "median_km": 218.7,
+    "share_within_20km": 0.0,
+    "min_km": 140.8
+   },
+   "england_wales": {
+    "median_km": 58.1,
+    "share_within_20km": 0.191,
+    "min_km": 0.5
+   },
+   "england_scotland": {
+    "median_km": 440.0,
+    "share_within_20km": 0.0,
+    "min_km": 346.2
+   },
+   "share_in_england": 0.866,
+   "share_on_danelaw_side": 0.0
+  },
+  "cwm_dingle": {
+   "danelaw": {
+    "median_km": 79.2,
+    "share_within_20km": 0.0,
+    "min_km": 34.1
+   },
+   "england_wales": {
+    "median_km": 6.4,
+    "share_within_20km": 0.811,
+    "min_km": 0.2
+   },
+   "england_scotland": {
+    "median_km": 265.3,
+    "share_within_20km": 0.0,
+    "min_km": 168.9
+   },
+   "share_in_england": 0.16,
+   "share_on_danelaw_side": 0.0
+  },
+  "fell_law": {
+   "danelaw": {
+    "median_km": 232.8,
+    "share_within_20km": 0.0,
+    "min_km": 220.6
+   },
+   "england_wales": {
+    "median_km": 212.8,
+    "share_within_20km": 0.0,
+    "min_km": 201.4
+   },
+   "england_scotland": {
+    "median_km": 35.2,
+    "share_within_20km": 0.184,
+    "min_km": 0.1
+   },
+   "share_in_england": 0.36,
+   "share_on_danelaw_side": 0.544
+  },
+  "tor_down": {
+   "danelaw": {
+    "median_km": 266.9,
+    "share_within_20km": 0.0,
+    "min_km": 252.6
+   },
+   "england_wales": {
+    "median_km": 100.7,
+    "share_within_20km": 0.0,
+    "min_km": 83.9
+   },
+   "england_scotland": {
+    "median_km": 468.8,
+    "share_within_20km": 0.0,
+    "min_km": 450.9
+   },
+   "share_in_england": 1.0,
+   "share_on_danelaw_side": 0.0
+  }
+ },
+ "line_extent": {
+  "beck_brook": {
+   "lat_median": 53.54,
+   "lat_min": 52.78,
+   "lat_max": 54.02,
+   "lon_min": -3.14,
+   "lon_max": -0.41
+  },
+  "burn_beck": {
+   "lat_median": 54.79,
+   "lat_min": 54.69,
+   "lat_max": 55.04,
+   "lon_min": -3.55,
+   "lon_max": -1.21
+  },
+  "allt_burn": {
+   "lat_median": 56.95,
+   "lat_min": 55.29,
+   "lat_max": 58.6,
+   "lon_min": -6.68,
+   "lon_max": -3.27
+  },
+  "nant_brook": {
+   "lat_median": 52.1,
+   "lat_min": 51.36,
+   "lat_max": 53.43,
+   "lon_min": -5.11,
+   "lon_max": -2.92
+  },
+  "dale_clough": {
+   "lat_median": 53.71,
+   "lat_min": 53.05,
+   "lat_max": 54.22,
+   "lon_min": -2.95,
+   "lon_max": -0.17
+  },
+  "combe_bottom": {
+   "lat_median": 50.9,
+   "lat_min": 50.27,
+   "lat_max": 51.72,
+   "lon_min": -4.79,
+   "lon_max": -2.82
+  },
+  "cwm_dingle": {
+   "lat_median": 52.45,
+   "lat_min": 51.54,
+   "lat_max": 53.31,
+   "lon_min": -3.74,
+   "lon_max": -2.75
+  },
+  "fell_law": {
+   "lat_median": 55.24,
+   "lat_min": 55.1,
+   "lat_max": 55.46,
+   "lon_min": -4.74,
+   "lon_max": -1.44
+  },
+  "tor_down": {
+   "lat_median": 50.62,
+   "lat_min": 50.47,
+   "lat_max": 50.78,
+   "lon_min": -4.13,
+   "lon_max": -3.87
+  }
+ },
+ "line_counties": {
+  "beck_brook": [
+   [
+    "Lancashire",
+    77
+   ],
+   [
+    "Nottinghamshire",
+    62
+   ],
+   [
+    "Lincolnshire",
+    25
+   ],
+   [
+    "Barnsley",
+    23
+   ],
+   [
+    "Doncaster",
+    23
+   ],
+   [
+    "Calderdale",
+    22
+   ]
+  ],
+  "burn_beck": [
+   [
+    "County Durham",
+    77
+   ],
+   [
+    "Cumberland",
+    73
+   ],
+   [
+    "Westmorland and Furness",
+    25
+   ],
+   [
+    "Dumfries and Galloway",
+    12
+   ]
+  ],
+  "allt_burn": [
+   [
+    "Highland",
+    297
+   ],
+   [
+    "Argyll and Bute",
+    163
+   ],
+   [
+    "Perth and Kinross",
+    87
+   ],
+   [
+    "North Ayrshire",
+    41
+   ],
+   [
+    "Stirling",
+    39
+   ],
+   [
+    "Aberdeenshire",
+    36
+   ]
+  ],
+  "nant_brook": [
+   [
+    "Powys",
+    105
+   ],
+   [
+    "Pembrokeshire",
+    47
+   ],
+   [
+    "Monmouthshire",
+    34
+   ],
+   [
+    "Flintshire",
+    27
+   ],
+   [
+    "Shropshire",
+    17
+   ],
+   [
+    "Wrexham",
+    17
+   ]
+  ],
+  "dale_clough": [
+   [
+    "North Yorkshire",
+    113
+   ],
+   [
+    "Derbyshire",
+    46
+   ],
+   [
+    "East Riding of Yorkshire",
+    40
+   ],
+   [
+    "Staffordshire",
+    30
+   ],
+   [
+    "Doncaster",
+    26
+   ],
+   [
+    "Westmorland and Furness",
+    24
+   ]
+  ],
+  "combe_bottom": [
+   [
+    "Devon",
+    98
+   ],
+   [
+    "Somerset",
+    48
+   ],
+   [
+    "Cornwall",
+    43
+   ],
+   [
+    "North Somerset",
+    22
+   ],
+   [
+    "Newport",
+    18
+   ],
+   [
+    "Caerphilly",
+    17
+   ]
+  ],
+  "cwm_dingle": [
+   [
+    "Powys",
+    102
+   ],
+   [
+    "Monmouthshire",
+    38
+   ],
+   [
+    "County of Herefordshire",
+    33
+   ],
+   [
+    "Conwy",
+    29
+   ],
+   [
+    "Denbighshire",
+    26
+   ],
+   [
+    "Wrexham",
+    8
+   ]
+  ],
+  "fell_law": [
+   [
+    "Northumberland",
+    82
+   ],
+   [
+    "Dumfries and Galloway",
+    81
+   ],
+   [
+    "Scottish Borders",
+    29
+   ],
+   [
+    "East Ayrshire",
+    18
+   ],
+   [
+    "South Ayrshire",
+    18
+   ]
+  ],
+  "tor_down": [
+   [
+    "Devon",
+    86
+   ]
+  ]
+ },
+ "line_pieces": {
+  "beck_brook": [
+   {
+    "km": 262,
+    "counties": [
+     [
+      "Lancashire",
+      77
+     ],
+     [
+      "Nottinghamshire",
+      62
+     ],
+     [
+      "Lincolnshire",
+      25
+     ]
+    ]
+   }
+  ],
+  "burn_beck": [
+   {
+    "km": 187,
+    "counties": [
+     [
+      "County Durham",
+      77
+     ],
+     [
+      "Cumberland",
+      73
+     ],
+     [
+      "Westmorland and Furness",
+      25
+     ]
+    ]
+   }
+  ],
+  "allt_burn": [
+   {
+    "km": 40,
+    "counties": [
+     [
+      "Argyll and Bute",
+      39
+     ]
+    ]
+   },
+   {
+    "km": 428,
+    "counties": [
+     [
+      "Highland",
+      135
+     ],
+     [
+      "Perth and Kinross",
+      87
+     ],
+     [
+      "Argyll and Bute",
+      61
+     ]
+    ]
+   },
+   {
+    "km": 64,
+    "counties": [
+     [
+      "Argyll and Bute",
+      63
+     ]
+    ]
+   },
+   {
+    "km": 30,
+    "counties": [
+     [
+      "Highland",
+      30
+     ]
+    ]
+   },
+   {
+    "km": 49,
+    "counties": [
+     [
+      "Highland",
+      48
+     ]
+    ]
+   },
+   {
+    "km": 85,
+    "counties": [
+     [
+      "Highland",
+      84
+     ]
+    ]
+   }
+  ],
+  "nant_brook": [
+   {
+    "km": 267,
+    "counties": [
+     [
+      "Powys",
+      105
+     ],
+     [
+      "Monmouthshire",
+      34
+     ],
+     [
+      "Flintshire",
+      27
+     ]
+    ]
+   },
+   {
+    "km": 48,
+    "counties": [
+     [
+      "Pembrokeshire",
+      47
+     ]
+    ]
+   }
+  ],
+  "dale_clough": [
+   {
+    "km": 264,
+    "counties": [
+     [
+      "North Yorkshire",
+      70
+     ],
+     [
+      "Derbyshire",
+      46
+     ],
+     [
+      "Staffordshire",
+      30
+     ]
+    ]
+   },
+   {
+    "km": 36,
+    "counties": [
+     [
+      "Cheshire West and Chester",
+      20
+     ],
+     [
+      "Liverpool",
+      9
+     ],
+     [
+      "Halton",
+      5
+     ]
+    ]
+   },
+   {
+    "km": 124,
+    "counties": [
+     [
+      "North Yorkshire",
+      43
+     ],
+     [
+      "East Riding of Yorkshire",
+      40
+     ],
+     [
+      "North Lincolnshire",
+      13
+     ]
+    ]
+   }
+  ],
+  "combe_bottom": [
+   {
+    "km": 33,
+    "counties": [
+     [
+      "Cornwall",
+      32
+     ]
+    ]
+   },
+   {
+    "km": 215,
+    "counties": [
+     [
+      "Devon",
+      98
+     ],
+     [
+      "Somerset",
+      48
+     ],
+     [
+      "North Somerset",
+      22
+     ]
+    ]
+   }
+  ],
+  "cwm_dingle": [
+   {
+    "km": 239,
+    "counties": [
+     [
+      "Powys",
+      102
+     ],
+     [
+      "Monmouthshire",
+      38
+     ],
+     [
+      "County of Herefordshire",
+      33
+     ]
+    ]
+   }
+  ],
+  "fell_law": [
+   {
+    "km": 229,
+    "counties": [
+     [
+      "Northumberland",
+      82
+     ],
+     [
+      "Dumfries and Galloway",
+      81
+     ],
+     [
+      "Scottish Borders",
+      29
+     ]
+    ]
+   }
+  ],
+  "tor_down": [
+   {
+    "km": 86,
+    "counties": [
+     [
+      "Devon",
+      86
+     ]
+    ]
+   }
+  ]
+ },
+ "n_landscape_classified": 74934,
+ "n_landscape": 88386,
+ "norse_corr": [
+  {
+   "region": "England",
+   "family": "stream",
+   "word": "beck",
+   "n_hex": 858,
+   "rho": 0.59,
+   "ci": [
+    0.44,
+    0.69
+   ]
+  },
+  {
+   "region": "England",
+   "family": "stream",
+   "word": "gill",
+   "n_hex": 858,
+   "rho": 0.23,
+   "ci": [
+    0.05,
+    0.42
+   ]
+  },
+  {
+   "region": "England",
+   "family": "hill",
+   "word": "fell",
+   "n_hex": 960,
+   "rho": 0.19,
+   "ci": [
+    0.02,
+    0.34
+   ]
+  },
+  {
+   "region": "England",
+   "family": "valley",
+   "word": "dale",
+   "n_hex": 267,
+   "rho": 0.49,
+   "ci": [
+    0.26,
+    0.65
+   ]
+  },
+  {
+   "region": "England",
+   "family": "stream",
+   "word": "brook",
+   "n_hex": 858,
+   "rho": -0.43,
+   "ci": [
+    -0.52,
+    -0.25
+   ]
+  },
+  {
+   "region": "England",
+   "family": "hill",
+   "word": "down",
+   "n_hex": 960,
+   "rho": -0.35,
+   "ci": [
+    -0.44,
+    -0.22
+   ]
+  },
+  {
+   "region": "England",
+   "family": "valley",
+   "word": "combe",
+   "n_hex": 267,
+   "rho": -0.16,
+   "ci": [
+    -0.29,
+    0.08
+   ]
+  },
+  {
+   "region": "England",
+   "family": "valley",
+   "word": "bottom",
+   "n_hex": 267,
+   "rho": -0.19,
+   "ci": [
+    -0.34,
+    0.07
+   ]
+  },
+  {
+   "region": "England",
+   "family": "stream",
+   "word": "burn",
+   "n_hex": 858,
+   "rho": -0.07,
+   "ci": [
+    -0.18,
+    0.05
+   ]
+  },
+  {
+   "region": "GB",
+   "family": "stream",
+   "word": "beck",
+   "n_hex": 1424,
+   "rho": 0.58,
+   "ci": [
+    0.41,
+    0.67
+   ]
+  },
+  {
+   "region": "GB",
+   "family": "stream",
+   "word": "gill",
+   "n_hex": 1424,
+   "rho": 0.27,
+   "ci": [
+    0.08,
+    0.41
+   ]
+  },
+  {
+   "region": "GB",
+   "family": "hill",
+   "word": "fell",
+   "n_hex": 1512,
+   "rho": 0.19,
+   "ci": [
+    0.01,
+    0.3
+   ]
+  },
+  {
+   "region": "GB",
+   "family": "valley",
+   "word": "dale",
+   "n_hex": 467,
+   "rho": 0.49,
+   "ci": [
+    0.31,
+    0.63
+   ]
+  },
+  {
+   "region": "GB",
+   "family": "stream",
+   "word": "brook",
+   "n_hex": 1424,
+   "rho": -0.19,
+   "ci": [
+    -0.33,
+    -0.01
+   ]
+  },
+  {
+   "region": "GB",
+   "family": "hill",
+   "word": "down",
+   "n_hex": 1512,
+   "rho": -0.22,
+   "ci": [
+    -0.3,
+    -0.11
+   ]
+  },
+  {
+   "region": "GB",
+   "family": "valley",
+   "word": "combe",
+   "n_hex": 467,
+   "rho": -0.06,
+   "ci": [
+    -0.16,
+    0.11
+   ]
+  },
+  {
+   "region": "GB",
+   "family": "valley",
+   "word": "bottom",
+   "n_hex": 467,
+   "rho": 0.1,
+   "ci": [
+    -0.07,
+    0.3
+   ]
+  },
+  {
+   "region": "GB",
+   "family": "stream",
+   "word": "burn",
+   "n_hex": 1424,
+   "rho": -0.13,
+   "ci": [
+    -0.3,
+    0.07
+   ]
+  }
+ ],
+ "beck_vs_norse": {
+  "n_hex": 626,
+  "rho": 0.63,
+  "ci": [
+   0.43,
+   0.75
+  ]
+ },
+ "beck_by_norse_band": [
+  {
+   "lo": 0,
+   "hi": 0.0001,
+   "n_hex": 370,
+   "beck": 465,
+   "brook": 1911,
+   "beck_share": 0.196
+  },
+  {
+   "lo": 0.0001,
+   "hi": 0.05,
+   "n_hex": 44,
+   "beck": 81,
+   "brook": 352,
+   "beck_share": 0.187
+  },
+  {
+   "lo": 0.05,
+   "hi": 0.1,
+   "n_hex": 65,
+   "beck": 456,
+   "brook": 152,
+   "beck_share": 0.75
+  },
+  {
+   "lo": 0.1,
+   "hi": 0.2,
+   "n_hex": 69,
+   "beck": 650,
+   "brook": 70,
+   "beck_share": 0.903
+  },
+  {
+   "lo": 0.2,
+   "hi": 1.01,
+   "n_hex": 78,
+   "beck": 639,
+   "brook": 42,
+   "beck_share": 0.938
+  }
+ ],
+ "norse_by_beck_side": {
+  "beck_side": 0.153,
+  "brook_side": 0.016,
+  "n_beck_side": 6229,
+  "n_brook_side": 20939
+ },
+ "transects": {
+  "stream": {
+   "words": [
+    "beck",
+    "brook",
+    "burn"
+   ],
+   "band_km": 20,
+   "rows": [
+    null,
+    null,
+    [
+     0.0,
+     1.0,
+     0.0,
+     23
+    ],
+    [
+     0.0,
+     0.963,
+     0.037,
+     54
+    ],
+    [
+     0.01,
+     0.99,
+     0.0,
+     99
+    ],
+    [
+     0.0,
+     0.987,
+     0.013,
+     77
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     90
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     97
+    ],
+    [
+     0.01,
+     0.99,
+     0.0,
+     101
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     168
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     232
+    ],
+    [
+     0.0,
+     0.994,
+     0.006,
+     154
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     158
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     157
+    ],
+    [
+     0.057,
+     0.943,
+     0.0,
+     158
+    ],
+    [
+     0.058,
+     0.942,
+     0.0,
+     155
+    ],
+    [
+     0.136,
+     0.859,
+     0.006,
+     177
+    ],
+    [
+     0.133,
+     0.867,
+     0.0,
+     173
+    ],
+    [
+     0.17,
+     0.83,
+     0.0,
+     206
+    ],
+    [
+     0.111,
+     0.889,
+     0.0,
+     280
+    ],
+    [
+     0.188,
+     0.812,
+     0.0,
+     351
+    ],
+    [
+     0.494,
+     0.506,
+     0.0,
+     322
+    ],
+    [
+     0.805,
+     0.195,
+     0.0,
+     473
+    ],
+    [
+     0.986,
+     0.011,
+     0.003,
+     358
+    ],
+    [
+     0.992,
+     0.004,
+     0.004,
+     529
+    ],
+    [
+     0.993,
+     0.002,
+     0.005,
+     589
+    ],
+    [
+     0.838,
+     0.002,
+     0.159,
+     433
+    ],
+    [
+     0.235,
+     0.0,
+     0.765,
+     548
+    ],
+    [
+     0.072,
+     0.0,
+     0.928,
+     582
+    ],
+    [
+     0.008,
+     0.0,
+     0.992,
+     706
+    ],
+    [
+     0.003,
+     0.0,
+     0.997,
+     745
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     573
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     539
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     479
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     331
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     283
+    ]
+   ]
+  },
+  "valley": {
+   "words": [
+    "dale",
+    "clough",
+    "cleugh",
+    "combe",
+    "bottom",
+    "dean"
+   ],
+   "band_km": 20,
+   "rows": [
+    null,
+    null,
+    [
+     0.0,
+     0.0,
+     0.0,
+     0.368,
+     0.632,
+     0.0,
+     19
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     0.29,
+     0.71,
+     0.0,
+     31
+    ],
+    [
+     0.007,
+     0.0,
+     0.0,
+     0.113,
+     0.88,
+     0.0,
+     150
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     0.041,
+     0.959,
+     0.0,
+     316
+    ],
+    [
+     0.01,
+     0.0,
+     0.0,
+     0.32,
+     0.665,
+     0.005,
+     200
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     0.505,
+     0.491,
+     0.004,
+     281
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     0.111,
+     0.889,
+     0.0,
+     99
+    ],
+    [
+     0.012,
+     0.0,
+     0.0,
+     0.116,
+     0.849,
+     0.023,
+     86
+    ],
+    [
+     0.013,
+     0.0,
+     0.0,
+     0.051,
+     0.91,
+     0.026,
+     78
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     0.037,
+     0.926,
+     0.037,
+     27
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     0.1,
+     0.8,
+     0.1,
+     10
+    ],
+    [
+     0.222,
+     0.0,
+     0.0,
+     0.0,
+     0.722,
+     0.056,
+     18
+    ],
+    [
+     0.6,
+     0.0,
+     0.0,
+     0.1,
+     0.3,
+     0.0,
+     10
+    ],
+    [
+     0.4,
+     0.0,
+     0.0,
+     0.0,
+     0.533,
+     0.067,
+     15
+    ],
+    [
+     0.5,
+     0.083,
+     0.0,
+     0.042,
+     0.375,
+     0.0,
+     24
+    ],
+    [
+     0.846,
+     0.051,
+     0.0,
+     0.026,
+     0.077,
+     0.0,
+     39
+    ],
+    [
+     0.537,
+     0.368,
+     0.0,
+     0.0,
+     0.088,
+     0.007,
+     136
+    ],
+    [
+     0.071,
+     0.808,
+     0.0,
+     0.0,
+     0.121,
+     0.0,
+     240
+    ],
+    [
+     0.025,
+     0.909,
+     0.0,
+     0.0,
+     0.066,
+     0.0,
+     363
+    ],
+    [
+     0.066,
+     0.822,
+     0.0,
+     0.0,
+     0.085,
+     0.027,
+     411
+    ],
+    [
+     0.283,
+     0.567,
+     0.0,
+     0.006,
+     0.14,
+     0.003,
+     314
+    ],
+    [
+     0.739,
+     0.118,
+     0.0,
+     0.0,
+     0.144,
+     0.0,
+     153
+    ],
+    [
+     0.688,
+     0.006,
+     0.0,
+     0.019,
+     0.287,
+     0.0,
+     160
+    ],
+    [
+     0.673,
+     0.0,
+     0.0,
+     0.038,
+     0.282,
+     0.006,
+     156
+    ],
+    [
+     0.305,
+     0.0,
+     0.237,
+     0.0,
+     0.237,
+     0.22,
+     59
+    ],
+    [
+     0.062,
+     0.0,
+     0.735,
+     0.0,
+     0.049,
+     0.154,
+     162
+    ],
+    [
+     0.019,
+     0.0,
+     0.738,
+     0.0,
+     0.009,
+     0.234,
+     107
+    ],
+    [
+     0.017,
+     0.0,
+     0.935,
+     0.0,
+     0.01,
+     0.038,
+     293
+    ],
+    [
+     0.012,
+     0.0,
+     0.959,
+     0.0,
+     0.002,
+     0.027,
+     510
+    ],
+    [
+     0.037,
+     0.0,
+     0.832,
+     0.0,
+     0.021,
+     0.11,
+     191
+    ],
+    [
+     0.031,
+     0.0,
+     0.812,
+     0.0,
+     0.0,
+     0.156,
+     128
+    ],
+    [
+     0.016,
+     0.0,
+     0.865,
+     0.0,
+     0.0,
+     0.119,
+     126
+    ],
+    null,
+    null
+   ]
+  },
+  "hill": {
+   "words": [
+    "fell",
+    "down",
+    "tor",
+    "law",
+    "pike",
+    "edge"
+   ],
+   "band_km": 20,
+   "rows": [
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     21
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     55
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     53
+    ],
+    [
+     0.0,
+     0.701,
+     0.299,
+     0.0,
+     0.0,
+     0.0,
+     251
+    ],
+    [
+     0.0,
+     0.815,
+     0.185,
+     0.0,
+     0.0,
+     0.0,
+     232
+    ],
+    [
+     0.0,
+     0.996,
+     0.004,
+     0.0,
+     0.0,
+     0.0,
+     224
+    ],
+    [
+     0.0,
+     0.996,
+     0.004,
+     0.0,
+     0.0,
+     0.0,
+     230
+    ],
+    [
+     0.0,
+     0.996,
+     0.004,
+     0.0,
+     0.0,
+     0.0,
+     283
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     87
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     89
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     15
+    ],
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     0.0,
+     0.0,
+     0.25,
+     0.083,
+     0.083,
+     0.583,
+     12
+    ],
+    [
+     0.0,
+     0.0,
+     0.591,
+     0.0,
+     0.091,
+     0.318,
+     22
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.4,
+     0.6,
+     10
+    ],
+    null,
+    [
+     0.963,
+     0.0,
+     0.0,
+     0.0,
+     0.025,
+     0.013,
+     80
+    ],
+    [
+     0.93,
+     0.0,
+     0.0,
+     0.0,
+     0.053,
+     0.018,
+     57
+    ],
+    [
+     0.864,
+     0.016,
+     0.0,
+     0.0,
+     0.112,
+     0.008,
+     125
+    ],
+    [
+     0.761,
+     0.0,
+     0.0,
+     0.0,
+     0.213,
+     0.027,
+     188
+    ],
+    [
+     0.815,
+     0.0,
+     0.0,
+     0.024,
+     0.145,
+     0.016,
+     124
+    ],
+    [
+     0.838,
+     0.017,
+     0.0,
+     0.094,
+     0.043,
+     0.009,
+     117
+    ],
+    [
+     0.8,
+     0.0,
+     0.0,
+     0.138,
+     0.05,
+     0.013,
+     80
+    ],
+    [
+     0.514,
+     0.019,
+     0.0,
+     0.21,
+     0.162,
+     0.095,
+     105
+    ],
+    [
+     0.215,
+     0.0,
+     0.0,
+     0.634,
+     0.07,
+     0.081,
+     186
+    ],
+    [
+     0.009,
+     0.009,
+     0.019,
+     0.954,
+     0.0,
+     0.009,
+     108
+    ],
+    [
+     0.018,
+     0.0,
+     0.0,
+     0.964,
+     0.0,
+     0.018,
+     112
+    ],
+    [
+     0.02,
+     0.0,
+     0.0,
+     0.922,
+     0.0,
+     0.059,
+     51
+    ],
+    [
+     0.111,
+     0.0,
+     0.0,
+     0.889,
+     0.0,
+     0.0,
+     9
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     25
+    ]
+   ]
+  }
+ },
+ "transect_band_lat": [
+  49.99,
+  50.17,
+  50.35,
+  50.53,
+  50.71,
+  50.89,
+  51.07,
+  51.25,
+  51.43,
+  51.61,
+  51.79,
+  51.97,
+  52.15,
+  52.33,
+  52.51,
+  52.69,
+  52.87,
+  53.05,
+  53.23,
+  53.41,
+  53.59,
+  53.77,
+  53.95,
+  54.13,
+  54.31,
+  54.49,
+  54.67,
+  54.84,
+  55.02,
+  55.2,
+  55.38,
+  55.56,
+  55.74,
+  55.92,
+  56.1,
+  56.28
+ ],
+ "counties": [
+  {
+   "county": "Aberdeen City",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    1.0,
+    32,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "burn",
+    0.95,
+    22,
+    "burn",
+    3.8
+   ]
+  },
+  {
+   "county": "Aberdeenshire",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    0.88,
+    1231,
+    "carn",
+    2.1
+   ],
+   "stream": [
+    "burn",
+    0.78,
+    899,
+    "burn",
+    3.1
+   ],
+   "valley": [
+    "coire",
+    0.39,
+    237,
+    "den",
+    18.0
+   ]
+  },
+  {
+   "county": "Angus",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    0.87,
+    312,
+    "carn",
+    2.8
+   ],
+   "stream": [
+    "burn",
+    0.9,
+    319,
+    "burn",
+    3.5
+   ],
+   "valley": [
+    "coire",
+    0.35,
+    92,
+    "den",
+    20.0
+   ]
+  },
+  {
+   "county": "Argyll and Bute",
+   "country": "Scotland",
+   "hill": [
+    "cnoc",
+    0.6,
+    1651,
+    "cnoc",
+    6.1
+   ],
+   "stream": [
+    "allt",
+    0.62,
+    1304,
+    "abhainn",
+    5.2
+   ],
+   "valley": [
+    "glen",
+    0.43,
+    723,
+    "glac",
+    4.7
+   ]
+  },
+  {
+   "county": "Barnsley",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.99,
+    76,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "dike",
+    0.62,
+    76,
+    "dike",
+    34.2
+   ],
+   "valley": [
+    "clough",
+    0.8,
+    35,
+    "clough",
+    8.8
+   ]
+  },
+  {
+   "county": "Bath and North East Somerset",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.86,
+    50,
+    "down",
+    3.1
+   ],
+   "stream": [
+    "brook",
+    0.78,
+    23,
+    "brook",
+    7.2
+   ],
+   "valley": [
+    "bottom",
+    0.46,
+    28,
+    "vale",
+    20.2
+   ]
+  },
+  {
+   "county": "Bedford",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    14,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "brook",
+    0.81,
+    16,
+    "brook",
+    7.4
+   ]
+  },
+  {
+   "county": "Birmingham",
+   "country": "England",
+   "stream": [
+    "brook",
+    0.76,
+    17,
+    "brook",
+    7.0
+   ]
+  },
+  {
+   "county": "Blackburn with Darwen",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.97,
+    35,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "brook",
+    0.98,
+    45,
+    "brook",
+    9.0
+   ],
+   "valley": [
+    "clough",
+    0.82,
+    22,
+    "clough",
+    9.0
+   ]
+  },
+  {
+   "county": "Blaenau Gwent",
+   "country": "Wales",
+   "stream": [
+    "nant",
+    0.67,
+    12,
+    "nant",
+    13.9
+   ],
+   "valley": [
+    "cwm",
+    0.82,
+    17,
+    "cwm",
+    11.8
+   ]
+  },
+  {
+   "county": "Bolton",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    12,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "brook",
+    0.74,
+    23,
+    "brook",
+    6.8
+   ],
+   "valley": [
+    "clough",
+    0.9,
+    20,
+    "clough",
+    9.9
+   ]
+  },
+  {
+   "county": "Bournemouth, Christchurch and Poole",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.94,
+    17,
+    "hill",
+    1.5
+   ],
+   "stream": [
+    "stream",
+    0.33,
+    12,
+    NaN,
+    NaN
+   ],
+   "valley": [
+    "chine",
+    0.6,
+    15,
+    "chine",
+    254.5
+   ]
+  },
+  {
+   "county": "Bracknell Forest",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    34,
+    "hill",
+    1.6
+   ]
+  },
+  {
+   "county": "Bradford",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.99,
+    137,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "beck",
+    0.74,
+    91,
+    "beck",
+    8.0
+   ],
+   "valley": [
+    "clough",
+    0.63,
+    60,
+    "clough",
+    7.0
+   ]
+  },
+  {
+   "county": "Bridgend",
+   "country": "Wales",
+   "hill": [
+    "mynydd",
+    0.43,
+    23,
+    "mynydd",
+    60.3
+   ],
+   "stream": [
+    "nant",
+    0.9,
+    51,
+    "nant",
+    18.8
+   ],
+   "valley": [
+    "cwm",
+    0.95,
+    39,
+    "cwm",
+    13.6
+   ]
+  },
+  {
+   "county": "Buckinghamshire",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.99,
+    97,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "brook",
+    0.68,
+    66,
+    "ditch",
+    18.0
+   ],
+   "valley": [
+    "bottom",
+    0.47,
+    30,
+    "bottom",
+    4.2
+   ]
+  },
+  {
+   "county": "Bury",
+   "country": "England",
+   "stream": [
+    "brook",
+    0.94,
+    18,
+    "brook",
+    8.6
+   ]
+  },
+  {
+   "county": "Caerphilly",
+   "country": "Wales",
+   "hill": [
+    "mynydd",
+    0.69,
+    13,
+    "mynydd",
+    96.1
+   ],
+   "stream": [
+    "nant",
+    0.89,
+    64,
+    "nant",
+    18.5
+   ],
+   "valley": [
+    "cwm",
+    1.0,
+    23,
+    "cwm",
+    14.3
+   ]
+  },
+  {
+   "county": "Calderdale",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.99,
+    159,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "dike",
+    0.23,
+    71,
+    "clough",
+    111.5
+   ],
+   "valley": [
+    "clough",
+    0.91,
+    215,
+    "clough",
+    10.0
+   ]
+  },
+  {
+   "county": "Cambridgeshire",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.99,
+    108,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "brook",
+    0.36,
+    123,
+    "lode",
+    172.3
+   ]
+  },
+  {
+   "county": "Cardiff",
+   "country": "Wales",
+   "stream": [
+    "nant",
+    0.7,
+    23,
+    "nant",
+    14.5
+   ]
+  },
+  {
+   "county": "Carmarthenshire",
+   "country": "Wales",
+   "hill": [
+    "mynydd",
+    0.24,
+    66,
+    "cefn",
+    43.7
+   ],
+   "stream": [
+    "nant",
+    0.59,
+    293,
+    "afon",
+    14.6
+   ],
+   "valley": [
+    "cwm",
+    0.93,
+    74,
+    "cwm",
+    13.3
+   ]
+  },
+  {
+   "county": "Central Bedfordshire",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.96,
+    50,
+    "hill",
+    1.5
+   ],
+   "stream": [
+    "river",
+    0.45,
+    11,
+    "river",
+    7.6
+   ]
+  },
+  {
+   "county": "Ceredigion",
+   "country": "Wales",
+   "hill": [
+    "pen",
+    0.34,
+    85,
+    "pen",
+    94.3
+   ],
+   "stream": [
+    "nant",
+    0.64,
+    250,
+    "afon",
+    14.0
+   ],
+   "valley": [
+    "cwm",
+    0.9,
+    60,
+    "cwm",
+    12.9
+   ]
+  },
+  {
+   "county": "Cheshire East",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.98,
+    57,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "brook",
+    0.88,
+    105,
+    "brook",
+    8.0
+   ],
+   "valley": [
+    "clough",
+    0.8,
+    54,
+    "clough",
+    8.8
+   ]
+  },
+  {
+   "county": "Cheshire West and Chester",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    50,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "brook",
+    0.73,
+    98,
+    "brook",
+    6.7
+   ],
+   "valley": [
+    "clough",
+    0.29,
+    14,
+    NaN,
+    NaN
+   ]
+  },
+  {
+   "county": "City of Bristol",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    12,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "brook",
+    0.45,
+    11,
+    "brook",
+    4.2
+   ]
+  },
+  {
+   "county": "City of Edinburgh",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    0.95,
+    41,
+    "hill",
+    1.5
+   ],
+   "stream": [
+    "burn",
+    0.96,
+    23,
+    "burn",
+    3.8
+   ]
+  },
+  {
+   "county": "City of Peterborough",
+   "country": "England",
+   "stream": [
+    "drain",
+    0.26,
+    19,
+    "drain",
+    9.1
+   ]
+  },
+  {
+   "county": "Clackmannanshire",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    0.75,
+    36,
+    "knowe",
+    11.8
+   ],
+   "stream": [
+    "burn",
+    0.94,
+    32,
+    "burn",
+    3.7
+   ],
+   "valley": [
+    "glen",
+    0.83,
+    18,
+    "glen",
+    6.3
+   ]
+  },
+  {
+   "county": "Conwy",
+   "country": "Wales",
+   "hill": [
+    "moel",
+    0.47,
+    77,
+    "moel",
+    60.7
+   ],
+   "stream": [
+    "afon",
+    0.55,
+    153,
+    "afon",
+    22.4
+   ],
+   "valley": [
+    "cwm",
+    0.4,
+    45,
+    "gully",
+    12.8
+   ]
+  },
+  {
+   "county": "Cornwall",
+   "country": "England",
+   "hill": [
+    "down",
+    0.62,
+    341,
+    "beacon",
+    21.8
+   ],
+   "stream": [
+    "river",
+    0.42,
+    125,
+    "stream",
+    23.0
+   ],
+   "valley": [
+    "valley",
+    0.45,
+    47,
+    "valley",
+    21.3
+   ]
+  },
+  {
+   "county": "County Durham",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.86,
+    472,
+    "rigg",
+    4.1
+   ],
+   "stream": [
+    "beck",
+    0.29,
+    588,
+    "sike",
+    9.4
+   ],
+   "valley": [
+    "cleugh",
+    0.28,
+    118,
+    "dean",
+    18.7
+   ]
+  },
+  {
+   "county": "County of Herefordshire",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.97,
+    161,
+    "hill",
+    1.5
+   ],
+   "stream": [
+    "brook",
+    0.87,
+    93,
+    "brook",
+    8.0
+   ],
+   "valley": [
+    "dingle",
+    0.75,
+    55,
+    "dingle",
+    24.7
+   ]
+  },
+  {
+   "county": "Cumberland",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.44,
+    563,
+    "crag",
+    22.7
+   ],
+   "stream": [
+    "beck",
+    0.56,
+    699,
+    "gill",
+    6.2
+   ],
+   "valley": [
+    "cleugh",
+    0.3,
+    88,
+    "gill",
+    14.7
+   ]
+  },
+  {
+   "county": "Darlington",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    28,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "beck",
+    0.86,
+    21,
+    "beck",
+    9.3
+   ]
+  },
+  {
+   "county": "Denbighshire",
+   "country": "Wales",
+   "hill": [
+    "moel",
+    0.58,
+    45,
+    "moel",
+    75.0
+   ],
+   "stream": [
+    "nant",
+    0.66,
+    73,
+    "nant",
+    13.7
+   ],
+   "valley": [
+    "dingle",
+    0.5,
+    14,
+    "dingle",
+    16.6
+   ]
+  },
+  {
+   "county": "Derbyshire",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.86,
+    182,
+    "edge",
+    30.1
+   ],
+   "stream": [
+    "brook",
+    0.81,
+    243,
+    "brook",
+    7.4
+   ],
+   "valley": [
+    "clough",
+    0.57,
+    257,
+    "clough",
+    6.3
+   ]
+  },
+  {
+   "county": "Devon",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.53,
+    718,
+    "tor",
+    29.2
+   ],
+   "stream": [
+    "brook",
+    0.44,
+    392,
+    "lake",
+    26.5
+   ],
+   "valley": [
+    "bottom",
+    0.43,
+    167,
+    "combe",
+    16.2
+   ]
+  },
+  {
+   "county": "Doncaster",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    44,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "drain",
+    0.55,
+    100,
+    "drain",
+    18.9
+   ]
+  },
+  {
+   "county": "Dorset",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.75,
+    544,
+    "down",
+    5.3
+   ],
+   "stream": [
+    "river",
+    0.41,
+    80,
+    "stream",
+    7.8
+   ],
+   "valley": [
+    "bottom",
+    0.9,
+    146,
+    "bottom",
+    8.2
+   ]
+  },
+  {
+   "county": "Dudley",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.93,
+    15,
+    "hill",
+    1.5
+   ]
+  },
+  {
+   "county": "Dumfries and Galloway",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    0.89,
+    2656,
+    "knowe",
+    2.8
+   ],
+   "stream": [
+    "burn",
+    0.79,
+    1374,
+    "pow",
+    6.0
+   ],
+   "valley": [
+    "cleugh",
+    0.66,
+    537,
+    "cleugh",
+    6.0
+   ]
+  },
+  {
+   "county": "East Ayrshire",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    0.88,
+    274,
+    "knowe",
+    5.0
+   ],
+   "stream": [
+    "burn",
+    0.86,
+    256,
+    "water",
+    5.0
+   ],
+   "valley": [
+    "glen",
+    0.76,
+    46,
+    "glen",
+    5.7
+   ]
+  },
+  {
+   "county": "East Dunbartonshire",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    0.92,
+    24,
+    "hill",
+    1.5
+   ],
+   "stream": [
+    "burn",
+    0.89,
+    36,
+    "burn",
+    3.5
+   ],
+   "valley": [
+    "glen",
+    1.0,
+    10,
+    "glen",
+    7.6
+   ]
+  },
+  {
+   "county": "East Lothian",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    0.65,
+    124,
+    "law",
+    15.1
+   ],
+   "stream": [
+    "burn",
+    0.78,
+    102,
+    "water",
+    7.7
+   ],
+   "valley": [
+    "cleugh",
+    0.81,
+    70,
+    "hope",
+    8.8
+   ]
+  },
+  {
+   "county": "East Renfrewshire",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    0.94,
+    48,
+    "hill",
+    1.5
+   ],
+   "stream": [
+    "burn",
+    0.88,
+    32,
+    "burn",
+    3.5
+   ]
+  },
+  {
+   "county": "East Riding of Yorkshire",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    340,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "drain",
+    0.55,
+    365,
+    "drain",
+    18.8
+   ],
+   "valley": [
+    "dale",
+    0.69,
+    183,
+    "dale",
+    10.4
+   ]
+  },
+  {
+   "county": "East Sussex",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.78,
+    134,
+    "down",
+    4.4
+   ],
+   "stream": [
+    "stream",
+    0.41,
+    157,
+    "sewer",
+    64.9
+   ],
+   "valley": [
+    "bottom",
+    0.7,
+    118,
+    "gill",
+    14.6
+   ]
+  },
+  {
+   "county": "Essex",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.99,
+    105,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "brook",
+    0.55,
+    267,
+    "ditch",
+    28.5
+   ],
+   "valley": [
+    "bottom",
+    0.55,
+    11,
+    "bottom",
+    5.0
+   ]
+  },
+  {
+   "county": "Falkirk",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    0.92,
+    13,
+    "hill",
+    1.5
+   ],
+   "stream": [
+    "burn",
+    0.95,
+    40,
+    "burn",
+    3.8
+   ],
+   "valley": [
+    "glen",
+    1.0,
+    11,
+    "glen",
+    7.6
+   ]
+  },
+  {
+   "county": "Fife",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    0.87,
+    259,
+    "law",
+    6.7
+   ],
+   "stream": [
+    "burn",
+    0.95,
+    144,
+    "burn",
+    3.8
+   ],
+   "valley": [
+    "den",
+    0.69,
+    48,
+    "den",
+    50.6
+   ]
+  },
+  {
+   "county": "Flintshire",
+   "country": "Wales",
+   "hill": [
+    "moel",
+    0.4,
+    15,
+    "moel",
+    51.9
+   ],
+   "stream": [
+    "brook",
+    0.32,
+    28,
+    "afon",
+    13.1
+   ],
+   "valley": [
+    "dingle",
+    0.82,
+    11,
+    "dingle",
+    27.1
+   ]
+  },
+  {
+   "county": "Gateshead",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.94,
+    32,
+    "hill",
+    1.5
+   ],
+   "stream": [
+    "burn",
+    0.79,
+    14,
+    "burn",
+    3.1
+   ]
+  },
+  {
+   "county": "Glasgow City",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    1.0,
+    12,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "burn",
+    0.91,
+    11,
+    "burn",
+    3.6
+   ]
+  },
+  {
+   "county": "Gloucestershire",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.95,
+    300,
+    "hill",
+    1.5
+   ],
+   "stream": [
+    "brook",
+    0.68,
+    135,
+    "rhyne",
+    10.3
+   ],
+   "valley": [
+    "bottom",
+    0.58,
+    79,
+    "valley",
+    6.6
+   ]
+  },
+  {
+   "county": "Greater London",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    66,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "river",
+    0.35,
+    101,
+    "bourne",
+    38.7
+   ]
+  },
+  {
+   "county": "Gwynedd",
+   "country": "Wales",
+   "hill": [
+    "moel",
+    0.5,
+    204,
+    "moel",
+    65.6
+   ],
+   "stream": [
+    "afon",
+    0.56,
+    387,
+    "afon",
+    22.9
+   ],
+   "valley": [
+    "cwm",
+    0.9,
+    145,
+    "cwm",
+    12.8
+   ]
+  },
+  {
+   "county": "Halton",
+   "country": "England",
+   "stream": [
+    "brook",
+    0.8,
+    10,
+    "brook",
+    7.3
+   ]
+  },
+  {
+   "county": "Hampshire",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.74,
+    535,
+    "down",
+    5.7
+   ],
+   "stream": [
+    "stream",
+    0.34,
+    187,
+    "lake",
+    23.8
+   ],
+   "valley": [
+    "bottom",
+    0.8,
+    187,
+    "dell",
+    8.5
+   ]
+  },
+  {
+   "county": "Hertfordshire",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    120,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "brook",
+    0.49,
+    87,
+    "bourne",
+    71.8
+   ],
+   "valley": [
+    "bottom",
+    0.44,
+    39,
+    "dell",
+    61.4
+   ]
+  },
+  {
+   "county": "Highland",
+   "country": "Scotland",
+   "hill": [
+    "cnoc",
+    0.31,
+    3930,
+    "sgurr",
+    7.9
+   ],
+   "stream": [
+    "allt",
+    0.76,
+    5344,
+    "caochan",
+    4.3
+   ],
+   "valley": [
+    "coire",
+    0.71,
+    2362,
+    "strath",
+    3.5
+   ]
+  },
+  {
+   "county": "Inverclyde",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    0.98,
+    49,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "burn",
+    0.82,
+    33,
+    "water",
+    8.0
+   ],
+   "valley": [
+    "glen",
+    0.86,
+    14,
+    "glen",
+    6.5
+   ]
+  },
+  {
+   "county": "Isle of Anglesey",
+   "country": "Wales",
+   "stream": [
+    "afon",
+    1.0,
+    28,
+    "afon",
+    40.8
+   ]
+  },
+  {
+   "county": "Isle of Wight",
+   "country": "England",
+   "hill": [
+    "down",
+    0.65,
+    89,
+    "down",
+    14.3
+   ],
+   "stream": [
+    "brook",
+    0.53,
+    32,
+    "stream",
+    11.7
+   ],
+   "valley": [
+    "chine",
+    0.73,
+    26,
+    "chine",
+    310.0
+   ]
+  },
+  {
+   "county": "Isles of Scilly",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.65,
+    46,
+    "down",
+    7.6
+   ]
+  },
+  {
+   "county": "Kent",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.82,
+    292,
+    "down",
+    4.0
+   ],
+   "stream": [
+    "stream",
+    0.31,
+    128,
+    "sewer",
+    60.9
+   ],
+   "valley": [
+    "bottom",
+    0.43,
+    47,
+    "valley",
+    14.2
+   ]
+  },
+  {
+   "county": "Kirklees",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    97,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "beck",
+    0.36,
+    105,
+    "clough",
+    75.4
+   ],
+   "valley": [
+    "clough",
+    0.9,
+    105,
+    "clough",
+    9.9
+   ]
+  },
+  {
+   "county": "Knowsley",
+   "country": "England",
+   "stream": [
+    "brook",
+    1.0,
+    13,
+    "brook",
+    9.2
+   ]
+  },
+  {
+   "county": "Lancashire",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.79,
+    452,
+    "fell",
+    8.1
+   ],
+   "stream": [
+    "brook",
+    0.48,
+    614,
+    "brook",
+    4.4
+   ],
+   "valley": [
+    "clough",
+    0.89,
+    360,
+    "clough",
+    9.9
+   ]
+  },
+  {
+   "county": "Leeds",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    73,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "beck",
+    0.92,
+    77,
+    "beck",
+    10.0
+   ],
+   "valley": [
+    "bottom",
+    0.58,
+    12,
+    "bottom",
+    5.3
+   ]
+  },
+  {
+   "county": "Leicestershire",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    140,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "brook",
+    0.8,
+    79,
+    "brook",
+    7.3
+   ]
+  },
+  {
+   "county": "Lincolnshire",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    174,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "drain",
+    0.44,
+    307,
+    "eau",
+    91.0
+   ],
+   "valley": [
+    "dale",
+    0.32,
+    19,
+    "vale",
+    29.7
+   ]
+  },
+  {
+   "county": "Manchester",
+   "country": "England",
+   "stream": [
+    "brook",
+    1.0,
+    11,
+    "brook",
+    9.2
+   ]
+  },
+  {
+   "county": "Medway",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    18,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "fleet",
+    0.54,
+    13,
+    "fleet",
+    313.3
+   ]
+  },
+  {
+   "county": "Merthyr Tydfil",
+   "country": "Wales",
+   "stream": [
+    "nant",
+    1.0,
+    31,
+    "nant",
+    20.8
+   ],
+   "valley": [
+    "cwm",
+    1.0,
+    10,
+    "cwm",
+    14.3
+   ]
+  },
+  {
+   "county": "Midlothian",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    0.74,
+    46,
+    "law",
+    14.6
+   ],
+   "stream": [
+    "burn",
+    0.84,
+    56,
+    "burn",
+    3.3
+   ],
+   "valley": [
+    "cleugh",
+    0.46,
+    26,
+    "cleugh",
+    4.2
+   ]
+  },
+  {
+   "county": "Monmouthshire",
+   "country": "Wales",
+   "hill": [
+    "hill",
+    0.88,
+    51,
+    "hill",
+    1.4
+   ],
+   "stream": [
+    "brook",
+    0.56,
+    86,
+    "reen",
+    56.3
+   ],
+   "valley": [
+    "cwm",
+    0.71,
+    35,
+    "cwm",
+    10.2
+   ]
+  },
+  {
+   "county": "Moray",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    0.79,
+    314,
+    "carn",
+    6.1
+   ],
+   "stream": [
+    "burn",
+    0.73,
+    445,
+    "caochan",
+    7.4
+   ],
+   "valley": [
+    "coire",
+    0.58,
+    67,
+    "coire",
+    2.8
+   ]
+  },
+  {
+   "county": "Na h-Eileanan an Iar",
+   "country": "Scotland",
+   "hill": [
+    "cnoc",
+    0.75,
+    1113,
+    "cnoc",
+    7.7
+   ],
+   "stream": [
+    "allt",
+    0.53,
+    704,
+    "abhainn",
+    19.2
+   ],
+   "valley": [
+    "glen",
+    0.73,
+    255,
+    "glen",
+    5.5
+   ]
+  },
+  {
+   "county": "Neath Port Talbot",
+   "country": "Wales",
+   "hill": [
+    "mynydd",
+    0.55,
+    40,
+    "mynydd",
+    76.3
+   ],
+   "stream": [
+    "nant",
+    0.73,
+    109,
+    "nant",
+    15.3
+   ],
+   "valley": [
+    "cwm",
+    0.95,
+    59,
+    "cwm",
+    13.6
+   ]
+  },
+  {
+   "county": "Newcastle upon Tyne",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.92,
+    13,
+    "hill",
+    1.5
+   ]
+  },
+  {
+   "county": "Newport",
+   "country": "Wales",
+   "stream": [
+    "reen",
+    0.83,
+    46,
+    "reen",
+    500.3
+   ]
+  },
+  {
+   "county": "Norfolk",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.99,
+    322,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "river",
+    0.29,
+    136,
+    "fleet",
+    25.7
+   ],
+   "valley": [
+    "bottom",
+    0.48,
+    25,
+    "valley",
+    9.5
+   ]
+  },
+  {
+   "county": "North Ayrshire",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    0.65,
+    229,
+    "cnoc",
+    1.9
+   ],
+   "stream": [
+    "burn",
+    0.62,
+    185,
+    "water",
+    5.4
+   ],
+   "valley": [
+    "glen",
+    0.68,
+    90,
+    "glen",
+    5.1
+   ]
+  },
+  {
+   "county": "North East Lincolnshire",
+   "country": "England",
+   "stream": [
+    "drain",
+    0.5,
+    12,
+    "drain",
+    17.2
+   ]
+  },
+  {
+   "county": "North Lanarkshire",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    1.0,
+    26,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "burn",
+    0.81,
+    64,
+    "water",
+    6.2
+   ],
+   "valley": [
+    "glen",
+    0.86,
+    22,
+    "glen",
+    6.5
+   ]
+  },
+  {
+   "county": "North Lincolnshire",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    18,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "drain",
+    0.69,
+    74,
+    "drain",
+    23.7
+   ]
+  },
+  {
+   "county": "North Northamptonshire",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    15,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "brook",
+    0.67,
+    33,
+    "dike",
+    11.7
+   ]
+  },
+  {
+   "county": "North Somerset",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.87,
+    53,
+    "down",
+    2.9
+   ],
+   "stream": [
+    "rhyne",
+    0.53,
+    36,
+    "rhyne",
+    105.1
+   ],
+   "valley": [
+    "combe",
+    0.5,
+    24,
+    "combe",
+    20.8
+   ]
+  },
+  {
+   "county": "North Yorkshire",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.94,
+    1799,
+    "fell",
+    1.8
+   ],
+   "stream": [
+    "beck",
+    0.54,
+    1678,
+    "gill",
+    6.0
+   ],
+   "valley": [
+    "dale",
+    0.54,
+    434,
+    "slack",
+    16.9
+   ]
+  },
+  {
+   "county": "Northumberland",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.73,
+    1120,
+    "crag",
+    6.1
+   ],
+   "stream": [
+    "burn",
+    0.74,
+    885,
+    "cleugh",
+    12.4
+   ],
+   "valley": [
+    "cleugh",
+    0.74,
+    369,
+    "dean",
+    10.2
+   ]
+  },
+  {
+   "county": "Nottinghamshire",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    198,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "dike",
+    0.26,
+    113,
+    "dike",
+    14.2
+   ],
+   "valley": [
+    "dale",
+    0.41,
+    17,
+    "dale",
+    6.2
+   ]
+  },
+  {
+   "county": "Oldham",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    36,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "brook",
+    0.71,
+    21,
+    "brook",
+    6.5
+   ],
+   "valley": [
+    "clough",
+    0.9,
+    70,
+    "clough",
+    9.9
+   ]
+  },
+  {
+   "county": "Orkney Islands",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    1.0,
+    130,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "burn",
+    0.99,
+    150,
+    "burn",
+    3.9
+   ],
+   "valley": [
+    "dale",
+    0.67,
+    42,
+    "dale",
+    10.0
+   ]
+  },
+  {
+   "county": "Oxfordshire",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.81,
+    288,
+    "down",
+    4.1
+   ],
+   "stream": [
+    "brook",
+    0.63,
+    168,
+    "ditch",
+    19.8
+   ],
+   "valley": [
+    "bottom",
+    0.93,
+    83,
+    "bottom",
+    8.4
+   ]
+  },
+  {
+   "county": "Pembrokeshire",
+   "country": "Wales",
+   "hill": [
+    "hill",
+    0.54,
+    92,
+    "mynydd",
+    15.1
+   ],
+   "stream": [
+    "afon",
+    0.46,
+    87,
+    "lake",
+    27.3
+   ],
+   "valley": [
+    "cwm",
+    0.57,
+    58,
+    "cwm",
+    8.1
+   ]
+  },
+  {
+   "county": "Perth and Kinross",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    0.42,
+    783,
+    "meall",
+    6.8
+   ],
+   "stream": [
+    "allt",
+    0.46,
+    798,
+    "pow",
+    16.5
+   ],
+   "valley": [
+    "coire",
+    0.61,
+    373,
+    "den",
+    5.1
+   ]
+  },
+  {
+   "county": "Powys",
+   "country": "Wales",
+   "hill": [
+    "hill",
+    0.4,
+    383,
+    "bryn",
+    37.0
+   ],
+   "stream": [
+    "nant",
+    0.63,
+    581,
+    "nant",
+    13.1
+   ],
+   "valley": [
+    "cwm",
+    0.74,
+    410,
+    "cwm",
+    10.5
+   ]
+  },
+  {
+   "county": "Redcar and Cleveland",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    44,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "beck",
+    0.77,
+    57,
+    "beck",
+    8.3
+   ],
+   "valley": [
+    "dale",
+    0.69,
+    13,
+    "dale",
+    10.4
+   ]
+  },
+  {
+   "county": "Renfrewshire",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    0.95,
+    56,
+    "hill",
+    1.5
+   ],
+   "stream": [
+    "burn",
+    0.89,
+    55,
+    "burn",
+    3.5
+   ],
+   "valley": [
+    "glen",
+    1.0,
+    12,
+    "glen",
+    7.6
+   ]
+  },
+  {
+   "county": "Rhondda Cynon Taf",
+   "country": "Wales",
+   "hill": [
+    "mynydd",
+    0.69,
+    32,
+    "mynydd",
+    95.4
+   ],
+   "stream": [
+    "nant",
+    0.92,
+    122,
+    "nant",
+    19.1
+   ],
+   "valley": [
+    "cwm",
+    0.97,
+    35,
+    "cwm",
+    13.9
+   ]
+  },
+  {
+   "county": "Rochdale",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.95,
+    74,
+    "hill",
+    1.5
+   ],
+   "stream": [
+    "brook",
+    0.86,
+    49,
+    "brook",
+    7.8
+   ],
+   "valley": [
+    "clough",
+    0.86,
+    28,
+    "clough",
+    9.5
+   ]
+  },
+  {
+   "county": "Rotherham",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    35,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "dike",
+    0.52,
+    25,
+    "dike",
+    28.8
+   ],
+   "valley": [
+    "bottom",
+    0.73,
+    11,
+    "bottom",
+    6.6
+   ]
+  },
+  {
+   "county": "Rutland",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    11,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "brook",
+    0.55,
+    11,
+    "river",
+    7.6
+   ]
+  },
+  {
+   "county": "Salford",
+   "country": "England",
+   "stream": [
+    "brook",
+    0.85,
+    13,
+    "brook",
+    7.7
+   ]
+  },
+  {
+   "county": "Scottish Borders",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    0.65,
+    1269,
+    "law",
+    11.4
+   ],
+   "stream": [
+    "burn",
+    0.73,
+    1052,
+    "grain",
+    7.1
+   ],
+   "valley": [
+    "cleugh",
+    0.75,
+    660,
+    "hope",
+    10.9
+   ]
+  },
+  {
+   "county": "Sefton",
+   "country": "England",
+   "stream": [
+    "brook",
+    0.71,
+    28,
+    "brook",
+    6.5
+   ]
+  },
+  {
+   "county": "Sheffield",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.78,
+    40,
+    "tor",
+    28.5
+   ],
+   "stream": [
+    "brook",
+    0.47,
+    73,
+    "dike",
+    17.4
+   ],
+   "valley": [
+    "clough",
+    0.72,
+    54,
+    "clough",
+    8.0
+   ]
+  },
+  {
+   "county": "Shetland Islands",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    0.95,
+    315,
+    "knowe",
+    3.8
+   ],
+   "stream": [
+    "burn",
+    0.99,
+    418,
+    "burn",
+    3.9
+   ],
+   "valley": [
+    "dale",
+    0.91,
+    108,
+    "dale",
+    13.7
+   ]
+  },
+  {
+   "county": "Shropshire",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.97,
+    187,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "brook",
+    0.84,
+    159,
+    "gutter",
+    11.2
+   ],
+   "valley": [
+    "dingle",
+    0.75,
+    131,
+    "dingle",
+    24.8
+   ]
+  },
+  {
+   "county": "Somerset",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.88,
+    502,
+    "beacon",
+    8.4
+   ],
+   "stream": [
+    "rhyne",
+    0.3,
+    274,
+    "rhyne",
+    60.3
+   ],
+   "valley": [
+    "combe",
+    0.66,
+    231,
+    "combe",
+    27.5
+   ]
+  },
+  {
+   "county": "South Ayrshire",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    0.91,
+    287,
+    "knowe",
+    3.3
+   ],
+   "stream": [
+    "burn",
+    0.93,
+    199,
+    "burn",
+    3.7
+   ],
+   "valley": [
+    "glen",
+    0.98,
+    83,
+    "glen",
+    7.4
+   ]
+  },
+  {
+   "county": "South Gloucestershire",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.95,
+    58,
+    "hill",
+    1.5
+   ],
+   "stream": [
+    "rhyne",
+    0.65,
+    57,
+    "rhyne",
+    129.3
+   ],
+   "valley": [
+    "bottom",
+    0.42,
+    12,
+    "bottom",
+    3.8
+   ]
+  },
+  {
+   "county": "South Lanarkshire",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    0.73,
+    344,
+    "rigg",
+    9.8
+   ],
+   "stream": [
+    "burn",
+    0.78,
+    321,
+    "grain",
+    4.7
+   ],
+   "valley": [
+    "cleugh",
+    0.71,
+    99,
+    "cleugh",
+    6.4
+   ]
+  },
+  {
+   "county": "St. Helens",
+   "country": "England",
+   "stream": [
+    "brook",
+    1.0,
+    14,
+    "brook",
+    9.2
+   ]
+  },
+  {
+   "county": "Staffordshire",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.98,
+    186,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "brook",
+    0.89,
+    194,
+    "brook",
+    8.2
+   ],
+   "valley": [
+    "valley",
+    0.34,
+    71,
+    "slade",
+    41.3
+   ]
+  },
+  {
+   "county": "Stirling",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    0.4,
+    242,
+    "meall",
+    6.4
+   ],
+   "stream": [
+    "burn",
+    0.55,
+    332,
+    "burn",
+    2.2
+   ],
+   "valley": [
+    "coire",
+    0.56,
+    201,
+    "glen",
+    3.0
+   ]
+  },
+  {
+   "county": "Stockport",
+   "country": "England",
+   "stream": [
+    "brook",
+    0.93,
+    15,
+    "brook",
+    8.5
+   ]
+  },
+  {
+   "county": "Stockton-on-Tees",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    16,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "beck",
+    0.78,
+    23,
+    "beck",
+    8.5
+   ]
+  },
+  {
+   "county": "Suffolk",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.99,
+    158,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "river",
+    0.46,
+    101,
+    "fleet",
+    46.1
+   ],
+   "valley": [
+    "bottom",
+    0.7,
+    23,
+    "bottom",
+    6.3
+   ]
+  },
+  {
+   "county": "Sunderland",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.9,
+    30,
+    "hill",
+    1.4
+   ]
+  },
+  {
+   "county": "Surrey",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.96,
+    307,
+    "hill",
+    1.5
+   ],
+   "stream": [
+    "brook",
+    0.44,
+    125,
+    "bourne",
+    37.5
+   ],
+   "valley": [
+    "bottom",
+    0.7,
+    53,
+    "gill",
+    8.1
+   ]
+  },
+  {
+   "county": "Swansea",
+   "country": "Wales",
+   "hill": [
+    "hill",
+    0.45,
+    20,
+    "hill",
+    0.7
+   ],
+   "stream": [
+    "nant",
+    0.52,
+    21,
+    "nant",
+    10.9
+   ]
+  },
+  {
+   "county": "Swindon",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.75,
+    24,
+    "down",
+    5.5
+   ],
+   "stream": [
+    "brook",
+    0.67,
+    15,
+    "brook",
+    6.1
+   ]
+  },
+  {
+   "county": "Tameside",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.83,
+    12,
+    "hill",
+    1.3
+   ],
+   "stream": [
+    "brook",
+    0.88,
+    16,
+    "brook",
+    8.0
+   ],
+   "valley": [
+    "clough",
+    0.94,
+    17,
+    "clough",
+    10.4
+   ]
+  },
+  {
+   "county": "Telford and Wrekin",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    15,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "brook",
+    0.81,
+    16,
+    "brook",
+    7.4
+   ],
+   "valley": [
+    "dingle",
+    0.7,
+    10,
+    "dingle",
+    23.2
+   ]
+  },
+  {
+   "county": "The City of Brighton and Hove",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    18,
+    "hill",
+    1.6
+   ],
+   "valley": [
+    "bottom",
+    0.75,
+    20,
+    "valley",
+    11.9
+   ]
+  },
+  {
+   "county": "Thurrock",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.91,
+    11,
+    "hill",
+    1.5
+   ],
+   "stream": [
+    "sewer",
+    0.45,
+    31,
+    "sewer",
+    135.4
+   ]
+  },
+  {
+   "county": "Torbay",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.83,
+    18,
+    "hill",
+    1.3
+   ]
+  },
+  {
+   "county": "Torfaen",
+   "country": "Wales",
+   "stream": [
+    "nant",
+    0.67,
+    18,
+    "nant",
+    13.9
+   ],
+   "valley": [
+    "cwm",
+    0.94,
+    16,
+    "cwm",
+    13.4
+   ]
+  },
+  {
+   "county": "Trafford",
+   "country": "England",
+   "stream": [
+    "brook",
+    0.93,
+    14,
+    "brook",
+    8.5
+   ]
+  },
+  {
+   "county": "Wakefield",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.97,
+    68,
+    "hill",
+    1.5
+   ],
+   "stream": [
+    "beck",
+    0.73,
+    48,
+    "beck",
+    7.9
+   ]
+  },
+  {
+   "county": "Warrington",
+   "country": "England",
+   "stream": [
+    "brook",
+    1.0,
+    33,
+    "brook",
+    9.2
+   ]
+  },
+  {
+   "county": "Warwickshire",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.99,
+    192,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "brook",
+    0.83,
+    72,
+    "brook",
+    7.6
+   ]
+  },
+  {
+   "county": "West Berkshire",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.52,
+    110,
+    "down",
+    10.6
+   ],
+   "stream": [
+    "brook",
+    0.28,
+    18,
+    "brook",
+    2.5
+   ],
+   "valley": [
+    "gully",
+    0.71,
+    97,
+    "gully",
+    41.1
+   ]
+  },
+  {
+   "county": "West Dunbartonshire",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    1.0,
+    22,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "burn",
+    0.97,
+    30,
+    "burn",
+    3.8
+   ],
+   "valley": [
+    "glen",
+    1.0,
+    14,
+    "glen",
+    7.6
+   ]
+  },
+  {
+   "county": "West Lothian",
+   "country": "Scotland",
+   "hill": [
+    "hill",
+    0.95,
+    73,
+    "hill",
+    1.5
+   ],
+   "stream": [
+    "burn",
+    0.79,
+    77,
+    "water",
+    5.1
+   ]
+  },
+  {
+   "county": "West Northamptonshire",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.97,
+    60,
+    "hill",
+    1.5
+   ],
+   "stream": [
+    "brook",
+    0.79,
+    34,
+    "brook",
+    7.3
+   ]
+  },
+  {
+   "county": "West Sussex",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.77,
+    226,
+    "down",
+    4.9
+   ],
+   "stream": [
+    "brook",
+    0.25,
+    120,
+    "rife",
+    247.3
+   ],
+   "valley": [
+    "bottom",
+    0.56,
+    126,
+    "gill",
+    21.8
+   ]
+  },
+  {
+   "county": "Westmorland and Furness",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.57,
+    1024,
+    "knott",
+    20.7
+   ],
+   "stream": [
+    "beck",
+    0.48,
+    1146,
+    "gill",
+    7.8
+   ],
+   "valley": [
+    "dale",
+    0.35,
+    150,
+    "gill",
+    6.9
+   ]
+  },
+  {
+   "county": "Wigan",
+   "country": "England",
+   "stream": [
+    "brook",
+    1.0,
+    49,
+    "brook",
+    9.2
+   ]
+  },
+  {
+   "county": "Wiltshire",
+   "country": "England",
+   "hill": [
+    "down",
+    0.53,
+    549,
+    "down",
+    11.6
+   ],
+   "stream": [
+    "brook",
+    0.58,
+    103,
+    "stream",
+    6.7
+   ],
+   "valley": [
+    "bottom",
+    0.89,
+    133,
+    "bottom",
+    8.1
+   ]
+  },
+  {
+   "county": "Windsor and Maidenhead",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    29,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "ditch",
+    0.47,
+    17,
+    "ditch",
+    55.9
+   ]
+  },
+  {
+   "county": "Wokingham",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    15,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "brook",
+    0.5,
+    16,
+    "brook",
+    4.6
+   ]
+  },
+  {
+   "county": "Worcestershire",
+   "country": "England",
+   "hill": [
+    "hill",
+    0.98,
+    164,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "brook",
+    0.91,
+    92,
+    "brook",
+    8.4
+   ],
+   "valley": [
+    "dingle",
+    0.72,
+    43,
+    "dingle",
+    23.9
+   ]
+  },
+  {
+   "county": "Wrexham",
+   "country": "Wales",
+   "hill": [
+    "hill",
+    0.31,
+    16,
+    "hill",
+    0.5
+   ],
+   "stream": [
+    "nant",
+    0.41,
+    41,
+    "nant",
+    8.6
+   ],
+   "valley": [
+    "dingle",
+    0.92,
+    12,
+    "dingle",
+    30.4
+   ]
+  },
+  {
+   "county": "York",
+   "country": "England",
+   "hill": [
+    "hill",
+    1.0,
+    20,
+    "hill",
+    1.6
+   ],
+   "stream": [
+    "drain",
+    0.39,
+    36,
+    "drain",
+    13.4
+   ]
+  },
+  {
+   "county": "the Vale of Glamorgan",
+   "country": "Wales",
+   "hill": [
+    "down",
+    0.55,
+    22,
+    "down",
+    12.0
+   ],
+   "stream": [
+    "brook",
+    0.44,
+    48,
+    "nant",
+    8.7
+   ],
+   "valley": [
+    "cwm",
+    0.71,
+    24,
+    "cwm",
+    10.1
+   ]
+  }
+ ],
+ "county_top_counts": {
+  "stream": {
+   "brook": 52,
+   "burn": 29,
+   "nant": 14,
+   "beck": 11,
+   "drain": 7,
+   "river": 6,
+   "allt": 4,
+   "dike": 4,
+   "stream": 4,
+   "afon": 4,
+   "rhyne": 3,
+   "fleet": 1,
+   "reen": 1,
+   "sewer": 1,
+   "ditch": 1
+  },
+  "valley": {
+   "bottom": 20,
+   "cwm": 15,
+   "clough": 14,
+   "glen": 12,
+   "cleugh": 8,
+   "dale": 8,
+   "dingle": 7,
+   "coire": 6,
+   "chine": 2,
+   "valley": 2,
+   "combe": 2,
+   "den": 1,
+   "gully": 1
+  },
+  "hill": {
+   "hill": 112,
+   "mynydd": 5,
+   "moel": 4,
+   "down": 4,
+   "cnoc": 3,
+   "pen": 1
+  }
+ },
+ "rare": [
+  {
+   "family": "valley",
+   "word": "hollow",
+   "n": 6,
+   "top_county": "Shropshire",
+   "top_n": 4,
+   "top_share": 0.67,
+   "radius80_km": 131,
+   "examples": [
+    "Sandpit Hollow",
+    "Pike Hollow",
+    "New Pool Hollow",
+    "Devilsmouth Hollow"
+   ]
+  },
+  {
+   "family": "fall",
+   "word": "foss",
+   "n": 6,
+   "top_county": "North Yorkshire",
+   "top_n": 6,
+   "top_share": 1.0,
+   "radius80_km": 6,
+   "examples": [
+    "Walk Mill Foss",
+    "Thomason Foss",
+    "Water Ark Foss",
+    "Falling Foss"
+   ]
+  },
+  {
+   "family": "fall",
+   "word": "sgwd",
+   "n": 7,
+   "top_county": "Powys",
+   "top_n": 6,
+   "top_share": 0.86,
+   "radius80_km": 29,
+   "examples": [
+    "Sgŵd Isaf Clun-gwyn",
+    "Sgŵd Clun-gwyn",
+    "Sgwd Gwladus",
+    "Sgwd yr Eira"
+   ]
+  },
+  {
+   "family": "fall",
+   "word": "rhaeadr",
+   "n": 11,
+   "top_county": "Gwynedd",
+   "top_n": 5,
+   "top_share": 0.45,
+   "radius80_km": 24,
+   "examples": [
+    "Rhaeadr Mawddach",
+    "Rhaeadr Du",
+    "Rhaeadr Cynfal",
+    "Rhaeadr Cymerau"
+   ]
+  },
+  {
+   "family": "fall",
+   "word": "pistyll",
+   "n": 12,
+   "top_county": "Powys",
+   "top_n": 7,
+   "top_share": 0.58,
+   "radius80_km": 33,
+   "examples": [
+    "Pistyll Cim",
+    "Pistyll Gwyn",
+    "Pistyll y Ceunant",
+    "Pistyll Rhyd-y-meinciau"
+   ]
+  },
+  {
+   "family": "stream",
+   "word": "eau",
+   "n": 17,
+   "top_county": "Lincolnshire",
+   "top_n": 16,
+   "top_share": 0.94,
+   "radius80_km": 46,
+   "examples": [
+    "River Eau",
+    "Great Eau",
+    "Long Eau",
+    "Sunderfleet Eau"
+   ]
+  },
+  {
+   "family": "stream",
+   "word": "rife",
+   "n": 17,
+   "top_county": "West Sussex",
+   "top_n": 17,
+   "top_share": 1.0,
+   "radius80_km": 9,
+   "examples": [
+    "Forebridge Rife",
+    "Oving Rife",
+    "Aldingbourne Rife",
+    "Ferring Rife"
+   ]
+  },
+  {
+   "family": "valley",
+   "word": "dyffryn",
+   "n": 17,
+   "top_county": "Conwy",
+   "top_n": 4,
+   "top_share": 0.24,
+   "radius80_km": 88,
+   "examples": [
+    "Dyffryn Nantlle",
+    "Dyffryn Dysynni",
+    "Dyffryn Mymbyr",
+    "Dyffryn Conwy"
+   ]
+  },
+  {
+   "family": "stream",
+   "word": "pow",
+   "n": 18,
+   "top_county": "Perth and Kinross",
+   "top_n": 8,
+   "top_share": 0.44,
+   "radius80_km": 138,
+   "examples": [
+    "Little Pow",
+    "Erskine Pow",
+    "Grange Pow",
+    "Inchmartine Pow"
+   ]
+  },
+  {
+   "family": "stream",
+   "word": "cleugh",
+   "n": 19,
+   "top_county": "Northumberland",
+   "top_n": 7,
+   "top_share": 0.37,
+   "radius80_km": 58,
+   "examples": [
+    "Causey Cleugh",
+    "Cairn Cleugh",
+    "Cat Cleugh",
+    "Archer Cleugh"
+   ]
+  },
+  {
+   "family": "stream",
+   "word": "lode",
+   "n": 21,
+   "top_county": "Cambridgeshire",
+   "top_n": 15,
+   "top_share": 0.71,
+   "radius80_km": 36,
+   "examples": [
+    "Pointon Lode",
+    "Billingborough Lode",
+    "Ouse Mere Lode",
+    "Sempringham Lode"
+   ]
+  },
+  {
+   "family": "valley",
+   "word": "slade",
+   "n": 21,
+   "top_county": "Staffordshire",
+   "top_n": 5,
+   "top_share": 0.24,
+   "radius80_km": 149,
+   "examples": [
+    "Moss Hall Slades",
+    "Horncliff Slade",
+    "Slade",
+    "Deer Slade"
+   ]
+  },
+  {
+   "family": "valley",
+   "word": "chine",
+   "n": 29,
+   "top_county": "Isle of Wight",
+   "top_n": 19,
+   "top_share": 0.66,
+   "radius80_km": 27,
+   "examples": [
+    "The Chine",
+    "Canford Cliffs Chine",
+    "Flag Head Chine",
+    "Middle Chine"
+   ]
+  },
+  {
+   "family": "stream",
+   "word": "clough",
+   "n": 30,
+   "top_county": "Calderdale",
+   "top_n": 8,
+   "top_share": 0.27,
+   "radius80_km": 29,
+   "examples": [
+    "Swinden Clough",
+    "Black Clough",
+    "Green's Clough",
+    "Tower Clough"
+   ]
+  },
+  {
+   "family": "stream",
+   "word": "bourne",
+   "n": 38,
+   "top_county": "Hertfordshire",
+   "top_n": 8,
+   "top_share": 0.21,
+   "radius80_km": 90,
+   "examples": [
+    "River Bourne",
+    "The Bourn",
+    "River Bourn",
+    "The Black Bourn"
+   ]
+  },
+  {
+   "family": "fall",
+   "word": "spout",
+   "n": 41,
+   "top_county": "Stirling",
+   "top_n": 17,
+   "top_share": 0.41,
+   "radius80_km": 135,
+   "examples": [
+    "Spùt Dubh",
+    "Spùt Beag",
+    "Spùt Mòr",
+    "Spùt Bàn"
+   ]
+  },
+  {
+   "family": "stream",
+   "word": "reen",
+   "n": 49,
+   "top_county": "Newport",
+   "top_n": 38,
+   "top_share": 0.78,
+   "radius80_km": 9,
+   "examples": [
+    "Wharf Reen",
+    "Saltmarsh Reen",
+    "Chapel Reen",
+    "Percoed Reen"
+   ]
+  },
+  {
+   "family": "stream",
+   "word": "fleet",
+   "n": 51,
+   "top_county": "Essex",
+   "top_n": 11,
+   "top_share": 0.22,
+   "radius80_km": 232,
+   "examples": [
+    "River Fleet",
+    "Little Water of Fleet",
+    "Big Water of Fleet",
+    "Broad Fleet"
+   ]
+  }
+ ],
+ "hidden": [
+  {
+   "word": "burn",
+   "n": 147,
+   "lat_med": 55.17,
+   "lat_p25": 54.48,
+   "lat_p75": 55.9,
+   "england": 79,
+   "scotland": 68,
+   "wales": 0,
+   "examples": [
+    "Peterburn",
+    "Muir of Fairburn",
+    "Millburn",
+    "Scotsburn",
+    "Redburn"
+   ]
+  },
+  {
+   "word": "thwaite",
+   "n": 75,
+   "lat_med": 54.42,
+   "lat_p25": 54.2,
+   "lat_p75": 54.62,
+   "england": 75,
+   "scotland": 0,
+   "wales": 0,
+   "examples": [
+    "Arrowthwaite",
+    "Branthwaite",
+    "Brackenthwaite",
+    "Thackthwaite",
+    "Rosthwaite"
+   ]
+  },
+  {
+   "word": "dale",
+   "n": 230,
+   "lat_med": 54.32,
+   "lat_p25": 53.2,
+   "lat_p75": 55.76,
+   "england": 156,
+   "scotland": 70,
+   "wales": 4,
+   "examples": [
+    "Ordale",
+    "Northdale",
+    "Quendale",
+    "Stanydale",
+    "Weisdale"
+   ]
+  },
+  {
+   "word": "beck",
+   "n": 46,
+   "lat_med": 54.26,
+   "lat_p25": 53.37,
+   "lat_p75": 54.57,
+   "england": 45,
+   "scotland": 1,
+   "wales": 0,
+   "examples": [
+    "Salterbeck",
+    "Blackbeck",
+    "Hopebeck",
+    "Caldbeck",
+    "Troutbeck"
+   ]
+  },
+  {
+   "word": "hope",
+   "n": 34,
+   "lat_med": 53.27,
+   "lat_p25": 52.45,
+   "lat_p75": 54.78,
+   "england": 31,
+   "scotland": 3,
+   "wales": 0,
+   "examples": [
+    "Longhope",
+    "Stanhope",
+    "Linhope",
+    "Sourhope",
+    "Rookhope"
+   ]
+  },
+  {
+   "word": "brook",
+   "n": 196,
+   "lat_med": 52.0,
+   "lat_p25": 51.24,
+   "lat_p75": 52.92,
+   "england": 185,
+   "scotland": 1,
+   "wales": 10,
+   "examples": [
+    "Glenbrook",
+    "Swillbrook",
+    "Tarnbrook",
+    "Ellenbrook",
+    "Calderbrook"
+   ]
+  },
+  {
+   "word": "dean",
+   "n": 42,
+   "lat_med": 51.69,
+   "lat_p25": 50.86,
+   "lat_p75": 55.26,
+   "england": 33,
+   "scotland": 9,
+   "wales": 0,
+   "examples": [
+    "Ballindean",
+    "Faucheldean",
+    "Eldindean",
+    "Lindean",
+    "Hassendean"
+   ]
+  },
+  {
+   "word": "bourne",
+   "n": 103,
+   "lat_med": 51.57,
+   "lat_p25": 51.09,
+   "lat_p75": 52.21,
+   "england": 102,
+   "scotland": 0,
+   "wales": 1,
+   "examples": [
+    "Milbourne",
+    "Eastbourne",
+    "Melbourne",
+    "Fairbourne",
+    "Ashbourne"
+   ]
+  },
+  {
+   "word": "combe",
+   "n": 171,
+   "lat_med": 51.06,
+   "lat_p25": 50.8,
+   "lat_p75": 51.32,
+   "england": 170,
+   "scotland": 0,
+   "wales": 1,
+   "examples": [
+    "Holcombe",
+    "Seacombe",
+    "Gatcombe",
+    "Pencombe",
+    "Little Witcombe"
+   ]
+  }
+ ],
+ "norse_index": {
+  "radius_km": 10,
+  "min_words": 25,
+  "n_places": 11446,
+  "norse_words": [
+   "fall:force",
+   "fall:foss",
+   "hill:fell",
+   "hill:how",
+   "settlement:by",
+   "settlement:holme",
+   "settlement:kirk",
+   "settlement:thorpe",
+   "settlement:thwaite",
+   "settlement:toft",
+   "stream:beck",
+   "stream:gill",
+   "valley:gill"
+  ],
+  "english_words": [
+   "hill:down",
+   "hill:edge",
+   "settlement:ham",
+   "settlement:ley",
+   "settlement:ton",
+   "settlement:worth",
+   "stream:bourne",
+   "stream:brook",
+   "stream:burn",
+   "stream:fleet",
+   "stream:lode",
+   "valley:bottom",
+   "valley:clough",
+   "valley:dean",
+   "valley:hope",
+   "valley:slade"
+  ],
+  "most_norse": [
+   {
+    "name": "Applethwaite",
+    "county": "Cumberland",
+    "type": "Village",
+    "norse": 151,
+    "english": 1,
+    "index": 0.993,
+    "lat": 54.621,
+    "lon": -3.14
+   },
+   {
+    "name": "Keswick",
+    "county": "Cumberland",
+    "type": "Town",
+    "norse": 149,
+    "english": 1,
+    "index": 0.993,
+    "lat": 54.602,
+    "lon": -3.139
+   },
+   {
+    "name": "Ghyll Head",
+    "county": "Westmorland and Furness",
+    "type": "Village",
+    "norse": 95,
+    "english": 1,
+    "index": 0.99,
+    "lat": 54.327,
+    "lon": -2.935
+   },
+   {
+    "name": "Threlkeld",
+    "county": "Westmorland and Furness",
+    "type": "Village",
+    "norse": 141,
+    "english": 2,
+    "index": 0.986,
+    "lat": 54.618,
+    "lon": -3.055
+   },
+   {
+    "name": "Bowness-on-Windermere",
+    "county": "Westmorland and Furness",
+    "type": "Town",
+    "norse": 125,
+    "english": 2,
+    "index": 0.984,
+    "lat": 54.365,
+    "lon": -2.92
+   },
+   {
+    "name": "Storrs",
+    "county": "Westmorland and Furness",
+    "type": "Village",
+    "norse": 110,
+    "english": 2,
+    "index": 0.982,
+    "lat": 54.342,
+    "lon": -2.931
+   },
+   {
+    "name": "Ings",
+    "county": "Westmorland and Furness",
+    "type": "Village",
+    "norse": 104,
+    "english": 2,
+    "index": 0.981,
+    "lat": 54.381,
+    "lon": -2.856
+   },
+   {
+    "name": "Fylingthorpe",
+    "county": "North Yorkshire",
+    "type": "Village",
+    "norse": 52,
+    "english": 1,
+    "index": 0.981,
+    "lat": 54.431,
+    "lon": -0.55
+   },
+   {
+    "name": "Portinscale",
+    "county": "Cumberland",
+    "type": "Village",
+    "norse": 154,
+    "english": 3,
+    "index": 0.981,
+    "lat": 54.602,
+    "lon": -3.162
+   },
+   {
+    "name": "Winster",
+    "county": "Westmorland and Furness",
+    "type": "Village",
+    "norse": 98,
+    "english": 2,
+    "index": 0.98,
+    "lat": 54.334,
+    "lon": -2.896
+   }
+  ],
+  "most_english": [
+   {
+    "name": "Tintwistle",
+    "county": "Derbyshire",
+    "type": "Village",
+    "norse": 0,
+    "english": 180,
+    "index": 0.0,
+    "lat": 53.472,
+    "lon": -1.972
+   },
+   {
+    "name": "Hadfield",
+    "county": "Derbyshire",
+    "type": "Village",
+    "norse": 0,
+    "english": 171,
+    "index": 0.0,
+    "lat": 53.461,
+    "lon": -1.967
+   },
+   {
+    "name": "Padfield",
+    "county": "Derbyshire",
+    "type": "Village",
+    "norse": 0,
+    "english": 169,
+    "index": 0.0,
+    "lat": 53.462,
+    "lon": -1.958
+   },
+   {
+    "name": "Hollingworth",
+    "county": "Tameside",
+    "type": "Village",
+    "norse": 0,
+    "english": 167,
+    "index": 0.0,
+    "lat": 53.463,
+    "lon": -1.991
+   },
+   {
+    "name": "Dinting Vale",
+    "county": "Derbyshire",
+    "type": "Village",
+    "norse": 0,
+    "english": 158,
+    "index": 0.0,
+    "lat": 53.445,
+    "lon": -1.968
+   },
+   {
+    "name": "Glossop",
+    "county": "Derbyshire",
+    "type": "Town",
+    "norse": 0,
+    "english": 157,
+    "index": 0.0,
+    "lat": 53.443,
+    "lon": -1.949
+   },
+   {
+    "name": "Gamesley",
+    "county": "Derbyshire",
+    "type": "Village",
+    "norse": 0,
+    "english": 151,
+    "index": 0.0,
+    "lat": 53.448,
+    "lon": -1.984
+   },
+   {
+    "name": "Mottram in Longdendale",
+    "county": "Tameside",
+    "type": "Village",
+    "norse": 0,
+    "english": 150,
+    "index": 0.0,
+    "lat": 53.456,
+    "lon": -2.011
+   },
+   {
+    "name": "Chapeltown",
+    "county": "Blackburn with Darwen",
+    "type": "Village",
+    "norse": 0,
+    "english": 149,
+    "index": 0.0,
+    "lat": 53.638,
+    "lon": -2.405
+   },
+   {
+    "name": "Hattersley",
+    "county": "Tameside",
+    "type": "Village",
+    "norse": 0,
+    "english": 147,
+    "index": 0.0,
+    "lat": 53.449,
+    "lon": -2.028
+   }
+  ],
+  "n_zero_norse": 5200,
+  "top_towns": [
+   {
+    "name": "Keswick",
+    "county": "Cumberland",
+    "index": 0.993,
+    "norse": 149,
+    "english": 1
+   },
+   {
+    "name": "Bowness-on-Windermere",
+    "county": "Westmorland and Furness",
+    "index": 0.984,
+    "norse": 125,
+    "english": 2
+   },
+   {
+    "name": "Windermere",
+    "county": "Westmorland and Furness",
+    "index": 0.975,
+    "norse": 118,
+    "english": 3
+   },
+   {
+    "name": "Sedbergh",
+    "county": "Westmorland and Furness",
+    "index": 0.964,
+    "norse": 162,
+    "english": 6
+   },
+   {
+    "name": "Ambleside",
+    "county": "Westmorland and Furness",
+    "index": 0.947,
+    "norse": 162,
+    "english": 9
+   },
+   {
+    "name": "Whitby",
+    "county": "North Yorkshire",
+    "index": 0.926,
+    "norse": 50,
+    "english": 4
+   },
+   {
+    "name": "Millom",
+    "county": "Cumberland",
+    "index": 0.92,
+    "norse": 46,
+    "english": 4
+   },
+   {
+    "name": "Broughton in Furness",
+    "county": "Westmorland and Furness",
+    "index": 0.92,
+    "norse": 126,
+    "english": 11
+   }
+  ]
+ },
+ "norse_index_detail": {
+  "most_norse": {
+   "name": "Applethwaite",
+   "words": {
+    "beck": 59,
+    "gill": 44,
+    "fell": 32,
+    "thwaite": 9,
+    "how": 6,
+    "force": 1
+   }
+  },
+  "most_english": {
+   "name": "Tintwistle",
+   "words": {
+    "clough": 102,
+    "brook": 45,
+    "ley": 15,
+    "ton": 8,
+    "worth": 4,
+    "edge": 4,
+    "bottom": 2
+   }
+  },
+  "most_english_km_to_beck_brook": 18.9
+ },
+ "audit": {
+  "stream": {
+   "n": 30,
+   "false": 0,
+   "false_names": []
+  },
+  "valley": {
+   "n": 30,
+   "false": 0,
+   "false_names": []
+  },
+  "hill": {
+   "n": 30,
+   "false": 0,
+   "false_names": []
+  },
+  "settlement": {
+   "n": 30,
+   "false": 0,
+   "false_names": []
+  },
+  "fall": {
+   "n": 30,
+   "false": 0,
+   "false_names": []
+  }
+ },
+ "audit_strat": {
+  "seed": 11,
+  "n": 120,
+  "false": 0,
+  "uncertain": 1
+ },
+ "audit_total": {
+  "n": 150,
+  "false": 0,
+  "seed": 2026
+ },
+ "boundaries": {
+  "beck_brook": {
+   "key": "beck_brook",
+   "a": "beck",
+   "b": "brook",
+   "n_a": 2744,
+   "n_b": 3241,
+   "bandwidth_km": 8,
+   "line_km": 262,
+   "n_pieces": 1,
+   "width_km": 10.8,
+   "ci": [
+    9.0,
+    12.5
+   ],
+   "n_near": 2674,
+   "a_on_a_side": 0.99,
+   "b_on_b_side": 0.985,
+   "local_widths": [
+    10.6,
+    10.2,
+    13.3,
+    12.2
+   ],
+   "local_min_km": 10.2,
+   "local_max_km": 13.3,
+   "sharpest_at": [
+    -1.878,
+    53.6599
+   ]
+  },
+  "burn_beck": {
+   "key": "burn_beck",
+   "a": "burn",
+   "b": "beck",
+   "n_a": 7518,
+   "n_b": 2744,
+   "bandwidth_km": 6,
+   "line_km": 187,
+   "n_pieces": 1,
+   "width_km": 11.7,
+   "ci": [
+    9.1,
+    13.7
+   ],
+   "n_near": 3535,
+   "a_on_a_side": 0.995,
+   "b_on_b_side": 0.985,
+   "local_widths": [
+    12.5,
+    10.5,
+    10.7
+   ],
+   "local_min_km": 10.5,
+   "local_max_km": 12.5,
+   "sharpest_at": [
+    -2.5351,
+    54.7855
+   ]
+  },
+  "allt_burn": {
+   "key": "allt_burn",
+   "a": "allt",
+   "b": "burn",
+   "n_a": 5924,
+   "n_b": 7518,
+   "bandwidth_km": 6,
+   "line_km": 695,
+   "n_pieces": 6,
+   "width_km": 26.2,
+   "ci": [
+    25.1,
+    27.6
+   ],
+   "n_near": 8673,
+   "a_on_a_side": 0.969,
+   "b_on_b_side": 0.91,
+   "local_widths": [
+    50.3,
+    17.8,
+    18.7,
+    20.6,
+    15.5,
+    21.7,
+    44.8,
+    22.6,
+    40.0,
+    30.4,
+    39.5,
+    34.9
+   ],
+   "local_min_km": 15.5,
+   "local_max_km": 50.3,
+   "sharpest_at": [
+    -3.4855,
+    56.7227
+   ]
+  },
+  "nant_brook": {
+   "key": "nant_brook",
+   "a": "nant or afon",
+   "b": "brook",
+   "n_a": 2154,
+   "n_b": 3241,
+   "bandwidth_km": 8,
+   "line_km": 315,
+   "n_pieces": 2,
+   "width_km": 20.3,
+   "ci": [
+    18.0,
+    22.7
+   ],
+   "n_near": 3286,
+   "a_on_a_side": 0.983,
+   "b_on_b_side": 0.966,
+   "local_widths": [
+    28.1,
+    20.3,
+    15.4,
+    6.9,
+    26.3
+   ],
+   "local_min_km": 6.9,
+   "local_max_km": 28.1,
+   "sharpest_at": [
+    -3.1351,
+    53.1619
+   ]
+  },
+  "dale_clough": {
+   "key": "dale_clough",
+   "a": "dale",
+   "b": "clough",
+   "n_a": 817,
+   "n_b": 1113,
+   "bandwidth_km": 10,
+   "line_km": 424,
+   "n_pieces": 3,
+   "width_km": 16.9,
+   "ci": [
+    14.5,
+    19.1
+   ],
+   "n_near": 1671,
+   "a_on_a_side": 0.922,
+   "b_on_b_side": 0.984,
+   "local_widths": [
+    10.3,
+    19.5,
+    8.0,
+    15.7,
+    null,
+    null,
+    5.2
+   ],
+   "local_min_km": 5.2,
+   "local_max_km": 19.5,
+   "sharpest_at": [
+    -0.4837,
+    53.6897
+   ]
+  },
+  "combe_bottom": {
+   "key": "combe_bottom",
+   "a": "combe",
+   "b": "bottom",
+   "n_a": 296,
+   "n_b": 1352,
+   "bandwidth_km": 20,
+   "line_km": 248,
+   "n_pieces": 2,
+   "width_km": 49.9,
+   "ci": [
+    43.8,
+    55.6
+   ],
+   "n_near": 601,
+   "a_on_a_side": 0.617,
+   "b_on_b_side": 0.964,
+   "local_widths": [
+    null,
+    145.6,
+    49.5,
+    39.1,
+    43.6
+   ],
+   "local_min_km": 39.1,
+   "local_max_km": 145.6,
+   "sharpest_at": [
+    -2.9165,
+    51.0972
+   ]
+  },
+  "cwm_dingle": {
+   "key": "cwm_dingle",
+   "a": "cwm",
+   "b": "dingle",
+   "n_a": 861,
+   "n_b": 371,
+   "bandwidth_km": 10,
+   "line_km": 239,
+   "n_pieces": 1,
+   "width_km": 17.0,
+   "ci": [
+    13.4,
+    19.9
+   ],
+   "n_near": 1057,
+   "a_on_a_side": 0.977,
+   "b_on_b_side": 0.838,
+   "local_widths": [
+    14.4,
+    19.6,
+    16.2,
+    13.2
+   ],
+   "local_min_km": 13.2,
+   "local_max_km": 19.6,
+   "sharpest_at": [
+    -3.5418,
+    53.0868
+   ]
+  },
+  "fell_law": {
+   "key": "fell_law",
+   "a": "fell",
+   "b": "law",
+   "n_a": 745,
+   "n_b": 483,
+   "bandwidth_km": 14,
+   "line_km": 229,
+   "n_pieces": 1,
+   "width_km": 32.8,
+   "ci": [
+    27.9,
+    37.8
+   ],
+   "n_near": 672,
+   "a_on_a_side": 0.93,
+   "b_on_b_side": 0.925,
+   "local_widths": [
+    54.3,
+    24.0,
+    21.5,
+    22.6
+   ],
+   "local_min_km": 21.5,
+   "local_max_km": 54.3,
+   "sharpest_at": [
+    -3.5562,
+    55.2273
+   ]
+  },
+  "tor_down": {
+   "key": "tor_down",
+   "a": "tor",
+   "b": "down",
+   "n_a": 142,
+   "n_b": 1473,
+   "bandwidth_km": 6,
+   "line_km": 86,
+   "n_pieces": 1,
+   "width_km": 39.7,
+   "ci": [
+    30.8,
+    50.9
+   ],
+   "n_near": 502,
+   "a_on_a_side": 0.585,
+   "b_on_b_side": 0.981,
+   "local_widths": [
+    39.7
+   ],
+   "local_min_km": 39.7,
+   "local_max_km": 39.7,
+   "sharpest_at": [
+    -4.0231,
+    50.4813
+   ]
+  }
+ }
+}
