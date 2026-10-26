@@ -32,7 +32,7 @@ OS Open Names is a modern map, not a historical record. Many names are recent, a
 ## Sources and licence
 
 - Contains OS data © Crown copyright and database right 2026. OS Open Names and OS Open Rivers, Ordnance Survey, Open Government Licence v3.0.
-- Base map on the interactive page: © OpenStreetMap contributors © CARTO.
+- Base map on the interactive page: tiles © Esri, HERE, Garmin, © OpenStreetMap contributors, and the GIS user community.
 
 The derived data and the text are released under CC BY 4.0 (compatible with the Open Government Licence; please keep the Crown copyright statement above when reusing the data). Code is MIT (see `LICENSE`).
 

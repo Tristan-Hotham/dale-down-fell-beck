@@ -178,7 +178,7 @@ footer p{margin:0 0 10px}
   <div class="mapwrap"><div id="lmap" role="region" aria-label="Interactive map of landscape words in Great Britain"></div></div>
   <div class="legend" id="legend"></div>
   <div class="card" id="wordcard"></div>
-  <div class="src">Base map © OpenStreetMap contributors © CARTO. Contains OS data © Crown copyright and database right 2026. Shading appears only in hexagons with at least 3 named features of that family. Lines are fitted boundaries where the two words are equally common; line thickness shows how sharp the change is there.</div>
+  <div class="src">Base map tiles © Esri, HERE, Garmin, © OpenStreetMap contributors, and the GIS user community. Contains OS data © Crown copyright and database right 2026. Shading appears only in hexagons with at least 3 named features of that family. Lines are fitted boundaries where the two words are equally common; line thickness shows how sharp the change is there.</div>
 </div>
 
 <h2><span class="n">02 · Water</span>Brook, beck, burn</h2>
@@ -309,7 +309,7 @@ footer p{margin:0 0 10px}
 </div>
 <footer>
   <p>Dr Tristan Hotham, researcher on social media, campaigns and politics. Independent researcher.</p>
-  <p>Contains OS data © Crown copyright and database right 2026. OS Open Names and OS Open Rivers from Ordnance Survey, used under the Open Government Licence v3.0. Base map © OpenStreetMap contributors © CARTO.</p>
+  <p>Contains OS data © Crown copyright and database right 2026. OS Open Names and OS Open Rivers from Ordnance Survey, used under the Open Government Licence v3.0. Base map tiles © Esri, HERE, Garmin, © OpenStreetMap contributors, and the GIS user community.</p>
   <p>The derived data and the text of this page are released under CC BY 4.0. The code is released under the MIT licence.</p>
   <p>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</p>
 </footer>
@@ -366,12 +366,12 @@ const isDark = () => { const r = document.documentElement; return r.dataset.them
   const map = L.map("lmap", { preferCanvas: true, zoomSnap: .25, minZoom: 4.5, maxZoom: 14, worldCopyJump: false });
   map.fitBounds([[50.0, -5.8], [58.6, 1.7]]);
   const canv = L.canvas({ padding: .3 });
-  const ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a> | Contains OS data &copy; Crown copyright and database right 2026';
+  const ATTR = 'Tiles &copy; Esri, HERE, Garmin, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, and the GIS user community | Contains OS data &copy; Crown copyright and database right 2026';
   map.createPane("labels"); map.getPane("labels").style.zIndex = 450; map.getPane("labels").style.pointerEvents = "none";
   let base, labs;
-  function tiles() { if (base) map.removeLayer(base); if (labs) map.removeLayer(labs); const t = isDark() ? "dark" : "light";
-    base = L.tileLayer(`https://{s}.basemaps.cartocdn.com/${t}_nolabels/{z}/{x}/{y}{r}.png`, { attribution: ATTR, subdomains: "abcd", maxZoom: 19 }).addTo(map);
-    labs = L.tileLayer(`https://{s}.basemaps.cartocdn.com/${t}_only_labels/{z}/{x}/{y}{r}.png`, { subdomains: "abcd", maxZoom: 19, pane: "labels", opacity: .8 }).addTo(map); }
+  function tiles() { if (base) map.removeLayer(base); if (labs) map.removeLayer(labs); const t = isDark() ? "Dark" : "Light";
+    base = L.tileLayer(`https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_${t}_Gray_Base/MapServer/tile/{z}/{y}/{x}`, { attribution: ATTR, maxZoom: 16 }).addTo(map);
+    labs = L.tileLayer(`https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_${t}_Gray_Reference/MapServer/tile/{z}/{y}/{x}`, { maxZoom: 16, pane: "labels", opacity: .8 }).addTo(map); }
   tiles();
   const hexL = L.layerGroup().addTo(map), ptsL = L.layerGroup().addTo(map), lineL = L.layerGroup().addTo(map), daneL = L.layerGroup().addTo(map), bordL = L.layerGroup().addTo(map);
   const GEO = R.geo.features;
